@@ -21,30 +21,120 @@ public class LightPractice {
         LightPractice lp = new LightPractice();
         lp.logProgramStart();
 
-        lp.testTheLargestIntegerFromThreeNumbers();
-
 
     }
 
-    @SuppressWarnings("unsed")
-    private void testTheLargestIntegerFromThreeNumbers(){
-        LightPractice lp = new LightPractice();
-        List<Integer> list = new ArrayList<>();
-        for(int i =0;i<3;i++){
-            int a = ThreadLocalRandom.current().nextInt(100);
-            int b = ThreadLocalRandom.current().nextInt(100);
-            int c = ThreadLocalRandom.current().nextInt(100);
-            list.add(lp.theLargestIntegerFromThreeNumbers(a,b,c));
-            System.out.println(a+" "+b+" "+c);
+    public double triangleArea(int base, int height){
+        return (double) base*height*0.5;
+    }
+
+    public double circleArea(int radius){
+        return Math.PI *radius*radius;
+    }
+
+    @SuppressWarnings("unused")
+    private static void rectangleAreaVoid(int a, int b){
+        System.out.println(a*b);
+    }
+
+    @SuppressWarnings("unused")
+    private void whileFactorial() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter positive number: ");
+        
+        int number = -1;
+        while (number<=0){
+            try{
+                number = scanner.nextInt();
+                if(number<=0){
+                    System.out.println("Please enter positive number: ");   
+                }
+            }catch (InputMismatchException e){
+                System.out.println("This is not valid number, please enter the valid number: ");
+                scanner.next();
+            }
         }
-        System.out.println();
-        list.forEach(i-> System.out.print(i+" "));
-        System.out.println("\n||----||");
+        scanner.close();
+
+        int counter = 1;
+        int factorial = 1;
+        while (counter<=number){
+            System.out.println("n = "+counter+" factorial = "+factorial);
+            counter++;
+            factorial*=counter;
+        }
+    }
+
+    @SuppressWarnings("unused")
+    public void fibonacci(){
+        //Expected result is : 0 1 1 2 3 5 8 13 21 34 55
+        int number = 10;
+        int a = 0;
+        int b = 1;
+        int next;
+        for(int i =0;i<10;i++){
+            next = a + b;
+            a = b;
+            b = next;
+            System.out.print(a+" ");
+        }
+    }
+
+    @SuppressWarnings("unused")
+    public int returnFactorial(int n){
+        if(n<0){
+            throw new IllegalArgumentException("You should enter positive value to this method.");
+        }
+        if(n==0){
+            return 1;
+        }return n * returnFactorial(n-1);
+    }
+
+    /*
+     * Program that evaluates the largest of the three numbers and display whether
+     * the largest number is even or odd.
+     */
+    @SuppressWarnings("unused")
+    private void evaluateTheLargestNumberAndCheckingIfTheNumberIsEvenOrOdd(int a, int b, int c){
+        int max =Math.max(a,Math.max(b,c));
+        boolean maxIsEven = max % 2 ==0;
+        if(maxIsEven){
+            System.out.println(max + " is even number.");
+        }
+        System.out.println(max + " is odd number.");
+    }
+
+    @SuppressWarnings("unused")
+    private boolean isEven(int number) {
+        return number % 2 == 0;
     }
 
     @SuppressWarnings("unused")
     private int theLargestIntegerFromThreeNumbers(int a, int b, int c) {
         return Math.max(a,Math.max(b,c));
+    }
+
+    /*
+     * This method tests the function that finds the largest number
+     * among three randomly generated numbers.
+     * It prints the inputs and the result for each test case.
+     */
+    @SuppressWarnings("unused")
+    private void testTheLargestIntegerFromThreeNumbers(){
+        LightPractice lp = new LightPractice();
+        List<Integer> list = new ArrayList<>();
+        for(int i =0;i<3;i++){
+            //  Generate three random integers between 0 and 99
+            int a = ThreadLocalRandom.current().nextInt(100);
+            int b = ThreadLocalRandom.current().nextInt(100);
+            int c = ThreadLocalRandom.current().nextInt(100);
+            list.add(lp.theLargestIntegerFromThreeNumbers(a,b,c));
+            // Print the generated numbers
+            System.out.println(a+" "+b+" "+c);
+        }
+        System.out.println();
+        list.forEach(i-> System.out.print(i+" "));
+        System.out.println("\n||----||");
     }
 
     @SuppressWarnings("unused")
@@ -176,15 +266,10 @@ public class LightPractice {
     private void factorialTest() {
         LightPractice lp = new LightPractice();
         for(int i =1;i<7;i++){
-            System.out.println(lp.factorial(i));
+            System.out.println(lp.returnFactorial(i));
         }
     }
 
-    public int factorial(int n){
-        if(n==0){
-            return 1;
-        }return n * factorial(n-1);
-    }
 
     public int add(int a, int b){
         return a+b;
