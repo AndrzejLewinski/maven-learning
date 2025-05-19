@@ -22,11 +22,37 @@ public class LightPractice {
         LightPractice lp = new LightPractice();
         lp.logProgramStart();
 
-        bubbleSortingLesson();
-
     }
 
-    private static void bubbleSortingLesson() {
+    @SuppressWarnings("unused")
+    private void printSortedRandomNumbers(int range, int bound){
+        LightPractice lp = new LightPractice();
+        lp.randomNumbers(range,bound).stream().sorted().forEach(i-> System.out.print(i+" "));
+        System.out.println();
+    }
+
+    @SuppressWarnings("unused")
+    private void printRandomNumbers(int range, int bound){
+        LightPractice lp = new LightPractice();
+        lp.randomNumbers(range,bound).forEach(i-> System.out.print(i+" "));
+        System.out.println();
+    }
+
+    private List<Integer> randomNumbers(int range, int bound){
+        return IntStream.range(0,range).map(i->ThreadLocalRandom.current().nextInt(bound)).boxed().collect(Collectors.toList());
+    }
+
+    @SuppressWarnings("unused")
+    private void simpleFilter() {
+        List<Integer> collect = IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
+        collect.stream().sorted().forEach(i-> System.out.print(i+" "));
+        System.out.println();
+        List<Integer> collect1 = collect.stream().filter(i -> i > 30).sorted().collect(Collectors.toList());
+        collect1.forEach(i-> System.out.print(i+" "));
+    }
+
+    @SuppressWarnings("unused")
+    private void bubbleSortingLesson() {
         List<Integer> collect =
                 IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
 
@@ -54,7 +80,7 @@ public class LightPractice {
 
 
     @SuppressWarnings("unused")
-    private static void reversedString() {
+    private void reversedString() {
         List<Integer> collect =
                 IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
         StringBuilder stringBuilder = new StringBuilder();
