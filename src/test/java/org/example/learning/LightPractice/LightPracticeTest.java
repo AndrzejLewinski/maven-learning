@@ -18,6 +18,15 @@ public class LightPracticeTest {
         Assertions.assertEquals(5, result);
     }
 
+    @Test
+    void testFactorial(){
+        LightPractice lp = new LightPractice();
+        int result = lp.factorial(3);
+        int result2 = lp.factorial(7);
+        Assertions.assertEquals(6,result);
+        Assertions.assertEquals(720,result2);
+    }
+
 
 
 }

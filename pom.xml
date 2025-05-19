@@ -57,10 +57,11 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>17</version> <!-- lub inna wersja zgodna z Twoim projektem -->
+      <version>24.0.1</version>
     </dependency>
 
     <dependency>
@@ -132,12 +133,17 @@
     </dependency>
 
 
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>4.31.0</version>
+    </dependency>
 
     <!-- JDBC Connector dla MySQL -->
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.28</version> <!-- Użyj najnowszej wersji -->
+      <groupId>com.mysql</groupId>
+      <artifactId>mysql-connector-j</artifactId>
+      <version>9.3.0</version>
     </dependency>
 
     <!-- JPA API -->

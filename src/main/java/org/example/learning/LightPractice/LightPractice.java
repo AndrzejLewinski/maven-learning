@@ -3,6 +3,8 @@ package org.example.learning.LightPractice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Scanner;
+
 /**
  * Created by User on 19.05.2025
  */
@@ -12,19 +14,32 @@ public class LightPractice {
 
     public static void main(String[] args) {
 
-        System.out.println(1);
+        LightPractice lp = new LightPractice();
+        lp.helloUser();
+
+
+    }
+
+    private void helloUser() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj swoje imię: ");
+        String string = scanner.nextLine();
+        System.out.println(string);
+        scanner.close();
     }
 
     @SuppressWarnings("unused")
-    private void whatIsComputer() {
-        logger.info("A computer is a machine that executes instructions contained in a program.");
-        logger.info("Programming is the process of creating those instructions " +
-                "that allow the computer to solve problems.");
-        logger.info("A programming language is a tool that allows the programmer " +
-                "to communicate with the computer by giving it commands.");
-        logger.info("Below is an example of the simplest program in Java that displays text on the screen.");
-        System.out.println("Welcome to the world of programming! This is the simplest program that can print text.");
+    private void factorialTest() {
+        LightPractice lp = new LightPractice();
+        for(int i =1;i<7;i++){
+            System.out.println(lp.factorial(i));
+        }
+    }
 
+    public int factorial(int n){
+        if(n==0){
+            return 1;
+        }return n * factorial(n-1);
     }
 
     public int add(int a, int b){
@@ -84,6 +99,19 @@ public class LightPractice {
     private void helloWorld() {
         logger.info("Programming is printing the text.");
         System.out.println("Hello World!");
+    }
+
+    @SuppressWarnings("unused")
+    private void whatIsComputer() {
+
+        logger.info("A computer is a machine that executes instructions contained in a program.");
+        logger.info("Programming is the process of creating those instructions " +
+                "that allow the computer to solve problems.");
+        logger.info("A programming language is a tool that allows the programmer " +
+                "to communicate with the computer by giving it commands.");
+        logger.info("Below is an example of the simplest program in Java that displays text on the screen.");
+        System.out.println("Welcome to the world of programming! This is the simplest program that can print text.");
+
     }
 
 
