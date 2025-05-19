@@ -20,11 +20,8 @@ public class LightPractice {
 
     public static void main(String[] args) {
 
-
         LightPractice lp = new LightPractice();
         lp.logProgramStart();
-
-
 
     }
 
