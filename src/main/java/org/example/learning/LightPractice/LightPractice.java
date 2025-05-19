@@ -7,6 +7,8 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -17,11 +19,131 @@ public class LightPractice {
     private static final Logger logger = LoggerFactory.getLogger(LightPractice.class);
 
     public static void main(String[] args) {
-
         LightPractice lp = new LightPractice();
         lp.logProgramStart();
 
+        bubbleSortingLesson();
 
+    }
+
+    private static void bubbleSortingLesson() {
+        List<Integer> collect =
+                IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
+        StringBuilder stringBuilder = new StringBuilder();
+        int[] tab = new int[20];
+        for(int i = 0; i < collect.size(); i++ ){
+            tab[i] = collect.get(i);
+            System.out.print(tab[i] + " ");
+        }
+        for(int n = 1; n < tab.length; n++) {
+            // Loop through the array from tab[0] to tab[n-1]
+            for(int i = 0; i < tab.length - 1; i++) {
+                // If the number on the left is greater than the one on the right
+                if(tab[i] > tab[i + 1]) {
+                    int temp = tab[i];
+                    // The number on the left takes the smaller value from the right number
+                    tab[i] = tab[i + 1];
+                    // The number on the right takes the larger value from the left number
+                    tab[i + 1] = temp;
+                }
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < tab.length; i++) {
+            System.out.print(tab[i] + " ");
+        }
+    }
+
+
+    private static void reversedString() {
+        List<Integer> collect =
+                IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
+        StringBuilder stringBuilder = new StringBuilder();
+
+        List<Integer> collect1 = collect.stream().sorted().collect(Collectors.toList());
+        collect1.forEach(i-> System.out.print(i+" "));
+        System.out.println();
+
+        int[] tab = new int[20];
+
+        int sum = 0;
+
+        for(int i = 0; i < collect.size(); i++ ){
+            tab[i] = collect.get(i);
+            System.out.print(tab[i]+" ");
+            sum+=tab[i];
+        }
+        System.out.println();
+        System.out.println("sum = "+sum+"\n");
+
+        int n = tab.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (tab[j] > tab[j + 1]) {
+                    int temp = tab[j];
+                    tab[j] = tab[j + 1];
+                    tab[j + 1] = temp;
+                }
+            }
+        }
+        Arrays.stream(tab).mapToObj(j -> j + " ").forEach(System.out::print);
+
+        System.out.println();
+
+        for(int i = 0; i < collect.size(); i++ ){
+            stringBuilder.append(collect.get(i));
+            if( i < collect.size() - 1){
+                stringBuilder.append("_");
+            }
+        }
+        String string = stringBuilder.toString();
+        //we're printing what we have done up till now
+        System.out.println(string);
+        String reversedString = stringBuilder.reverse().toString();
+        System.out.println(reversedString);
+    }
+
+    @SuppressWarnings("unused")
+    private void testForSumFunctionOnlyForPrimeNumbers(){
+        LightPractice lp = new LightPractice();
+        lp.sumForPrimeNumbers(3);
+        System.out.println();
+        lp.sumForPrimeNumbers(7);
+    }
+
+    private void sumForPrimeNumbers(int counter){
+        LightPractice lp = new LightPractice();
+        int sum = 0;
+        for(int i = 0; i <= counter; i++){
+            if(lp.ifPrimeNumber(i)){
+                sum+=i;
+                System.out.println(i + " " + lp.ifPrimeNumber(i)+" sum: "+sum);
+            }
+        }
+        System.out.println("sum = "+sum);
+    }
+    private boolean ifPrimeNumber(int number){
+        int sqrtNumber = (int) Math.sqrt(number);
+        boolean isPrimeNumber = true;
+        if(number<=1){
+            return false;
+        }
+        int i =2;
+        while (i<=sqrtNumber) {
+            if (number % i == 0) {
+                isPrimeNumber = false;
+                break;
+            }
+            i++;
+        }
+        return isPrimeNumber;
+    }
+
+    @SuppressWarnings("unused")
+    private void quickRepetitionOne() {
+        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+        System.out.println(zonedDateTime.format(DateTimeFormatter.ofPattern("dd-MM-yyy HH:mm:ss:SS")));
     }
 
     public double triangleArea(int base, int height){
