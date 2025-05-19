@@ -3,7 +3,13 @@ package org.example.learning.LightPractice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 /**
  * Created by User on 19.05.2025
@@ -14,9 +20,107 @@ public class LightPractice {
 
     public static void main(String[] args) {
 
+
         LightPractice lp = new LightPractice();
         lp.logProgramStart();
 
+
+
+    }
+
+    @SuppressWarnings("unused")
+    private int positiveInput(Scanner scanner){
+        System.out.println("Enter positive number: ");
+        int number = -1;
+        while (number<=0){
+            try{
+                number = scanner.nextInt();
+                if(number<=0){
+                    System.out.println("Enter positive number: ");
+                }
+            }catch (InputMismatchException e){
+                System.out.println("Please enter a valid integer:");
+                scanner.next();
+            }
+        }
+        return number;
+    }
+
+
+    @SuppressWarnings("unused")
+    private void bmiCalculator() {
+        //while cm are less than zero then our client is unable to go outside the loop
+        Scanner scanner = new Scanner(System.in);
+        int weight =-1;
+        int height_in_cm=-1;
+        double height;
+        double denominator;
+
+        System.out.println("Enter your weight: ");
+
+        //The user will remain in the loop until he enters a value greater than zero.
+        while (weight<=0){
+            try{
+                weight = scanner.nextInt();
+                if(weight<=0){
+                    System.out.println("Weight must be greater than zero");
+                }
+            }catch (RuntimeException e){
+                System.out.println("Please enter a valid integer number.");
+                scanner.next();
+            }
+        }
+
+        System.out.println("Enter your height in cm: ");
+
+        while (height_in_cm<=0){
+            try{
+                height_in_cm = scanner.nextInt();
+                if(height_in_cm<=0){
+                    System.out.println("Height must be greater than zero");
+                }
+            }catch (RuntimeException e){
+                System.out.println("Please enter a valid integer number.");
+                scanner.next();
+            }
+        }
+        height = (double) height_in_cm/100;
+        denominator = Math.pow(height,2);
+        double bmi = (double) weight/denominator;
+        System.out.println("Your BMI equals: "+bmi);
+
+        scanner.close();
+    }
+
+    @SuppressWarnings("unused")
+    private void tree() {
+        for(int i =0;i<5;i++){
+            for(int j=0;j<i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    @SuppressWarnings("unused")
+    private void localDatePrinting() {
+
+        //localTime.definedFormat(definedFormatter))
+        //
+        //
+        //localTime -> ZonedDateTime localTime = new ZoneDateTime.now();
+        //.format ->metoda format
+        //DateTimeFormatter.ofPatter() ->introduce local variable
+        //full pattern <<||   yyyy-MM-dd HH:mm:ss.SSS Z   ||>>
+
+        ZonedDateTime localDate = ZonedDateTime.now();
+        List<String> list = Arrays.asList("yyyy-MM-dd HH:mm:ss.SSS Z", "yyyy-MM-dd HH:mm:ss Z", "yyyy-MM-dd HH:mm Z",
+                                            "yyyy-MM-dd HH Z", "yyyy-MM-dd Z");
+        //
+        String string = "Andrzej || <<  ";
+        Stream<String> stringStream =
+                list.stream().map(formats ->string+ localDate.format(DateTimeFormatter.ofPattern(formats))+" >>");
+        stringStream.forEach(System.out::println);
     }
 
     private void logProgramStart(){
