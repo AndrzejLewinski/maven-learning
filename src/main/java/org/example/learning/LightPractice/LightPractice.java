@@ -29,7 +29,7 @@ public class LightPractice {
     private static void bubbleSortingLesson() {
         List<Integer> collect =
                 IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
-        StringBuilder stringBuilder = new StringBuilder();
+
         int[] tab = new int[20];
         for(int i = 0; i < collect.size(); i++ ){
             tab[i] = collect.get(i);
@@ -49,12 +49,11 @@ public class LightPractice {
             }
         }
         System.out.println();
-        for(int i = 0; i < tab.length; i++) {
-            System.out.print(tab[i] + " ");
-        }
+        Arrays.stream(tab).mapToObj(j -> j + " ").forEach(System.out::print);
     }
 
 
+    @SuppressWarnings("unused")
     private static void reversedString() {
         List<Integer> collect =
                 IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
