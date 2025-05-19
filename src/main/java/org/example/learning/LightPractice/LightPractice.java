@@ -5,10 +5,10 @@ import org.slf4j.LoggerFactory;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -23,7 +23,49 @@ public class LightPractice {
         LightPractice lp = new LightPractice();
         lp.logProgramStart();
 
+        lp.testTheLargestIntegerFromThreeNumbers();
+
+
     }
+
+    @SuppressWarnings("unsed")
+    private void testTheLargestIntegerFromThreeNumbers(){
+        LightPractice lp = new LightPractice();
+        List<Integer> list = new ArrayList<>();
+        for(int i =0;i<3;i++){
+            int a = ThreadLocalRandom.current().nextInt(100);
+            int b = ThreadLocalRandom.current().nextInt(100);
+            int c = ThreadLocalRandom.current().nextInt(100);
+            list.add(lp.theLargestIntegerFromThreeNumbers(a,b,c));
+            System.out.println(a+" "+b+" "+c);
+        }
+        System.out.println();
+        list.forEach(i-> System.out.print(i+" "));
+        System.out.println("\n||----||");
+    }
+
+    @SuppressWarnings("unused")
+    private int theLargestIntegerFromThreeNumbers(int a, int b, int c) {
+        return Math.max(a,Math.max(b,c));
+    }
+
+    @SuppressWarnings("unused")
+    private int theLargestIntegerFromThreeNumbers2(int a, int b, int c) {
+        if(a>b && a>c){
+            return a;
+        }else if(b>a && b>c){
+            return b;
+        }else return c;
+    }
+
+
+    @SuppressWarnings("unused")
+    private boolean isEvenAndDivisible(int number) {
+        if(number%3==0 && number%2==0){
+            return true;
+        }return false;
+    }
+
 
     @SuppressWarnings("unused")
     private int positiveInput(Scanner scanner){
