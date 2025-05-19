@@ -7,8 +7,6 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -61,9 +59,7 @@ public class LightPractice {
 
     @SuppressWarnings("unused")
     private boolean isEvenAndDivisible(int number) {
-        if(number%3==0 && number%2==0){
-            return true;
-        }return false;
+        return number % 3 == 0 && number % 2 == 0;
     }
 
 
@@ -213,7 +209,7 @@ public class LightPractice {
     }
 
     @SuppressWarnings("unused")
-    private static void ageCoclusions(int n){
+    private static void ageConclusions(int n){
         if (n == 16) {
             System.out.println("It's time to make a driving licence");
         } else if (n >= 18) {
