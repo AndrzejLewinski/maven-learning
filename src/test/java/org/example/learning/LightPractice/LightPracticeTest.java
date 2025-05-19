@@ -3,7 +3,6 @@ package org.example.learning.LightPractice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
 
 /**
  * Created by User on 19.05.2025
