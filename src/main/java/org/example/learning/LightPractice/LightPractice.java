@@ -15,11 +15,16 @@ public class LightPractice {
     public static void main(String[] args) {
 
         LightPractice lp = new LightPractice();
-        lp.helloUser();
-
+        lp.logProgramStart();
 
     }
 
+    private void logProgramStart(){
+       logger.info("Program execution started");
+    }
+
+
+    @SuppressWarnings("unused")
     private void helloUser() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj swoje imię: ");
