@@ -13,7 +13,6 @@ import static org.example.archive.WarmUpExercises.logger;
  */
 public class AClassLister {
 
-
     public static void main(String[] args) {
        classGenerator();
     }
