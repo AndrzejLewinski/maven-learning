@@ -5,17 +5,19 @@ package org.example.learning.utils;
  */
 public class Config {
 
+   //we really need this otherwise ith doesn't work
+   public static final String workingDir = System.getProperty("user.dir");
 
-   public static final String workingDir = System.getProperty("user.dir"); // Zwraca ścieżkę roboczą
-   public static final String LEARNING_PATH_FILE_PATH = workingDir + "/src/main/java/org/example/archetypes/archetype" +
-           "/utils" +
-            "/learningpath/";
+   public static final String LEARNING_PATH_FILE_PATH = workingDir + "/src/main/java/org/example/archetypes" +
+            "/archetype/utils/learningpath/";
+   public static final String ARCHETYPES_FILE_PATH = workingDir+"/src/main/java/org/example/archetypes/";
 
-    public static final String PACKAGE_PATH = "package org.example.archetypes.archetype.utils.learningpath;";
-
+   public static final String PACKAGE_PATH = "package org.example.archetypes.archetype.utils.learningpath;";
 
 
 
-    public static final String JAVA_EXTENSION = ".java";
+
+   public static final String JAVA_EXTENSION = ".java";
+
 
 }
