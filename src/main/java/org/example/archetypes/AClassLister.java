@@ -1,6 +1,8 @@
 package org.example.archetypes;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 import static org.example.archive.WarmUpExercises.logger;
 
@@ -12,7 +14,25 @@ public class AClassLister {
 
     public static void main(String[] args) {
         AClassLister aClassLister = new AClassLister();
-        aClassLister.printJavaClassNames();
+        aClassLister.classGenerator();
+    }
+
+    private void classGenerator(){
+        String className = "ExampleClass";
+        String fileName = className + ".java";
+
+        String classContent = "public class " + className + " {\n" +
+                "    public static void main(String[] args) {\n" +
+                "        System.out.println(\"Hello from " + className + "!\");\n" +
+                "    }\n" +
+                "}";
+
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write(classContent);
+            System.out.println("Class file " + fileName + " generated successfully.");
+        } catch (IOException e) {
+            System.out.println("IOException");
+        }
     }
 
     private void printJavaClassNames(){
