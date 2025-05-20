@@ -2,6 +2,7 @@ package org.example.archetypes.archetype.utils;
 
 import org.example.learning.utils.Config;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -13,40 +14,50 @@ import static org.example.archive.WarmUpExercises.logger;
 public class ClassFileManager {
 
     public static void main(String[] args) {
-       classGenerator();
-    }
-    private static void classGenerator(){
-
-
-        ClassFileManager aClassLister = new ClassFileManager();
-
-        //przetestowane, że działa
-        aClassLister.classPreGenerator("AAAExampleClass");
-        aClassLister.classPreGenerator("AAAAExampleClass");
-
+        generateClasses();
     }
 
-    @SuppressWarnings("unused")
-    private void classPreGenerator(String className){
-        String fileName = fileName(className);
-        String classContent = classContent(className);
-        writingClass(classContent,fileName);
+    private static void generateClasses() {
+        ClassFileManager manager = new ClassFileManager();
+        manager.generateClassFile("AAAExampleClass");
+        manager.generateClassFile("AAAAExampleClass");
     }
-    private String fileName(String className){
+
+    private void generateClassFile(String className) {
+        String fileName = getFileName(className);
+        String classContent = generateClassContent(className);
+        writeClassToFile(classContent, fileName);
+    }
+
+    private String getFileName(String className) {
         String path = Config.ARCHETYPES_QUICK_PATH;
         return path + className + ".java";
     }
-    @SuppressWarnings("CallToPrintStackTrace")
-    private void writingClass(String classContent, String fileName){
+
+    private void writeClassToFile(String classContent, String fileName) {
+        // Check if the directory exists, if not, try to create it
+        File file = new File(fileName);
+        File parentDir = file.getParentFile();
+
+        if (parentDir != null && !parentDir.exists()) {
+            boolean dirsCreated = parentDir.mkdirs();
+            if (dirsCreated) {
+                logger.info("Directory created: {}", parentDir.getAbsolutePath());
+            } else {
+                logger.error("Failed to create directory: {}", parentDir.getAbsolutePath());
+                return;
+            }
+        }
+
         try (FileWriter writer = new FileWriter(fileName)) {
             writer.write(classContent);
-            System.out.println("Class file " + fileName + " generated successfully.");
+            logger.info("Class file {} generated successfully.", fileName);
         } catch (IOException e) {
-            logger.error("⚠️ IOException while generating file: {}", fileName);
-            e.printStackTrace();
+            logger.error("⚠️ IOException while generating file: {}", fileName, e);
         }
     }
-    private String classContent(String className) {
+
+    private String generateClassContent(String className) {
         return "package org.example.archetypes;\n\n" +
                 "/**\n" +
                 " * Auto-generated class.\n" +

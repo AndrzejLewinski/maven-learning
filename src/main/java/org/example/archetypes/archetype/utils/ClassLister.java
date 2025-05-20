@@ -11,36 +11,38 @@ import static org.example.archive.WarmUpExercises.logger;
  */
 public class ClassLister {
 
+    private static final String JAVA_EXTENSION = ".java";
+    private static final String FOLDER_NOT_EXISTS = "The specified folder does not exist or is not a directory.";
+    private static final String NO_JAVA_FILES = "No .java files found in the folder.";
+
     public static void main(String[] args) {
-        ClassLister classLister =  new ClassLister();
-        classLister.printJavaClassNames();
+        ClassLister classLister = new ClassLister();
+        classLister.listJavaClassNames();
     }
 
-
-    private void printJavaClassNames(){
-
+    private void listJavaClassNames() {
         String filePath = Config.ARCHETYPES_FILE_PATH;
 
-        logger.info(" 🚀 Program started!");
-        logger.warn(" ⚠️ Something might be wrong...");
+        logger.info("🚀 Program started!");
+        logger.warn("⚠️ Something might be wrong...");
         logger.error("⛔ An error occurred.");
-        System.out.println("🚀 Main logic starts here...");
-        String folderNotExists= "The specified folder does not exist or is not a directory.";
-        String noJavaFiles="No .java files found in the folder.";
-        String javaExtension = ".java";
+
         File folder = new File(filePath);
+
         if (!folder.exists() || !folder.isDirectory()) {
-            System.err.println(folderNotExists);
+            logger.error(FOLDER_NOT_EXISTS);
             return;
         }
-        File[] files = folder.listFiles((dir, name) -> name.endsWith(javaExtension));
+
+        File[] files = folder.listFiles((dir, name) -> name.endsWith(JAVA_EXTENSION));
         if (files == null || files.length == 0) {
-            System.out.println(noJavaFiles);
+            logger.info(NO_JAVA_FILES);
             return;
         }
+
         for (File file : files) {
             String fileName = file.getName();
-            System.out.println(file.getName().substring(0, fileName.length()-5));
+            logger.info("Class found: {}", fileName.substring(0, fileName.length() - 5));
         }
     }
 }
