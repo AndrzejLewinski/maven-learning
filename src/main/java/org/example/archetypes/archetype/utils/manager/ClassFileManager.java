@@ -39,7 +39,7 @@ public class ClassFileManager {
        String path = Config.LEARNING_PATH_FILE_PATH;
         return path + className + ".java";
     }
-
+    @SuppressWarnings("unused")
     private void writeClassToFile(String classContent, String fileName) {
         // Check if the directory exists, if not, try to create it
         File file = new File(fileName);
@@ -74,4 +74,5 @@ public class ClassFileManager {
                 "    }\n" +
                 "}";
     }
+
 }
