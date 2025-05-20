@@ -42,7 +42,8 @@ public class ClassFileManager {
     }
 
     private String getFileName(String className) {
-        String path = Config.ARCHETYPES_QUICK_PATH;
+       //String path = Config.ARCHETYPES_QUICK_PATH;
+       String path = Config.ARCHETYPES_FILE_PATH2;
         return path + className + ".java";
     }
 
