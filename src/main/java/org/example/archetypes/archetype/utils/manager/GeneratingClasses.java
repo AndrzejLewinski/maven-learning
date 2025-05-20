@@ -10,10 +10,26 @@ public class GeneratingClasses {
 
     public static List<String> importString(){
         return Arrays.asList(
-                "AAAExampleClass",
-                "AAAAExampleClass",
-                "BBBBExampleClass",
-                "CCCExampleClass"
+                "IntroductionToJava",
+                "HelloWorldProgram",
+                "VariablesAndDataTypes",
+                "ControlFlowBasics",
+                "LoopsPractice",
+                "MethodsAndFunctions",
+                "ObjectOrientedBasics",
+                "EncapsulationExample",
+                "InheritanceAndPolymorphism",
+                "WorkingWithArrays",
+                "CollectionsFrameworkIntro",
+                "ExceptionHandlingBasics",
+                "FileIOIntroduction",
+                "JavaStreamsOverview",
+                "LambdaExpressionsIntro",
+                "UnitTestingWithJUnit",
+                "IntroToSpringBoot",
+                "SimpleRestApi",
+                "DatabaseConnectivity",
+                "FinalProjectScaffold"
         );
     }
 
