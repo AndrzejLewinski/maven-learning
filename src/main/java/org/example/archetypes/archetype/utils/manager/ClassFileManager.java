@@ -5,6 +5,8 @@ import org.example.learning.utils.Config;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 import static org.example.archive.WarmUpExercises.logger;
 
@@ -19,8 +21,16 @@ public class ClassFileManager {
 
     private static void generateClasses() {
         ClassFileManager manager = new ClassFileManager();
-        manager.generateClassFile("AAAExampleClass");
-        manager.generateClassFile("AAAAExampleClass");
+
+
+        List<String> classNames = Arrays.asList(
+                "AAAExampleClass",
+                "AAAAExampleClass",
+                "BBBBExampleClass",
+                "CCCExampleClass"
+        );
+
+        classNames.forEach(manager::generateClassFile);
     }
 
     private void generateClassFile(String className) {
