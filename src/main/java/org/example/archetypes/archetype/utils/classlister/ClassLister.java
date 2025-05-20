@@ -23,9 +23,7 @@ public class ClassLister {
     private void listJavaClassNames() {
         String filePath = Config.ARCHETYPES_FILE_PATH;
 
-        logger.info("🚀 Program started!");
-        logger.warn("⚠️ Something might be wrong...");
-        logger.error("⛔ An error occurred.");
+        logger.info("🚀 Program started...");
 
         File folder = new File(filePath);
 
@@ -40,9 +38,11 @@ public class ClassLister {
             return;
         }
 
+        logger.info("Found the following classes:");
         for (File file : files) {
             String fileName = file.getName();
-            logger.info("Class found: {}", fileName.substring(0, fileName.length() - 5));
+            // Remove the extension from the file name and log it
+            logger.info("Class found: {}", fileName.substring(0, fileName.length() - JAVA_EXTENSION.length()));
         }
     }
 }
