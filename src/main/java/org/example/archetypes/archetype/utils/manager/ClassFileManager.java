@@ -30,6 +30,7 @@ public class ClassFileManager {
                 "CCCExampleClass"
         );
 
+
         classNames.forEach(manager::generateClassFile);
     }
 
