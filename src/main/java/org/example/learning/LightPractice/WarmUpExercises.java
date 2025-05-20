@@ -4,7 +4,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 
 /**
@@ -18,12 +23,74 @@ public class WarmUpExercises {
         WarmUpExercises warmUpExercises = new WarmUpExercises();
         warmUpExercises.logProgramStart();
 
-        warmUpExercises.run();
+        warmUpExercises.lambdaRepetitionStep5();
 
     }
 
-    private void run() {
-        System.out.println(1);
+    private void printList(List<Integer> list){
+        list.forEach(i-> System.out.print(i+" "));
+    }
+
+    private void lambdaRepetitionStep5() {
+        Function<Integer,Integer> integerFunction = i -> (int) Math.pow(i,2);
+        System.out.println(integerFunction.apply(4));
+        Predicate<Integer> integerPredicate = i->i%2==0;
+        System.out.println(integerPredicate.test(5));
+        System.out.println(integerPredicate.test(4));
+        System.out.println();
+
+        List<Integer> collect = IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
+        //we're using help method printList
+        printList(collect);
+
+        System.out.println();
+        List<Integer> collect1 = collect.stream().filter(i->i%2==0).collect(Collectors.toList());
+        printList(collect1);
+        System.out.println();
+        BiFunction<Integer,Integer,Integer> biFunction = (a,b)->a+b;
+        System.out.println(biFunction.apply(4,5));
+        Function<String,String> str = String::toUpperCase;
+        System.out.println(str.apply("ala ma kota"));
+        Predicate<Integer> ifGreater = i -> i > 10;
+        System.out.println(ifGreater.test(15));
+        System.out.println(ifGreater.test(7));
+        List<Integer> collect2 = IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
+        List<Integer> collect3 = collect2.stream().map(i -> i * i).collect(Collectors.toList());
+        printList(collect3);
+        Predicate<String> isEmpty = String::isEmpty;
+        System.out.println(isEmpty.test("Whatever"));
+        System.out.println(isEmpty.test(""));
+    }
+
+    @SuppressWarnings("unused")
+    private void lambdaRepetitionStep4() {
+        List<Integer> collect = IntStream.range(0, 5).boxed().collect(Collectors.toList());
+        collect.forEach(i-> System.out.print(i+" "));
+        int sum1 = collect.stream().mapToInt(Integer::intValue).sum();
+        System.out.println();
+        System.out.println("sum = "+sum1);
+        System.out.println();
+        Optional<Integer> sum = collect.stream().reduce((a, b)->a+b);
+        sum.ifPresent(i-> System.out.println("sum = "+i));
+    }
+
+    @SuppressWarnings("unused")
+    private void lambdaRepetitionStep3() {
+        Function<String,String> reverseString = s -> new StringBuilder(s).reverse().toString();
+        System.out.println(reverseString.apply("snowboard"));
+    }
+
+    @SuppressWarnings("unused")
+    private void lambdaRepetitionStep2() {
+        //filtering
+        Predicate<Integer> isEven = integer -> integer%2==0;
+        Predicate<Integer> isBiggerThanFive = integer -> integer>5;
+    }
+
+    @SuppressWarnings("unused")
+    private void lambdaRepetitionStep1() {
+        BiFunction<Integer,Integer,Integer> addition = (a,b)->a+b;
+        System.out.println(addition.apply(2,3));
     }
 
     @SuppressWarnings("unused")
@@ -85,7 +152,6 @@ public class WarmUpExercises {
             }
         }
         System.out.println("Longest name is : "+longestName);
-
     }
 
     @SuppressWarnings("unused")
