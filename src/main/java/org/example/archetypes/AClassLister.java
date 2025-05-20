@@ -17,6 +17,7 @@ public class AClassLister {
     }
     private static void classGenerator(){
 
+
         AClassLister aClassLister = new AClassLister();
 
         //przetestowane, że działa
@@ -25,6 +26,7 @@ public class AClassLister {
 
     }
 
+    @SuppressWarnings("unused")
     private void printJavaClassNames(){
 
         logger.info(" 🚀 Program started!");
@@ -51,6 +53,7 @@ public class AClassLister {
         }
     }
 
+    @SuppressWarnings("unused")
     private void classPreGenerator(String className){
         String fileName = fileName(className);
         String classContent = classContent(className);
@@ -66,7 +69,6 @@ public class AClassLister {
             System.out.println("Class file " + fileName + " generated successfully.");
         } catch (IOException e) {
             System.err.println("⚠️ IOException while generating file: " + fileName);
-            e.printStackTrace();
         }
     }
     private String classContent(String className) {
