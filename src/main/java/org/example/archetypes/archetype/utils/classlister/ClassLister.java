@@ -1,4 +1,4 @@
-package org.example.archetypes.archetype.utils;
+package org.example.archetypes.archetype.utils.classlister;
 
 import org.example.learning.utils.Config;
 

@@ -1,4 +1,4 @@
-package org.example.archetypes.archetype.utils;
+package org.example.archetypes.archetype.utils.manager;
 
 import org.example.learning.utils.Config;
 
