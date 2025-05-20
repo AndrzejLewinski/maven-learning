@@ -19,7 +19,6 @@ public class ClassFileManager {
     }
 
 
-
     /// the most important method in this class
     private static void generateClasses() {
         ClassFileManager manager = new ClassFileManager();
