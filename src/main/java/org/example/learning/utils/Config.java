@@ -10,6 +10,7 @@ public class Config {
     public static final String ARCHETYPES_QUICK_PATH = "src/main/java/org/example/archetypes/";
 
 
+
     public static final String JAVA_EXTENSION = ".java";
 
 }
