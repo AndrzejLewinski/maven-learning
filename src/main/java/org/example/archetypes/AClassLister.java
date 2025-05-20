@@ -18,8 +18,10 @@ public class AClassLister {
     private static void classGenerator(){
 
         AClassLister aClassLister = new AClassLister();
-        aClassLister.classPreGenerator("AAAExampleClass");
-        aClassLister.classPreGenerator("AAAAExampleClass");
+
+        //przetestowane, że działa
+        //aClassLister.classPreGenerator("AAAExampleClass");
+        //aClassLister.classPreGenerator("AAAAExampleClass");
 
     }
 
