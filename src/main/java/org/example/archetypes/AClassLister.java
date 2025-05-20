@@ -19,31 +19,27 @@ public class AClassLister {
         logger.info(" 🚀 Program started!");
         logger.warn(" ⚠️ Something might be wrong...");
         logger.error("⛔ An error occurred.");
-
-
         System.out.println("🚀 Main logic starts here...");
-        // reszta programu
 
-        // Ścieżka do folderu z klasami, np. "bin/org/example/archetypes"
         File folder = new File("E:\\Java\\ChatGPT\\ChatGPT_0\\maven-learning\\src\\main\\java\\org\\example\\archetypes");
 
         if (!folder.exists() || !folder.isDirectory()) {
-            System.err.println("Folder nie istnieje lub nie jest katalogiem.");
+            System.err.println("The specified folder does not exist or is not a directory.");
             return;
         }
-
+        // Get all .java files in the folder
         File[] files = folder.listFiles((dir, name) -> name.endsWith(".java"));
 
         if (files == null || files.length == 0) {
-            System.out.println("Brak plików .class w folderze.");
+            System.out.println("No .java files found in the folder.");
             return;
         }
-
+        // Print class names (file names without .java extension)
         for (File file : files) {
             String fileName = file.getName();
-            // Usuwamy rozszerzenie .java
-            String className = fileName.substring(0, fileName.length() - 5);
+            String className = fileName.substring(0, fileName.length() - 5); // Remove .java extension
             System.out.println(className);
         }
+
     }
 }
