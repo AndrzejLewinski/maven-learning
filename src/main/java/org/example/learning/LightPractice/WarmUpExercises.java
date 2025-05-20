@@ -47,7 +47,7 @@ public class WarmUpExercises {
         List<Integer> collect1 = collect.stream().filter(i->i%2==0).collect(Collectors.toList());
         printList(collect1);
         System.out.println();
-        BiFunction<Integer,Integer,Integer> biFunction = (a,b)->a+b;
+        BiFunction<Integer,Integer,Integer> biFunction = Integer::sum;
         System.out.println(biFunction.apply(4,5));
         Function<String,String> str = String::toUpperCase;
         System.out.println(str.apply("ala ma kota"));
@@ -70,7 +70,7 @@ public class WarmUpExercises {
         System.out.println();
         System.out.println("sum = "+sum1);
         System.out.println();
-        Optional<Integer> sum = collect.stream().reduce((a, b)->a+b);
+        Optional<Integer> sum = collect.stream().reduce(Integer::sum);
         sum.ifPresent(i-> System.out.println("sum = "+i));
     }
 
@@ -89,7 +89,7 @@ public class WarmUpExercises {
 
     @SuppressWarnings("unused")
     private void lambdaRepetitionStep1() {
-        BiFunction<Integer,Integer,Integer> addition = (a,b)->a+b;
+        BiFunction<Integer,Integer,Integer> addition = Integer::sum;
         System.out.println(addition.apply(2,3));
     }
 
