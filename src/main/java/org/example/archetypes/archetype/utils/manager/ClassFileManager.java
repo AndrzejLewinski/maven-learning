@@ -23,7 +23,7 @@ public class ClassFileManager {
     private static void generateClasses() {
         ClassFileManager manager = new ClassFileManager();
         /// important line of code
-        /// todo go to GeneratingClasses class and you can generate names of classes directly out there
+        /// todo go to GeneratingClasses class and you can generate names of classes directly out there..
         List<String> classNames = GeneratingClasses.importString();
         classNames.forEach(manager::generateClassFile);
     }
