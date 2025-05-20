@@ -22,17 +22,8 @@ public class ClassFileManager {
 
     private static void generateClasses() {
         ClassFileManager manager = new ClassFileManager();
-
-
-        List<String> classNames = Arrays.asList(
-                "AAAExampleClass",
-                "AAAAExampleClass",
-                "BBBBExampleClass",
-                "CCCExampleClass"
-        );
-
-
-
+        /// important line of code
+        List<String> classNames = GeneratingClasses.importString();
         classNames.forEach(manager::generateClassFile);
     }
 
