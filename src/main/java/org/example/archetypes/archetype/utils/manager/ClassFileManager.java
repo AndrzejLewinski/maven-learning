@@ -43,7 +43,7 @@ public class ClassFileManager {
 
     private String getFileName(String className) {
        //String path = Config.ARCHETYPES_QUICK_PATH;
-       String path = Config.ARCHETYPES_FILE_PATH2;
+       String path = Config.LEARNING_PATH_FILE_PATH;
         return path + className + ".java";
     }
 
@@ -71,7 +71,7 @@ public class ClassFileManager {
     }
 
     private String generateClassContent(String className) {
-        return "package org.example.archetypes;\n\n" +
+        return Config.PACKAGE_PATH+"\n\n" +
                 "/**\n" +
                 " * Auto-generated class.\n" +
                 " */\n" +

@@ -6,9 +6,10 @@ package org.example.learning.utils;
 public class Config {
 
     public static final String ARCHETYPES_FILE_PATH = "E:\\Java\\ChatGPT\\ChatGPT_0\\maven-learning\\src\\main\\java\\org\\example\\archetypes";
-    public static final String ARCHETYPES_FILE_PATH2 = "E:\\Java\\ChatGPT\\ChatGPT_0\\maven-learning\\src\\main\\java" +
+    public static final String LEARNING_PATH_FILE_PATH = "E:\\Java\\ChatGPT\\ChatGPT_0\\maven-learning\\src\\main\\java" +
             "\\org\\example\\archetypes\\archetype\\utils\\learningpath\\";
 
+    public static final String PACKAGE_PATH = "package org.example.archetypes.archetype.utils.learningpath;";
 
 
     public static final String ARCHETYPES_QUICK_PATH = "src/main/java/org/example/archetypes/";
