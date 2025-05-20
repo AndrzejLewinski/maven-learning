@@ -5,12 +5,12 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-
 
 /**
  * Created by User on 19.05.2025
@@ -20,23 +20,144 @@ public class WarmUpExercises {
     public static final Logger logger = LoggerFactory.getLogger(WarmUpExercises.class);
 
     public static void main(String[] args) {
+
         WarmUpExercises warmUpExercises = new WarmUpExercises();
         warmUpExercises.logProgramStart();
+        warmUpExercises.lambdaRepetitionStep7();
 
-        warmUpExercises.lambdaRepetitionStep5();
+    }
 
+    private void lambdaRepetitionStep7() {
+
+        List<Integer> IntList_02_Modifiable  = new ArrayList<>(creteListInteger());
+
+        List<Integer> IntList_01      =  creteListInteger();
+        List<Double>  DoubleList_01   =  createListDouble();
+        List<String>  StringList_01   =  createNameList();
+        List<Object>  ObjectList_01   =  createObjectList();
+        List<Object>  ObjectList_02   =  creteArrayList();
+
+        add42ToList(IntList_02_Modifiable);
+        add42ToList(ObjectList_02);
+
+        List<List<?>> objects = List.of(
+                IntList_02_Modifiable,
+                IntList_01,
+                DoubleList_01,
+                StringList_01,
+                ObjectList_01,
+                ObjectList_02
+        );
+
+        printListGenericAndSeparate(objects);
+        printThisLineT("\n");
+        printListWithSeparators(objects);
+
+    }
+
+    private void printListWithSeparators(List<List<?>> objects) {
+        for (List<?> sublist : objects) {
+            printThisLineT("");
+            for (Object item : sublist) {
+                printThisLineT("| " + item + " ");
+            }
+            printThisLineT("|");
+            printThisLineT("\n");
+        }
+    }
+
+    private void add42ToList(List<? super Integer> list){
+        list.add(42);
+    }
+    private List<Object>  createObjectList(){
+        return List.of("Andrzej",35,"niedźwiedź",5.0,true,Integer.MIN_VALUE,
+                TimeUnit.MICROSECONDS);
+    }
+    private List<Object> creteArrayList(){
+        return new ArrayList<>(List.of("Niedźwiedź",42,true,Integer.MAX_VALUE));
+    }
+    private List<String> createNameList(){
+        return List.of("Andrzej","Anna","Zenon");
+    }
+    private List<Integer> creteListInteger(){
+        return List.of(1, 2, 3, 4);
+    }
+    private List<Double> createListDouble(){
+        return List.of(3.14, 2.71);
+    }
+    @SuppressWarnings("unused")
+    public void printNumbers(List<? extends Number> list) {
+        for (Number item : list) {
+            System.out.print(item.doubleValue()+" ");  // Działamy na typach Number
+        }
+        printNewLineT("");
+    }
+    @SuppressWarnings("unused")
+    public void printListWildCard(List<?> list) {
+        for (Object item : list) {
+            System.out.print(item+" ");  // Elementy traktowane są jako Object
+        }
+        printNewLineT("");
+    }
+    @SuppressWarnings("unused")
+    public <T> void printListGeneric(List<T> list){
+        for(Object item : list){
+            printThisLineT(item+" ");
+        }
+    }
+
+    public <T> void printListGenericAndSeparate(List<T> list) {
+        for (Object item : list) {
+            printThisLineT(item+" ");
+        }
+        printNewLineT("");
+    }
+
+    private <T> void printNewLineT(T element){
+        System.out.println(element);
+    }
+
+    private <T> void printThisLineT(T element){
+        System.out.print(element);
+    }
+
+    private <T extends Number> double doubleValue(T number){
+        return number.doubleValue()*2;
+    }
+
+    @SuppressWarnings("unused")
+    private void lambdaRepetitionStep6() {
+        Function<String, Integer> stringLength = String::length;
+       printThisLineT(stringLength.apply("Ala ma kota"));
+       System.out.println();
+       printThisLineT(doubleValue(5));
+       printThisLineT(doubleValue(2));
+
+    }
+
+    private <T> void printFilterResult(Function<T,?> genericFunction, T genericInput){
+        System.out.println(genericFunction.apply(genericInput));
     }
 
     private void printList(List<Integer> list){
         list.forEach(i-> System.out.print(i+" "));
     }
 
+    private <T> void printPredicate(Predicate<T> predicate, T object){
+        System.out.println(predicate.test(object));
+    }
+
+    @SuppressWarnings("unused")
     private void lambdaRepetitionStep5() {
         Function<Integer,Integer> integerFunction = i -> (int) Math.pow(i,2);
-        System.out.println(integerFunction.apply(4));
-        Predicate<Integer> integerPredicate = i->i%2==0;
-        System.out.println(integerPredicate.test(5));
-        System.out.println(integerPredicate.test(4));
+                
+        printFilterResult(integerFunction,4);
+        printFilterResult(integerFunction,5);
+
+        System.out.println("...");
+        printPredicate(i->i%2==0,15);
+        printPredicate(i->i%2==0,12);
+
         System.out.println();
 
         List<Integer> collect = IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
@@ -49,17 +170,24 @@ public class WarmUpExercises {
         System.out.println();
         BiFunction<Integer,Integer,Integer> biFunction = Integer::sum;
         System.out.println(biFunction.apply(4,5));
+
         Function<String,String> str = String::toUpperCase;
         System.out.println(str.apply("ala ma kota"));
-        Predicate<Integer> ifGreater = i -> i > 10;
-        System.out.println(ifGreater.test(15));
-        System.out.println(ifGreater.test(7));
+
+        System.out.println("...");
+
+        printPredicate(i->i>10,15);
+        printPredicate(i->i>10,2);
+        System.out.println();
+
         List<Integer> collect2 = IntStream.range(0, 20).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
         List<Integer> collect3 = collect2.stream().map(i -> i * i).collect(Collectors.toList());
         printList(collect3);
-        Predicate<String> isEmpty = String::isEmpty;
-        System.out.println(isEmpty.test("Whatever"));
-        System.out.println(isEmpty.test(""));
+
+        System.out.println("\n...");
+        printPredicate(String::isEmpty,"Whatever");
+        printPredicate(String::isEmpty,"");
+
     }
 
     @SuppressWarnings("unused")
@@ -199,6 +327,7 @@ public class WarmUpExercises {
                     System.out.println("Age can't be negative number, enter a valid number: ");
                 }
             }catch (InputMismatchException e){
+                printNewLineT("Enter a valid number: ");
                 System.out.println("Enter a valid numer: ");
                 scanner.nextLine();
             }
@@ -226,7 +355,7 @@ public class WarmUpExercises {
         if(isAdult){
             System.out.println("Jesteś pełnoletni");
         }else {
-            System.out.println("Jeseś niepełnoletni");
+            System.out.println("Jesteś niepełnoletni");
         }
         Map<String, Integer> map = new LinkedHashMap<>();
         map.put(name,age);
