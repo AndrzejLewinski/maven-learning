@@ -19,6 +19,7 @@ public class ClassFileManager {
         generateClasses();
     }
 
+
     private static void generateClasses() {
         ClassFileManager manager = new ClassFileManager();
 
