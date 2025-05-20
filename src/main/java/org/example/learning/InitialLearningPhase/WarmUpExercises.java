@@ -1,4 +1,4 @@
-package org.example.learning.LightPractice;
+package org.example.learning.InitialLearningPhase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,19 +29,19 @@ public class WarmUpExercises {
 
     private void lambdaRepetitionStep7() {
 
-        List<Integer> IntList_02_Modifiable  = new ArrayList<>(creteListInteger());
+        List<Integer> IntList02Modifiable  = new ArrayList<>(createListInteger());
 
-        List<Integer> IntList_01      =  creteListInteger();
+        List<Integer> IntList_01      =  createListInteger();
         List<Double>  DoubleList_01   =  createListDouble();
         List<String>  StringList_01   =  createNameList();
         List<Object>  ObjectList_01   =  createObjectList();
-        List<Object>  ObjectList_02   =  creteArrayList();
+        List<Object>  ObjectList_02   =  createArrayList();
 
-        add42ToList(IntList_02_Modifiable);
+        add42ToList(IntList02Modifiable);
         add42ToList(ObjectList_02);
 
         List<List<?>> objects = List.of(
-                IntList_02_Modifiable,
+                IntList02Modifiable,
                 IntList_01,
                 DoubleList_01,
                 StringList_01,
@@ -73,13 +73,13 @@ public class WarmUpExercises {
         return List.of("Andrzej",35,"niedźwiedź",5.0,true,Integer.MIN_VALUE,
                 TimeUnit.MICROSECONDS);
     }
-    private List<Object> creteArrayList(){
+    private List<Object> createArrayList(){
         return new ArrayList<>(List.of("Niedźwiedź",42,true,Integer.MAX_VALUE));
     }
     private List<String> createNameList(){
         return List.of("Andrzej","Anna","Zenon");
     }
-    private List<Integer> creteListInteger(){
+    private List<Integer> createListInteger(){
         return List.of(1, 2, 3, 4);
     }
     private List<Double> createListDouble(){
