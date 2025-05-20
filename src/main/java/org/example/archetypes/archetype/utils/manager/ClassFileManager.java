@@ -5,7 +5,6 @@ import org.example.learning.utils.Config;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.example.archive.WarmUpExercises.logger;
@@ -20,9 +19,11 @@ public class ClassFileManager {
     }
 
 
+    /// the most important method in this class
     private static void generateClasses() {
         ClassFileManager manager = new ClassFileManager();
         /// important line of code
+        /// todo go to GeneratingClasses class and you can generate names of classes directly out there
         List<String> classNames = GeneratingClasses.importString();
         classNames.forEach(manager::generateClassFile);
     }
