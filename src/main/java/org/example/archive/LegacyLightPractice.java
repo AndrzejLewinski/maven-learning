@@ -172,10 +172,12 @@ public class LegacyLightPractice {
         System.out.println(zonedDateTime.format(DateTimeFormatter.ofPattern("dd-MM-yyy HH:mm:ss:SS")));
     }
 
+    @SuppressWarnings("unused")
     public double triangleArea(int base, int height){
         return (double) base*height*0.5;
     }
 
+    @SuppressWarnings("unused")
     public double circleArea(int radius){
         return Math.PI *radius*radius;
     }
@@ -419,6 +421,7 @@ public class LegacyLightPractice {
     }
 
 
+    @SuppressWarnings("unused")
     public int add(int a, int b){
         return a+b;
     }

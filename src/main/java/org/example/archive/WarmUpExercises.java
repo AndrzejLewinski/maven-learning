@@ -19,14 +19,11 @@ import java.util.stream.Stream;
 public class WarmUpExercises {
 
     public static final Logger logger = LoggerFactory.getLogger(WarmUpExercises.class);
-
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
-
-
-
+        printing("Hello World");
 
     }
-
 
     @SuppressWarnings("unused")
     private boolean isPositiveNumber(double n){
