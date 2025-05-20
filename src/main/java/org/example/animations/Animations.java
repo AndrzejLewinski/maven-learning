@@ -8,13 +8,11 @@ import java.util.concurrent.TimeUnit;
 public class Animations {
     public static void main(String[] args) {
 
+        animation07();
+
 
     }
 
-    public static void miniConsoleTest(){
-        Animations animations = new Animations();
-
-    }
 
     @SuppressWarnings("unused")
     private static void animation01() {
@@ -34,7 +32,7 @@ public class Animations {
             try {
                 TimeUnit.MILLISECONDS.sleep(currentDelay);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("Interrupted Exception");
             }
         }
         System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");
@@ -89,7 +87,7 @@ public class Animations {
                     line.append(" ");
                 }
             }
-            System.out.println(line.toString() + RESET);
+            System.out.println(line + RESET);
             try {
                 TimeUnit.MILLISECONDS.sleep(150);
             } catch (InterruptedException e) {
@@ -140,9 +138,7 @@ public class Animations {
             for (int j = 0; j < i; j++) {
                 bar.append(greenShades[j]).append("▓");
             }
-            for (int j = i; j < totalSteps; j++) {
-                bar.append("▒");
-            }
+            bar.append("▒".repeat(Math.max(0, totalSteps - i)));
             int percent = i * 100 / totalSteps;
             System.out.print("\rGradient loading: [" + bar + RESET + "] " + percent + "%");
             try {
@@ -173,7 +169,7 @@ public class Animations {
             try {
                 TimeUnit.MILLISECONDS.sleep(currentDelay);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("InterruptedException ....");
             }
         }
         System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");
@@ -224,7 +220,7 @@ public class Animations {
             try {
                 Thread.sleep(delay);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("wrong");
             }
         }
         System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");
@@ -237,14 +233,13 @@ public class Animations {
         String LIGHT_GREEN = "\033[92m";
         String OLIVE_DRAB = "\033[38;5;60m";
         String LIME_GREEN = "\033[38;5;82m";
-        String COLOR = LIME_GREEN;
         String[] frames = {"|", "/", "-", "\\"};
         String input = "Ładowanie";
         int timeout = 150;
         int repetitions = 3;
         for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < frames.length; j++) {
-                System.out.print("\r" + input + " " + frames[j]);
+            for (String frame : frames) {
+                System.out.print("\r" + input + " " + frame);
                 try {
                     TimeUnit.MILLISECONDS.sleep(150);
                 } catch (InterruptedException e) {
@@ -257,7 +252,7 @@ public class Animations {
         for (int i = 0; i < 10; i++) {
             String currentProgress = fullBar.substring(0, i + 1);
             String remaining = "▒".repeat(10 - (i + 1));
-            System.out.print("\r" + input + " [" + COLOR + currentProgress + RESET + remaining + "] " + (i + 1) * 10 + "%");
+            System.out.print("\r" + input + " [" + LIME_GREEN + currentProgress + RESET + remaining + "] " + (i + 1) * 10 + "%");
             try {
                 TimeUnit.MILLISECONDS.sleep(timeout);
             } catch (InterruptedException e) {

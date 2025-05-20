@@ -1,0 +1,48 @@
+🟢 Stage 1: Basics – Your First Computer
+
+1 What is a computer? | Understanding basic concepts: computer, program, programming language.
+2 First Program – Hello World | Creating and running your first program in Java.
+3 Variables and Data Types | Working with data types: int, double, String, boolean.
+4 Operators | Arithmetic, logical, assignment, and comparison operators.
+5 Conditional Statements | if, else, else if – making decisions in a program.
+6 Loops – Repetition | for loop, while loop – how to repeat code in a program.
+7 Methods – Program Structure | Creating and calling methods in Java.
+
+🟡 Stage 2: Development – More Tools and Structures
+
+8 Arrays – First Steps | Creating and manipulating arrays: int[], String[].
+9 Loops and Arrays | Iterating over arrays using for and for-each loops.
+10 Strings – Text Sequences | String operations in Java: concatenation, substring, length.
+11 Introduction to Classes | Classes and objects: creating simple classes and methods.
+
+🟠 Stage 3: The Computer Remembers More – Arrays and Collections
+Lesson | Topic | What we learn?
+12 Arrays – Many Things at Once | int[], String[], for-each loops.
+13 Lists – Dynamic Boxes | ArrayList, add(), get(), size().
+14 Maps and Keys | HashMap, put(), get(), containsKey().
+15 Sets – Only Unique Things | HashSet, no duplicates.
+
+🔴 Stage 4: A More Serious Computer – Errors and Files
+Lesson | Topic | What we learn?
+16 Something Broke – Exceptions | try, catch, throw, finally.
+17 The Computer Writes to a File | File, FileWriter, Scanner for files.
+18 Mini Project – “Console Notepad” | Practice with classes, lists, and files.
+
+🟣 Stage 5: A Bit of Magic – Lambdas and Streams (Optional)
+Lesson | Topic | What we learn?
+19 The Computer Knows Functions – Lambdas | () -> {}, Function, Predicate.
+20 Streams – Data Processing | stream(), filter(), map(), collect().
+
+🧩 Bonus: Mini Projects at the End of Each Stage
+
+    Text Calculator
+
+    Quiz with Questions
+
+    “Guess the Number” Game
+
+    Console Notepad
+
+    Phonebook Contacts
+
+    Mini Text Game with Map and Movement
