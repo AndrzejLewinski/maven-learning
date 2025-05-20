@@ -1,6 +1,7 @@
 package org.example.learning.LightPractice;
 
 import org.example.learning.HelpClasses.TestableCircle;
+import org.example.learning.InitialLearningPhase.LegacyLightPractice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -18,7 +19,7 @@ public class LightPracticeTest {
         TestableCircle circle5 = new TestableCircle(5);
         double area5 = circle5.area();
         double area4 = circle4.area();
-        LightPractice lp = new LightPractice();
+        LegacyLightPractice lp = new LegacyLightPractice();
         double areaFive = lp.circleArea(5);
         double areaFour = lp.circleArea(4);
         Assertions.assertEquals(area4,areaFour,0.0001);
@@ -28,7 +29,7 @@ public class LightPracticeTest {
     @Test
     void testTriangleArea(){
 
-        LightPractice lightPractice = new LightPractice();
+        LegacyLightPractice lightPractice = new LegacyLightPractice();
         Assertions.assertEquals(6,lightPractice.triangleArea(3,4));
         Assertions.assertEquals(60000,lightPractice.triangleArea(300,400));
         Assertions.assertEquals(25,lightPractice.triangleArea(5,10));
@@ -36,7 +37,7 @@ public class LightPracticeTest {
 
     @Test
     void testAdd() {
-        LightPractice lightPractice = new LightPractice();
+        LegacyLightPractice lightPractice = new LegacyLightPractice();
         int result = lightPractice.add(2,3);
         Assertions.assertEquals(5, result);
         Assertions.assertEquals(0, lightPractice.add(-2, 2));
@@ -45,7 +46,7 @@ public class LightPracticeTest {
 
     @Test
     void testFactorial(){
-        LightPractice lp = new LightPractice();
+        LegacyLightPractice lp = new LegacyLightPractice();
         int result0 = lp.returnFactorial(0);
         int result = lp.returnFactorial(3);
         int result2 = lp.returnFactorial(4);

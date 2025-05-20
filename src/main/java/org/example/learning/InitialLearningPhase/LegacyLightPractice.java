@@ -1,4 +1,4 @@
-package org.example.learning.LightPractice;
+package org.example.learning.InitialLearningPhase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,31 +14,32 @@ import java.util.stream.Stream;
 /**
  * Created by User on 19.05.2025
  */
-public class LightPractice {
+public class LegacyLightPractice {
 
-    private static final Logger logger = LoggerFactory.getLogger(LightPractice.class);
+    private static final Logger logger = LoggerFactory.getLogger(LegacyLightPractice.class);
 
     public static void main(String[] args) {
-        LightPractice lp = new LightPractice();
+        LegacyLightPractice lp = new LegacyLightPractice();
         lp.logProgramStart();
 
     }
 
+
     @SuppressWarnings("unused")
     private void printSortedRandomNumbers(int range, int bound){
-        LightPractice lp = new LightPractice();
-        lp.randomNumbers(range,bound).stream().sorted().forEach(i-> System.out.print(i+" "));
+        LegacyLightPractice lp = new LegacyLightPractice();
+        lp.generateRandomNumbers(range,bound).stream().sorted().forEach(i-> System.out.print(i+" "));
         System.out.println();
     }
 
     @SuppressWarnings("unused")
     private void printRandomNumbers(int range, int bound){
-        LightPractice lp = new LightPractice();
-        lp.randomNumbers(range,bound).forEach(i-> System.out.print(i+" "));
+        LegacyLightPractice lp = new LegacyLightPractice();
+        lp.generateRandomNumbers(range,bound).forEach(i-> System.out.print(i+" "));
         System.out.println();
     }
 
-    private List<Integer> randomNumbers(int range, int bound){
+    private List<Integer> generateRandomNumbers(int range, int bound){
         return IntStream.range(0,range).map(i->ThreadLocalRandom.current().nextInt(bound)).boxed().collect(Collectors.toList());
     }
 
@@ -131,14 +132,14 @@ public class LightPractice {
 
     @SuppressWarnings("unused")
     private void testForSumFunctionOnlyForPrimeNumbers(){
-        LightPractice lp = new LightPractice();
+        LegacyLightPractice lp = new LegacyLightPractice();
         lp.sumForPrimeNumbers(3);
         System.out.println();
         lp.sumForPrimeNumbers(7);
     }
 
     private void sumForPrimeNumbers(int counter){
-        LightPractice lp = new LightPractice();
+        LegacyLightPractice lp = new LegacyLightPractice();
         int sum = 0;
         for(int i = 0; i <= counter; i++){
             if(lp.ifPrimeNumber(i)){
@@ -268,7 +269,7 @@ public class LightPractice {
      */
     @SuppressWarnings("unused")
     private void testTheLargestIntegerFromThreeNumbers(){
-        LightPractice lp = new LightPractice();
+        LegacyLightPractice lp = new LegacyLightPractice();
         List<Integer> list = new ArrayList<>();
         for(int i =0;i<3;i++){
             //  Generate three random integers between 0 and 99
@@ -411,7 +412,7 @@ public class LightPractice {
 
     @SuppressWarnings("unused")
     private void factorialTest() {
-        LightPractice lp = new LightPractice();
+        LegacyLightPractice lp = new LegacyLightPractice();
         for(int i =1;i<7;i++){
             System.out.println(lp.returnFactorial(i));
         }
