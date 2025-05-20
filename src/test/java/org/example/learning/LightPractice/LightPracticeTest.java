@@ -26,6 +26,7 @@ public class LightPracticeTest {
         Assertions.assertEquals(area5,areaFive,0.0001);
     }
 
+
     @Test
     void testTriangleArea(){
 
