@@ -3,10 +3,8 @@ package org.example.learning.LightPractice;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.InputMismatchException;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**
@@ -20,7 +18,73 @@ public class WarmUpExercises {
         WarmUpExercises warmUpExercises = new WarmUpExercises();
         warmUpExercises.logProgramStart();
 
-        warmUpExercises.runConsoleProgramStepTwo();
+        warmUpExercises.run();
+
+    }
+
+    private void run() {
+        System.out.println(1);
+    }
+
+    @SuppressWarnings("unused")
+    private void runConsoleProgramStepThree() {
+        HashMap<String, Integer> map = new LinkedHashMap<>();
+        Scanner scanner = new Scanner(System.in);
+        for(int i =0;i<3;i++){
+            // program element
+              boolean condition = true;
+              while (condition){
+
+                  System.out.println("Wypisz String dłuższy niż 5");
+                  // validation
+                  try{
+                      String string = scanner.nextLine();
+                      // key condition statement for this program
+                      boolean keyCondition = string.length()>5;
+                      if(keyCondition){
+                          //if key condition statement for this program is true put data in map
+                          map.put(string,string.length());
+                          condition=false;
+                      }else {
+                          System.out.println("string must be greater than 5");
+                      }
+                  }catch (InputMismatchException e){
+                      System.out.println("string must be greater than 5");
+                      scanner.nextLine();
+                  }
+              }
+        }// end of program element
+        List<Integer> list = new ArrayList<>();
+        for(Map.Entry<String,Integer> eachElement : map.entrySet()){
+            System.out.println(eachElement.getKey()+" -> "+eachElement.getValue());
+            list.add(eachElement.getValue());
+        }
+        List<Integer> collect = list.stream().sorted().collect(Collectors.toList());
+        collect.forEach(i-> System.out.print(i+" "));
+        System.out.println();
+        int[] tab = new int[3];
+        for(int i =0;i<collect.size();i++){
+            tab[i]=collect.get(i);
+            System.out.print(tab[i]+" ");
+        }
+        int a  = tab[0];
+        int b = tab[1];
+        int c = tab[2];
+
+        int max1 = Math.max(a,b);
+        int max = Math.max(max1,c);
+
+        System.out.println();
+        //another option
+        map.forEach((k,v)-> System.out.println(k+" -> "+v));
+        System.out.println();
+        String longestName = "";
+        for(Map.Entry<String,Integer> eachElement : map.entrySet()){
+            if(eachElement.getValue().equals(max)){
+                longestName = eachElement.getKey();
+            }
+        }
+        System.out.println("Longest name is : "+longestName);
 
     }
 
