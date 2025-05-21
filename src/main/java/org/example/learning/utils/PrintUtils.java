@@ -18,6 +18,9 @@ public class PrintUtils {
     public static void printIntegerWithSpace(int number) {
         System.out.print(number+" ");
     }
+    public static void printIntegerAndReplace(int number){
+        System.out.print("\r"+number+" ");
+    }
 
     @SuppressWarnings("unused")
     public static void printlnLine(String text) {
@@ -30,7 +33,7 @@ public class PrintUtils {
     }
 
     public static void printObjectWithSpace(Object object){
-        System.out.println(object+" ");
+        System.out.print(object+" ");
     }
 
     public static <T> void printThreeVariables(T var1, T var2, T var3){
