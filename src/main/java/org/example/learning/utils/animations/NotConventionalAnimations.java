@@ -8,6 +8,10 @@ import java.util.concurrent.TimeUnit;
 
 public class NotConventionalAnimations {
 
+    public static void main(String[] args) {
+
+    }
+
     //warning it is not conventional animation
     @SuppressWarnings("unused")
     public static void leafRainAnimation() {
@@ -30,7 +34,7 @@ public class NotConventionalAnimations {
                     line.append(" ");
                 }
             }
-            System.out.println(line.toString() + RESET);
+            System.out.println(line + RESET);
             try {
                 TimeUnit.MILLISECONDS.sleep(150);
             } catch (InterruptedException e) {
@@ -55,9 +59,7 @@ public class NotConventionalAnimations {
             for (int j = 0; j < i; j++) {
                 bar.append(greenShades[j]).append("▓");
             }
-            for (int j = i; j < totalSteps; j++) {
-                bar.append("▒");
-            }
+            bar.append("▒".repeat(Math.max(0, totalSteps - i)));
             int percent = i * 100 / totalSteps;
             System.out.print("\rGradient loading: [" + bar + RESET + "] " + percent + "%");
             try {

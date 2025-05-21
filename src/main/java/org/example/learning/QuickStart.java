@@ -1,5 +1,6 @@
 package org.example.learning;
 
+import org.example.learning.utils.animations.DotsAnimation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,8 +16,8 @@ public class QuickStart {
 
     @SuppressWarnings("unused")
     public static void main(String[] args) {
-
-
+        DotsAnimation dotsAnimation = new DotsAnimation();
+        dotsAnimation.run();
 
     }
 

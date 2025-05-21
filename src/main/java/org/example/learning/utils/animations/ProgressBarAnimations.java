@@ -1,5 +1,9 @@
 package org.example.learning.utils.animations;
 
+import org.example.learning.QuickStart;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -7,36 +11,46 @@ import java.util.concurrent.TimeUnit;
  */
 public class ProgressBarAnimations {
 
-    @SuppressWarnings("unused")
-    public static void lemonSeedlingAndKiwi(){
-        lemonSetup();
-        seedlingSetup();
-        kiwiSetup();
+    private static final Logger logger = LoggerFactory.getLogger(ProgressBarAnimations.class);
+
+    public static final String[] GREEN_SYMBOLS = {
+            "🍃", "🌿", "🌱", "🌳", "🌾", "🍀", "🌵", "🌲", "🌻",
+            "🍏", "🍋", "🥒", "🥝", "🥑", "🌰", "🛤", "🥦", "🎄"
+    };
+
+    public static void main(String[] args) {
+        lemonSeedlingAndKiwi();
     }
 
-    public static void lemonSetup(){
+    @SuppressWarnings("unused")
+    public static void lemonSeedlingAndKiwi(){
+        ProgressBarAnimations progressBarAnimations = new ProgressBarAnimations();
+        progressBarAnimations.lemonAnimation();
+        progressBarAnimations.seedlingAnimation();
+        progressBarAnimations.kiwiAnimation();
+
+    }
+
+    public void lemonAnimation(){
         int STEPS = 10;
         int DELAY = 225;
         minimalisticGreenLemon2(STEPS,DELAY);
     }
 
-    public static void seedlingSetup(){
+    public void seedlingAnimation(){
         int STEPS = 20;
         int DELAY = 150;
         minimalisticGreenLemon2(STEPS,DELAY);
     }
 
-    public static void kiwiSetup(){
+    public void kiwiAnimation(){
         int STEPS = 30;
         int DELAY = 150;
         minimalisticGreenLemon2(STEPS,DELAY);
     }
 
     private static void minimalisticGreenLemon2(int progressBarLength, int delay) {
-        String[] symbols = {
-                "🍃", "🌿", "🌱", "🌳", "🌾", "🍀", "🌵", "🌲", "🌻",
-                "🍏", "🍋", "🥒", "🥝", "🥑", "🌰", "🛤", "🥦", "🎄"
-        };
+        String[] symbols = GREEN_SYMBOLS;
         String fullBar = "▓".repeat(progressBarLength);
         for (int i = 0; i <= progressBarLength; i++) {
             String currentProgress = fullBar.substring(0, i);
@@ -47,7 +61,7 @@ public class ProgressBarAnimations {
             try {
                 TimeUnit.MILLISECONDS.sleep(currentDelay);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                logger.error("Interrupted Exception");
             }
         }
         System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");

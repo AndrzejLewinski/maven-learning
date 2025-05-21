@@ -5,7 +5,41 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by User on 20.05.2025
  */
-public class MinimalisticAnimations {
+public class MinimalisticAnimations{
+
+    public static String[] SYMBOLS = {
+            "🍃", "🌿", "🌱", "🌳", "🌾", "🍀", "🌵", "🌲", "🌻",
+            "🍏", "🍋", "🥒", "🥝", "🥑", "🌰", "🛤", "🥦", "🎄"
+    };
+
+    public static void main(String[] args) {
+       MinimalisticAnimations minimalisticAnimations = new MinimalisticAnimations();
+       minimalisticAnimations.fourLeafClover();
+    }
+
+    @SuppressWarnings("unused")
+    public void herbalLeafAnimation(){printProgressBar(1,225,SYMBOLS);}
+
+    @SuppressWarnings("unused")
+    public void fourLeafClover(){printProgressBar(5,250, SYMBOLS);}
+
+    private static void printProgressBar(int totalSteps, int delay, String[] symbols) {
+        String fullBar = "▓".repeat(totalSteps);
+
+        for (int i = 0; i <= totalSteps; i++) {
+            String currentProgress = fullBar.substring(0, i);
+            String remaining = "▒".repeat(totalSteps - i);
+            String currentSymbol = symbols[i % symbols.length];
+            System.out.print("\rLoading: [" + currentProgress + currentSymbol + remaining + "] " + (i * 100 / totalSteps) + "%");
+            try {
+                TimeUnit.MILLISECONDS.sleep(delay);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                System.err.println("❌ Przerwano animację");
+            }
+        }
+        System.out.println("\n✅ Załadowano!");
+    }
 
     //shortest possible animation in my opinion
     @SuppressWarnings("unused")
@@ -36,53 +70,5 @@ public class MinimalisticAnimations {
             }
         }
         System.out.println();
-    }
-    //extreme minimalistic animation
-    @SuppressWarnings("unused")
-    public static void extremeMinimalisticGreenAnimation() {
-        String[] symbols = {
-                "🍃", "🌿", "🌱", "🌳", "🌾", "🍀", "🌵", "🌲", "🌻",
-                "🍏", "🍋", "🥒", "🥝", "🥑", "🌰", "🛤", "🥦", "🎄"
-        };
-        int totalSteps = 5;
-        int delay = 250;
-        String fullBar = "▓".repeat(totalSteps);
-        for (int i = 0; i <= totalSteps; i++) {
-            String currentProgress = fullBar.substring(0, i);
-            String remaining = "▒".repeat(totalSteps - i);
-            String currentSymbol = symbols[i % symbols.length];
-            System.out.print("\rLoading: [" + currentProgress + currentSymbol + remaining + "] " + (i * 100 / totalSteps) + "%");
-            try {
-                Thread.sleep(delay);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");
-    }
-    //minimalistic animation
-    @SuppressWarnings("unused")
-    public static void minimalisticGreenLemonAnimation() {
-        String[] symbols = {
-                "🍃", "🌿", "🌱", "🌳", "🌾", "🍀", "🌵", "🌲", "🌻",
-                "🍏", "🍋", "🥒", "🥝", "🥑", "🌰", "🛤", "🥦", "🎄"
-        };
-        int totalSteps = 10;
-        int delay = 225;
-        String fullBar = "▓".repeat(totalSteps);
-
-        for (int i = 0; i <= totalSteps; i++) {
-            String currentProgress = fullBar.substring(0, i);
-            String remaining = "▒".repeat(totalSteps - i);
-            String currentSymbol = symbols[i % symbols.length];
-            int currentDelay = (i < totalSteps / 2) ? delay : (delay / 2);
-            System.out.print("\rLoading: [" + currentProgress + currentSymbol + remaining + "] " + (i * 100 / totalSteps) + "%");
-            try {
-                TimeUnit.MILLISECONDS.sleep(currentDelay);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");
     }
 }
