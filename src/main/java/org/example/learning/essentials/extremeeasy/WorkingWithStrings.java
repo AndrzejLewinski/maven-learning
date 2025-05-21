@@ -23,13 +23,11 @@ public class WorkingWithStrings {
         AnimationLauncher.runHerbalLeaf();
         ///AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
-        //
-        //exercise8();
-        exercises();
+
     }
 
     @SuppressWarnings("unused")
-    private static void exercise8() {
+    private void exercise8() {
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -56,7 +54,8 @@ public class WorkingWithStrings {
 
     }
 
-    private static void exercises() {
+    @SuppressWarnings("unused")
+    private void exercises() {
         Scanner scanner = new Scanner(System.in);
         PrintUtils.printLine("Enter name: ");
         String name = scanner.nextLine();

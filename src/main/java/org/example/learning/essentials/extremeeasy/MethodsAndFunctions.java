@@ -32,6 +32,7 @@ public class MethodsAndFunctions {
 
     }
 
+    @SuppressWarnings("unused")
     public boolean isEven(int number){
         return number%2==0;
     }
