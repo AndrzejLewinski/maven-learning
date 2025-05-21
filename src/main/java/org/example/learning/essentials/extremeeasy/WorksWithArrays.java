@@ -25,14 +25,6 @@ public class WorksWithArrays {
         ///AnimationLauncher.runLemon();
 
 
-        WorksWithArrays worksWithArrays = new WorksWithArrays();
-        worksWithArrays.exercise11b();
-
-    }
-
-    private void exercise11b() {
-
-
     }
 
 
