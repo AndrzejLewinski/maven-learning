@@ -3,9 +3,8 @@ import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -27,15 +26,15 @@ public class WorksWithArrays {
 
 
         WorksWithArrays worksWithArrays = new WorksWithArrays();
-        worksWithArrays.exercise11();
+        worksWithArrays.exercise11b();
 
     }
 
-    private void exercise11() {
-
+    private void exercise11b() {
 
 
     }
+
 
     @SuppressWarnings("unused")
     private void exercise10() {
