@@ -25,37 +25,43 @@ public class BasicMathematicalOperations {
     @SuppressWarnings("unused")
     private void basicMathOperations() {
         BasicMathematicalOperations b = new BasicMathematicalOperations();
-        System.out.print("Enter first number: ");
+        System.out.print("Enter the first number: ");
         int x = b.isValidNumber();
-        System.out.print("Enter second number (different than zero): ");
-
+        System.out.print("Enter the second number (non-zero): ");
         int y = b.getNonZeroNumber();
+
         int z = x + y;
         int a = x - y;
         int d = x * y;
         int e = x % y;
-        int f = (int) Math.pow(x,y);
+        int f = (int) Math.pow(x, y);
 
-        //Średnia z wyników dodawania, odejmowania, mnożenia, znajdowania reszty z dzielenia, potęgowania
-        int sum = z+a+d+e+f;
-        double avg = division(sum,5);
+        int sum = z + a + d + e + f;
+        double avg = division(sum, 5);
 
-        double c = b.division(x,y);
-        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] +"," ["+y+"] = ","["+z+"]\n");
-        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] -"," ["+y+"] = ","["+a+"]\n");
-        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] *"," ["+y+"] = ","["+d+"]\n");
-        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] %"," ["+y+"] = ","["+e+"]\n");
-        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] ^"," ["+y+"] = ","["+f+"]\n");
-        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] /"," ["+y+"] = ","["+c+"]\n");
-        if (isEven(x)){
-            PrintUtils.printThreeVarAnimations("Liczba ["+x+"] is"," [even","]");
-        }else {
-            PrintUtils.printThreeVarAnimations("Liczba ["+x+"] is"," [odd","]");
+        double c = 0;
+        try {
+            c = b.division(x, y);
+        } catch (ArithmeticException e1) {
+            System.out.println("Division by zero error!");
         }
-        PrintUtils.printThreeVarAnimations("Średnia z wyników dodawania, odejmowania, " +
-                "mnożenia, znajdowania reszty z dzielenia, potęgowania = ","["+avg+"]","\n");
+        PrintUtils.printThreeVarAnimations("Result: [" + x + "] +", " [" + y + "] = ", "[" + z + "]\n");
+        PrintUtils.printThreeVarAnimations("Result: [" + x + "] -", " [" + y + "] = ", "[" + a + "]\n");
+        PrintUtils.printThreeVarAnimations("Result: [" + x + "] *", " [" + y + "] = ", "[" + d + "]\n");
+        PrintUtils.printThreeVarAnimations("Result: [" + x + "] %", " [" + y + "] = ", "[" + e + "]\n");
+        PrintUtils.printThreeVarAnimations("Result: [" + x + "] ^", " [" + y + "] = ", "[" + f + "]\n");
+        PrintUtils.printThreeVarAnimations("Result: [" + x + "] /", " [" + y + "] = ", "[" + c + "]\n");
 
+        if (isEven(x)) {
+            PrintUtils.printThreeVarAnimations("Number [" + x + "] is", " [even", "]\n");
+        } else {
+            PrintUtils.printThreeVarAnimations("Number [" + x + "] is", " [odd", "]\n");
+        }
+
+        PrintUtils.printThreeVarAnimations("Average of the results of addition, subtraction, " +
+                "multiplication, modulus, and exponentiation = ", "[" + avg + "]", "\n");
     }
+
 
     private boolean isEven(int n){
         return n % 2 == 0;
