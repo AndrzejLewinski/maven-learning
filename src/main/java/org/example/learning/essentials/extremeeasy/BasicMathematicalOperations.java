@@ -1,17 +1,13 @@
 package org.example.learning.essentials.extremeeasy;
-
 import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Scanner;
-
 /**
  * Created by User on 22.05.2025
  */
 public class BasicMathematicalOperations {
-
 
     private static final Logger logger = LoggerFactory.getLogger(BasicMathematicalOperations.class);
 
@@ -22,6 +18,10 @@ public class BasicMathematicalOperations {
         ///  AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
 
+    }
+
+    @SuppressWarnings("unused")
+    private static void basicMathOperations() {
         BasicMathematicalOperations b = new BasicMathematicalOperations();
         System.out.print("Enter first number: ");
         int x = b.isValidNumber();
@@ -30,21 +30,16 @@ public class BasicMathematicalOperations {
         int z = x+y;
         int a = x-y;
         double c = b.division(x,y);
-
         PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] +"," ["+y+"] = ","["+z+"]\n");
         PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] -"," ["+y+"] = ","["+a+"]\n");
         PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] /"," ["+y+"] = ","["+c+"]");
-
     }
-
     private double division(int a, int b){
         if(b==0){
             throw new ArithmeticException("You can't divide by zero");
         }
         return (double) a/b;
     }
-
-
     private int getNonZeroNumber() {
         Scanner scanner = new Scanner(System.in);
         int number;
@@ -63,12 +58,10 @@ public class BasicMathematicalOperations {
         }
         return number;
     }
-
     @SuppressWarnings("unused")
     private int addition(int a, int b){
         return a+b;
     }
-
     private int isValidNumber(){
         Scanner scanner = new Scanner(System.in);
         int number;
@@ -83,6 +76,4 @@ public class BasicMathematicalOperations {
         }
         return number;
     }
-
-
 }
