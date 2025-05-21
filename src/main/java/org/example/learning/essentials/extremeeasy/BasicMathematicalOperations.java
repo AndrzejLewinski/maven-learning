@@ -47,7 +47,7 @@ public class BasicMathematicalOperations {
 
     private int getNonZeroNumber() {
         Scanner scanner = new Scanner(System.in);
-        int number = 0;
+        int number;
         while (true) {
             try {
                 String string = scanner.nextLine();
@@ -64,14 +64,14 @@ public class BasicMathematicalOperations {
         return number;
     }
 
-
+    @SuppressWarnings("unused")
     private int addition(int a, int b){
         return a+b;
     }
 
     private int isValidNumber(){
         Scanner scanner = new Scanner(System.in);
-        int number = 0;
+        int number;
         while (true){
             try{
                 String input = scanner.nextLine();
