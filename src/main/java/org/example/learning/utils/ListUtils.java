@@ -11,9 +11,9 @@ public class ListUtils {
     @SuppressWarnings("unused")
     public static void printList(List<?> list) {
         for (Object item : list) {
-            System.out.print(item + " ");
+            PrintUtils.printLine(item+" ");
         }
-        System.out.println();
+        PrintUtils.printEmptyLine();
     }
 
     @SuppressWarnings("unused")

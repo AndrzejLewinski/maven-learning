@@ -9,6 +9,11 @@ public class PrintUtils {
     // Simple method for printing a line of text
     @SuppressWarnings("unused")
     public static void printLine(String text) {
+        System.out.print(text);
+    }
+
+    @SuppressWarnings("unused")
+    public static void printlnLine(String text) {
         System.out.println(text);
     }
 
