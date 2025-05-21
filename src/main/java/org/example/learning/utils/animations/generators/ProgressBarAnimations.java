@@ -1,6 +1,5 @@
-package org.example.learning.utils.animations;
+package org.example.learning.utils.animations.generators;
 
-import org.example.learning.QuickStart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

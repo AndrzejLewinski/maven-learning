@@ -1,4 +1,4 @@
-package org.example.learning.utils.animations;
+package org.example.learning.utils.animations.generators;
 
 import java.util.concurrent.TimeUnit;
 

@@ -1,4 +1,4 @@
-package org.example.learning.utils.animations;
+package org.example.learning.utils.animations.generators;
 
 import java.util.concurrent.TimeUnit;
 
@@ -8,13 +8,10 @@ import java.util.concurrent.TimeUnit;
 
 public class NotConventionalAnimations {
 
-    public static void main(String[] args) {
-
-    }
 
     //warning it is not conventional animation
     @SuppressWarnings("unused")
-    public static void leafRainAnimation() {
+    public void leafRainAnimation() {
         String RESET = "\033[0m";
         String[] shades = {
                 "\033[38;5;34m", "\033[38;5;40m", "\033[38;5;46m", "\033[38;5;82m"
@@ -46,7 +43,7 @@ public class NotConventionalAnimations {
 
     //warning - it is not conventional animation
     @SuppressWarnings("unused")
-    public static void gradientProgressBarAnimation() {
+    public void gradientProgressBarAnimation() {
         String[] greenShades = {
                 "\033[38;5;22m", "\033[38;5;28m", "\033[38;5;34m",
                 "\033[38;5;40m", "\033[38;5;46m", "\033[38;5;82m",
