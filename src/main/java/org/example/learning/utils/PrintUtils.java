@@ -1,5 +1,7 @@
 package org.example.learning.utils;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by User on 19.05.2025
  */
@@ -23,8 +25,23 @@ public class PrintUtils {
     }
 
     @SuppressWarnings("unused")
-    public static void printlnLine(String text) {
+    public static void printlnStringLine(String text) {
         System.out.println(text);
+    }
+
+
+    @SuppressWarnings("unused")
+    public static<T> void printAnimation(T input){
+        String sth = input.toString();
+        char[] charArray = sth.toCharArray();
+        for(Character c : charArray){
+            try {
+                System.out.print(c);
+                TimeUnit.MILLISECONDS.sleep(250);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     @SuppressWarnings("unused")
@@ -38,6 +55,40 @@ public class PrintUtils {
 
     public static <T> void printThreeVariables(T var1, T var2, T var3){
         System.out.print(String.valueOf(var1)+ var2+var3);
+    }
+
+    public static <T> void printThreeVarAnimations(T prefix, T output, T suffix){
+        final int DELAY = 125;
+        String sth = prefix.toString();
+        char[] charArray = sth.toCharArray();
+        for(Character c : charArray){
+            try {
+                System.out.print(c);
+                TimeUnit.MILLISECONDS.sleep(DELAY);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        String sth2 = output.toString();
+        char[] charArray2 = sth2.toCharArray();
+        for(Character c : charArray2){
+            try {
+                System.out.print(c);
+                TimeUnit.MILLISECONDS.sleep(DELAY);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        String sth3 = suffix.toString();
+        char[] charArray3 = sth3.toCharArray();
+        for(Character c : charArray3){
+            try {
+                System.out.print(c);
+                TimeUnit.MILLISECONDS.sleep(DELAY);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public String getSuffix(int number) {

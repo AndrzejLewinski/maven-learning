@@ -18,9 +18,9 @@ public class VariablesAndDataTypes {
     @SuppressWarnings("unused")
     private void isSunny(boolean isSunny){
         if(isSunny){
-            PrintUtils.printlnLine("It's sunny!");
+            PrintUtils.printlnStringLine("It's sunny!");
         }else {
-            PrintUtils.printlnLine("It's not sunny!");
+            PrintUtils.printlnStringLine("It's not sunny!");
         }
     }
 
@@ -64,7 +64,7 @@ public class VariablesAndDataTypes {
 
     @SuppressWarnings("unused")
     private static void helloWorld(){
-        PrintUtils.printlnLine("Hello World!");
+        PrintUtils.printlnStringLine("Hello World!");
     }
 
     @SuppressWarnings("unused")

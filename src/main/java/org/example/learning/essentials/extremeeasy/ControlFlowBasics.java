@@ -78,9 +78,9 @@ public class ControlFlowBasics {
 
     private void exercise1(int n){
         if(ifPositiveNumber(n)){
-            PrintUtils.printlnLine("this is positive number");
+            PrintUtils.printlnStringLine("this is positive number");
         }else {
-            PrintUtils.printlnLine("this number is not positive");
+            PrintUtils.printlnStringLine("this number is not positive");
         }
     }
 
