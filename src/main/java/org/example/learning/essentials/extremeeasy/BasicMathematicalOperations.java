@@ -28,12 +28,18 @@ public class BasicMathematicalOperations {
         System.out.print("Enter first number: ");
         int x = b.isValidNumber();
         System.out.print("Enter second number (different than zero): ");
+
         int y = b.getNonZeroNumber();
         int z = x + y;
         int a = x - y;
         int d = x * y;
         int e = x % y;
         int f = (int) Math.pow(x,y);
+
+        //Średnia z wyników dodawania, odejmowania, mnożenia, znajdowania reszty z dzielenia, potęgowania
+        int sum = z+a+d+e+f;
+        double avg = division(sum,5);
+
         double c = b.division(x,y);
         PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] +"," ["+y+"] = ","["+z+"]\n");
         PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] -"," ["+y+"] = ","["+a+"]\n");
@@ -46,6 +52,9 @@ public class BasicMathematicalOperations {
         }else {
             PrintUtils.printThreeVarAnimations("Liczba ["+x+"] is"," [odd","]");
         }
+        PrintUtils.printThreeVarAnimations("Średnia z wyników dodawania, odejmowania, " +
+                "mnożenia, znajdowania reszty z dzielenia, potęgowania = ","["+avg+"]","\n");
+
     }
 
     private boolean isEven(int n){
