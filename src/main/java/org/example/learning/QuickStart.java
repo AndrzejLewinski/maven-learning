@@ -24,6 +24,7 @@ public class QuickStart {
         PrintUtils.printThreeVariables(new PrintUtils().getPrefix(1),new QuickStart().myAge(15),"\n");
         PrintUtils.printThreeVariables(new PrintUtils().getPrefix(2),new QuickStart().piNumber(),"\n");
 
+
     }
 
     private double piNumber(){
