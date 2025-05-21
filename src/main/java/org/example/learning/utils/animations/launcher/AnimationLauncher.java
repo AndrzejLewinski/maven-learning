@@ -17,6 +17,7 @@ public class AnimationLauncher {
         new FourLeafCloverAnimation().run();
         new LemonAnimation().run();
         new DotsAnimation().run();
+
     }
 
     @SuppressWarnings("unused")
@@ -57,7 +58,7 @@ public class AnimationLauncher {
 
     @SuppressWarnings("unused")
     public static void displayAvailableMethods(){
-        System.out.println(new AnimationLauncher().toString());
+        System.out.println(new AnimationLauncher());
     }
 
     @Override

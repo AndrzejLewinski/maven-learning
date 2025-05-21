@@ -8,7 +8,15 @@ import java.util.concurrent.TimeUnit;
 public class Animations {
     public static void main(String[] args) {
 
+        animation01();
+        animation02();
+        animation03();
+        animation04();
+        animation05();
+        animation06();
         animation07();
+        animation08();
+        animation09();
 
 
     }
