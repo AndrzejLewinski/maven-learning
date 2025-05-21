@@ -10,7 +10,7 @@ The project is organized as follows:
 
 ### 1. **Demo**
 - **AnimationDemo.java**  
-  A simple class to demonstrate various predefined animations. It is used to quickly test and view animations such as `HerbalLeaf`, `FourLeafClover`, `Lemon`, and `Dots`.
+  A simple class to demonstrate various predefined animations. It is used to quickly test and view animations such as `HerbalLeaf 🌿`, `FourLeafClover 🍀`, `Lemon 🍋`, and `Dots`.
 
 ### 2. **Generators**
 - **Animation.java**  
@@ -18,7 +18,7 @@ The project is organized as follows:
 - **MinimalisticAnimations.java**  
   Contains minimalistic and simple animations.
 - **NotConventionalAnimations.java**  
-  Defines animations that do not follow conventional structures, such as the "GreenRain" animation.
+  Defines animations that do not follow conventional structures, such as the "GreenRain 🌧️" animation.
 - **ProgressBarAnimations.java**  
   Includes animations related to progress bars.
 
@@ -29,15 +29,15 @@ The project is organized as follows:
 ### 4. **Presets**
 - **Graphic Animations**
     - **FourLeafCloverAnimation.java**  
-      A graphic animation of a four-leaf clover.
+      A graphic animation of a four-leaf clover 🍀.
     - **GradientAnimation.java**  
-      A gradient-themed animation.
+      A gradient-themed animation 
     - **GreenRain.java**  
-      A non-conventional animation simulating a "green rain" effect.
+      A non-conventional animation simulating a "green rain" effect 🌧️.
     - **HerbalLeafAnimation.java**  
-      A graphic animation of herbal leaves falling.
+      A graphic animation of herbal leaves falling 🌿.
     - **LemonAnimation.java**  
-      A graphic animation involving lemons.
+      A graphic animation involving lemons 🍋.
 
 - **Loading Animations**
     - **DotsAnimation.java**  
@@ -51,4 +51,4 @@ The project is organized as follows:
 Use the following method call:
 
 ```java
-AnimationLauncher.runAll();
+AnimationLauncher.runAll(); // Runs all animations (Herbal Leaf 🌿, Four Leaf Clover 🍀, Lemon 🍋, Dots)

@@ -1,3 +1,4 @@
+🟢 **1. Wprowadzenie do Javy i podstawy**
 1. IntroductionToJava
 2. HelloWorldProgram
 3. VariablesAndDataTypes
@@ -18,6 +19,8 @@
 18. ForEachLoopInJava
 19. LabelsInLoops
 20. ScopeOfVariables
+
+🟡 **2. Programowanie obiektowe (OOP)**
 21. ObjectOrientedBasics
 22. ClassesAndObjectsInJava
 23. ConstructorsInJava
@@ -28,6 +31,8 @@
 28. EncapsulationInJava
 29. InheritanceInJava
 30. PolymorphismInJava
+
+🟠 **3. Obsługa wyjątków**
 31. ExceptionHandlingBasics
 32. TryCatchBlocks
 33. MultipleCatchBlocks
@@ -38,6 +43,8 @@
 38. HandlingRuntimeExceptions
 39. HandlingCheckedExceptions
 40. ExceptionChaining
+
+🟢 **4. Kolekcje i struktury danych**
 41. ArrayListsInJava
 42. LinkedListsInJava
 43. HashMapsInJava
@@ -48,6 +55,8 @@
 48. StacksInJava
 49. IteratorsInJava
 50. CollectionsSortingInJava
+
+🟡 **5. Strumienie i programowanie funkcyjne**
 51. StreamsInJava
 52. LambdaExpressionsInJava
 53. FunctionalInterfacesInJava
@@ -68,6 +77,8 @@
 68. OptionalsInJava
 69. MonadsInJava
 70. CurryingInJava
+
+🟠 **6. Zaawansowane klasy i interfejsy**
 71. AbstractClassesInJava
 72. InterfacesInJava
 73. AbstractMethodsInJava
@@ -78,6 +89,8 @@
 78. NestedClassesInJava
 79. SingletonPatternInJava
 80. FactoryPatternInJava
+
+🟢 **7. Narzędzia programistyczne**
 81. LoggingInJava
 82. DebuggingInJava
 83. JVMArchitecture
@@ -88,6 +101,8 @@
 88. AnnotationsInJava
 89. GenericsInJava
 90. TypeInferenceInJava
+
+🟡 **8. Wzorce projektowe**
 91. SingletonPattern
 92. FactoryPattern
 93. ObserverPattern
@@ -98,6 +113,8 @@
 98. CommandPattern
 99. IteratorPattern
 100. CompositePattern
+
+🟠 **9. Algorytmy**
 101. SortingAlgorithms
 102. SearchingAlgorithms
 103. MergeSortInJava
@@ -108,6 +125,8 @@
 108. BinarySearchInJava
 109. TreeTraversalsInJava
 110. GraphTraversalsInJava
+
+🟢 **10. Programowanie wielowątkowe**
 111. MultithreadingInJava
 112. ConcurrencyInJava
 113. SynchronizationInJava
@@ -118,16 +137,22 @@
 118. ConcurrencyUtilitiesInJava
 119. AtomicOperationsInJava
 120. ForkJoinPoolInJava
+
+🟡 **11. Obsługa plików i serializacja**
 121. FileHandlingInJava
 122. ReadingFromFileInJava
 123. WritingToFileInJava
 124. SerializationInJava
 125. DeserializationInJava
+
+🟠 **12. Połączenie z bazą danych**
 126. DatabaseConnectivityInJava
 127. JDBCConnectionInJava
 128. PreparedStatementInJava
 129. StatementAndResultSetInJava
 130. SQLInjectionPreventionInJava
+
+🟢 **13. Testowanie**
 131. JUnitBasics
 132. WritingFirstJUnitTest
 133. JUnitAssertions
@@ -138,6 +163,8 @@
 138. JUnitParametersInTests
 139. MockitoAnnotationsInJava
 140. JUnit5Features
+
+🟡 **14. Maven**
 141. IntroductionToMaven
 142. SettingUpMavenProject
 143. MavenBuildLifeCycle
@@ -158,6 +185,8 @@
 158. MavenCleanGoal
 159. MavenTestGoal
 160. MavenPackageGoal
+
+🟠 **15. Technologie webowe**
 161. IntroductionToServlets
 162. CreatingFirstServlet
 163. HTTPRequestsInJava
@@ -168,6 +197,8 @@
 168. SessionManagementInJava
 169. CookiesInJava
 170. URLPatternsInJava
+
+🟢 **16. Spring**
 171. IntroductionToSpringFramework
 172. SpringConfiguration
 173. SpringBeans
@@ -178,6 +209,8 @@
 178. SpringBootRestApi
 179. SpringBootApplicationStructure
 180. SpringBootTesting
+
+🟡 **17. Narzędzia DevOps**
 181. UsingGitForVersionControl
 182. JenkinsCI
 183. DockerIntroduction
@@ -188,6 +221,8 @@
 188. ElasticSearchInJava
 189. KubernetesInJava
 190. AWSAndJava
+
+🟠 **18. Projektowanie i implementacja aplikacji**
 191. ProjectSetupInJava
 192. VersionControlWithGit
 193. WorkingWithOpenSourceProjects
