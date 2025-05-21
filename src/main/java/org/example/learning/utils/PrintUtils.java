@@ -12,6 +12,32 @@ public class PrintUtils {
         System.out.println(text);
     }
 
+    @SuppressWarnings("unused")
+    public static void printObject(Object object){
+        System.out.print(object);
+    }
+
+    public static void printObjectWithSpace(Object object){
+        System.out.println(object+" ");
+    }
+
+    public static <T> void printThreeVariables(T var1, T var2, T var3){
+        System.out.print(String.valueOf(var1)+ var2+var3);
+    }
+
+    public String getSuffix(int number) {
+        return " (exercise_" + number + ")";
+    }
+
+    public String getPrefix(int number) {
+        return "(exercise_" + number + ")  |  ";
+    }
+
+    @SuppressWarnings("unused")
+    public static void printlnObject(Object object){
+        System.out.println(object);
+    }
+
     // Prints text with a prefix
     @SuppressWarnings("unused")
     public static void printWithPrefix(String prefix, String text) {
