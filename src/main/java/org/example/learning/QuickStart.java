@@ -42,7 +42,7 @@ public class QuickStart {
 
     @SuppressWarnings("unused")
     private void exercises(){
-        // PrintUtils.printObjectWithCustomSuffixes(new QuickStart().myAge(15)," (exercise_",1+")");
+        PrintUtils.printThreeVariables(new PrintUtils().getPrefix(1),new QuickStart().myAge(14),"\n");
     }
 
 
