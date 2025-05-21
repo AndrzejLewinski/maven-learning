@@ -18,22 +18,40 @@ public class BasicMathematicalOperations {
         ///  AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
 
+        BasicMathematicalOperations basicMathematicalOperations = new BasicMathematicalOperations();
+        basicMathematicalOperations.basicMathOperations();
     }
 
     @SuppressWarnings("unused")
-    private static void basicMathOperations() {
+    private void basicMathOperations() {
         BasicMathematicalOperations b = new BasicMathematicalOperations();
         System.out.print("Enter first number: ");
         int x = b.isValidNumber();
         System.out.print("Enter second number (different than zero): ");
         int y = b.getNonZeroNumber();
-        int z = x+y;
-        int a = x-y;
+        int z = x + y;
+        int a = x - y;
+        int d = x * y;
+        int e = x % y;
+        int f = (int) Math.pow(x,y);
         double c = b.division(x,y);
         PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] +"," ["+y+"] = ","["+z+"]\n");
         PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] -"," ["+y+"] = ","["+a+"]\n");
-        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] /"," ["+y+"] = ","["+c+"]");
+        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] *"," ["+y+"] = ","["+d+"]\n");
+        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] %"," ["+y+"] = ","["+e+"]\n");
+        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] ^"," ["+y+"] = ","["+f+"]\n");
+        PrintUtils.printThreeVarAnimations("Wynik: ["+x+"] /"," ["+y+"] = ","["+c+"]\n");
+        if (isEven(x)){
+            PrintUtils.printThreeVarAnimations("Liczba ["+x+"] is"," [even","]");
+        }else {
+            PrintUtils.printThreeVarAnimations("Liczba ["+x+"] is"," [odd","]");
+        }
     }
+
+    private boolean isEven(int n){
+        return n % 2 == 0;
+    }
+
     private double division(int a, int b){
         if(b==0){
             throw new ArithmeticException("You can't divide by zero");
