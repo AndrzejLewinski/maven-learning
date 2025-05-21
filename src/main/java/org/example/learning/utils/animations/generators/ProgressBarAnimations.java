@@ -1,5 +1,6 @@
 package org.example.learning.utils.animations.generators;
 
+import org.example.learning.utils.PrintUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -63,7 +64,8 @@ public class ProgressBarAnimations {
                 logger.error("Interrupted Exception");
             }
         }
-        System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");
+        PrintUtils.printDoubleEmptyLine();
+        //System.out.println("\n✅ Załadowano! Wczytano wszystkie roślinki.");
     }
 
 }

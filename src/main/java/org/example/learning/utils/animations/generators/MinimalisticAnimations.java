@@ -1,5 +1,7 @@
 package org.example.learning.utils.animations.generators;
 
+import org.example.learning.utils.PrintUtils;
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -38,7 +40,8 @@ public class MinimalisticAnimations{
                 System.err.println("❌ Przerwano animację");
             }
         }
-        System.out.println("\n✅ Załadowano!");
+        PrintUtils.printDoubleEmptyLine();
+        //System.out.println("\n✅ Załadowano!");
     }
 
     //shortest possible animation in my opinion
