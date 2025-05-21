@@ -14,6 +14,7 @@ public class QuickStart {
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
+        AnimationLauncher.runDots();
         AnimationLauncher.runHerbalLeaf();
 
     }
