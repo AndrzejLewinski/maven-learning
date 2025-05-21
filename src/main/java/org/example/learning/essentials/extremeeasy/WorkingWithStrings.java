@@ -19,8 +19,6 @@ public class WorkingWithStrings {
         AnimationLauncher.runHerbalLeaf();
         ///AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
-        //new BasicInputOutput().enterYourName();
-
 
     }
 }

@@ -21,12 +21,12 @@ public class BasicInputOutput {
         AnimationLauncher.runHerbalLeaf();
         ///AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
-        //new BasicInputOutput().enterYourName();
-        //new BasicInputOutput().exercises();
+        new BasicInputOutput().enterYourName();
+        new BasicInputOutput().exercises();
 
     }
 
-    private void exercises(){
+    private void exercises() {
         String prompt1 = "Enter your name: ";
         String prompt2 = "Enter number a: ";
         String prompt3 = "Enter number b: ";
@@ -37,27 +37,26 @@ public class BasicInputOutput {
         Scanner scanner = new Scanner(System.in);
         PrintUtils.printLine(prompt1);
         String name = scanner.nextLine();
-        PrintUtils.printThreeVarAnimations("Hey, ",name,"! \n");
+        PrintUtils.printThreeVarAnimations("Hey, ", name, "! \n");
         PrintUtils.printLine(prompt2);
         int a = isValidNumber(scanner);
         PrintUtils.printLine(prompt3);
         int b = isValidNumber(scanner);
-        PrintUtils.printThreeVarAnimations(numberA+a+" ,",numberB+b,output1+(a+b)+"\n");
+        PrintUtils.printThreeVarAnimations(numberA + a + " ,", numberB + b, output1 + (a + b) + "\n");
         PrintUtils.printLine(prompt4);
         int c = isValidNumber(scanner);
-        PrintUtils.printThreeVarAnimations("entered number n = "+c+", n^2 = ",Math.pow(c,2),"\n");
+        PrintUtils.printThreeVarAnimations("entered number n = " + c + ", n^2 = ", Math.pow(c, 2), "\n");
         PrintUtils.printLine(prompt2);
         a = isValidNumber(scanner);
         PrintUtils.printLine(prompt3);
         b = isValidNumber(scanner);
-        compareTwoNumbers(a,b);
+        compareTwoNumbers(a, b);
         PrintUtils.printLine(prompt4);
         c = isValidNumber(scanner);
-        if(c%2==0){
-            PrintUtils.printThreeVarAnimations("Entered number n = ",c," is even number.");
-        }else {
-            PrintUtils.printThreeVarAnimations("Entered number n = ",c," is even number.");
+        if (c % 2 == 0) {
+            PrintUtils.printThreeVarAnimations("Entered number n = ", c, " is even number.");
         }
+        PrintUtils.printThreeVarAnimations("Entered number n = ", c, " is even number.");
     }
 
     private void compareTwoNumbers(int a, int b){
