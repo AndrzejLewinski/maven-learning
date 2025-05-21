@@ -12,6 +12,13 @@ public class PrintUtils {
         System.out.print(text);
     }
 
+    public static void printStringWithSpace(String text) {
+        System.out.print(text+" ");
+    }
+    public static void printIntegerWithSpace(int number) {
+        System.out.print(number+" ");
+    }
+
     @SuppressWarnings("unused")
     public static void printlnLine(String text) {
         System.out.println(text);
