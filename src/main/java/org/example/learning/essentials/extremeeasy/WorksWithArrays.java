@@ -3,7 +3,6 @@ import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
@@ -28,10 +27,59 @@ public class WorksWithArrays {
 
 
         WorksWithArrays worksWithArrays = new WorksWithArrays();
-        worksWithArrays.exercise9();
+        worksWithArrays.exercise11();
 
     }
 
+    private void exercise11() {
+
+
+
+
+    }
+
+    private void exercise10() {
+
+        List<Integer> collect =
+                IntStream.range(0, 100).map(i -> ThreadLocalRandom.current().nextInt(10)).boxed().collect(Collectors.toList());
+        collect.forEach(PrintUtils::printIntegerWithSpace);
+        List<Integer> collect1 = collect.stream().sorted().collect(Collectors.toList());
+        PrintUtils.printEmptyLine();
+        collect1.forEach(PrintUtils::printIntegerWithSpace);
+
+        //indeks 0, ... ,indeks 9
+        //do każdego indeksu tablicy będzie przyporządkowana ilość wystąpień danej liczby
+        //
+        int[] tab = new int[10];
+
+        for(Integer integer : collect1){
+            for(int i =0;i<collect1.size();i++){
+                if(integer.equals(i)){
+                    tab[i]+=1;
+                }
+            }
+        }
+        PrintUtils.printEmptyLine();
+        for(Integer integer : tab){
+            PrintUtils.printIntegerWithSpace(integer);
+        }
+
+        int[] counts = new int[10];
+
+        for (Integer number : collect) {
+            counts[number]++;
+        }
+        PrintUtils.printEmptyLine();
+
+        for (int i = 0; i < counts.length; i++) {
+            System.out.println("Liczba " + i + " występuje: " + counts[i] + " razy.");
+        }
+
+
+
+    }
+
+    @SuppressWarnings("unused")
     private void exercise9() {
 
         List<Integer> collect = IntStream.range(0,100).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
@@ -121,8 +169,8 @@ public class WorksWithArrays {
             PrintUtils.printObjectWithSpace(tab[i]);
         }
         for (int j = 0; j <= tab.length-1; j++) {
-            for (int i = 0; i <= tab.length-2; i++) {//5-2 = 3 , porównujemy indeks 3 z indeksem 4
-                if (tab[i] > tab[i + 1]) {
+            for (int i = 0; i <= tab.length-2; i++) {//5-2 = 3 porównujemy indeks 3 z indeksem 4
+                if (tab[i] > tab[i + 1]){
                     int temp = tab[i];
                     tab[i] = tab[i + 1];
                     tab[i + 1] = temp;
