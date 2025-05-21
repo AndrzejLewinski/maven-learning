@@ -12,7 +12,6 @@ public class QuickStart {
 
     private static final Logger logger = LoggerFactory.getLogger(QuickStart.class);
 
-
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
 
