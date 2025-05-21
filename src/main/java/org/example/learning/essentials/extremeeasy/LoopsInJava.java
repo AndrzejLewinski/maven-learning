@@ -20,7 +20,7 @@ public class LoopsInJava {
         ///  AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
 
-        new ControlFlowBasics().forLoop();
+
 
     }
 
