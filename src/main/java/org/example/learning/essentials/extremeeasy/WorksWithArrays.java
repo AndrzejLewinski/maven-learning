@@ -35,9 +35,9 @@ public class WorksWithArrays {
 
 
 
-
     }
 
+    @SuppressWarnings("unused")
     private void exercise10() {
 
         List<Integer> collect =
@@ -47,9 +47,6 @@ public class WorksWithArrays {
         PrintUtils.printEmptyLine();
         collect1.forEach(PrintUtils::printIntegerWithSpace);
 
-        //indeks 0, ... ,indeks 9
-        //do każdego indeksu tablicy będzie przyporządkowana ilość wystąpień danej liczby
-        //
         int[] tab = new int[10];
 
         for(Integer integer : collect1){
