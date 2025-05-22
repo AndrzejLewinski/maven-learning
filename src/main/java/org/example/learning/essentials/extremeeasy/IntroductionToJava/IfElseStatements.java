@@ -1,6 +1,5 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava;
 
-import org.apache.jasper.tagplugins.jstl.core.If;
 import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
@@ -9,9 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
 
 /**
  * Created by User on 22.05.2025
