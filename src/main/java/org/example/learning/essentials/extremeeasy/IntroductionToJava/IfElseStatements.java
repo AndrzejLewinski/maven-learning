@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.OptionalDouble;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
@@ -44,6 +43,7 @@ public class IfElseStatements {
         System.out.println(asDouble);
         int average = (int) asDouble;
         System.out.println(average);
+        //noinspection IfStatementWithTooManyBranches
         if(average<60){
             System.out.println("F");
         }else if(average<70){
