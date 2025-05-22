@@ -37,12 +37,40 @@ This project is part of an introductory Java learning module. It demonstrates ke
    ```bash
    javac -d out src/org/example/learning/essentials/extremeeasy/IntroductionToJava/ComparisonOperators/ComparisonOperators.java
 
-📂 src
-└── 📂 org
-└── 📂 example
-└── 📂 learning
-└── 📂 essentials
-└── 📂 extremeeasy
-└── 📂 IntroductionToJava
-└── 📂 ComparisonOperators
-└── 📄 ComparisonOperators.java
+<<ul>
+  <li>📂 src
+    <ul>
+      <li>📂 org
+        <ul>
+          <li>📂 example
+            <ul>
+              <li>📂 learning
+                <ul>
+                  <li>📂 essentials
+                    <ul>
+                      <li>📂 extremeeasy
+                        <ul>
+                          <li>📂 IntroductionToJava
+                            <ul>
+                              <li>📂 ComparisonOperators
+                                <ul>
+                                  <li>📄 ComparisonOperators.java</li>
+                                  <li>📘 README.md</li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
