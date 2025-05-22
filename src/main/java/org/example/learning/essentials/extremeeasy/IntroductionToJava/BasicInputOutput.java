@@ -1,4 +1,4 @@
-package org.example.learning.essentials.extremeeasy;
+package org.example.learning.essentials.extremeeasy.IntroductionToJava;
 
 import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;

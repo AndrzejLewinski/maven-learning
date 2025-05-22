@@ -1,4 +1,4 @@
-package org.example.learning.essentials.extremeeasy;
+package org.example.learning.essentials.extremeeasy.IntroductionToJava;
 import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
@@ -27,34 +27,6 @@ public class BasicMathematicalOperations {
 
     }
 
-    @SuppressWarnings("unused")
-    private void sumOfDigits() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number to find the sum of its digits and convert to an array: ");
-        int number = scanner.nextInt();
-
-        int sum = 0;
-        // Lista do przechowywania cyfr
-        List<Integer> digitsList = new ArrayList<>();
-
-        // Rozbijamy liczbę na cyfry
-        while (number != 0) {
-            int digit = number % 10;  // Pobieramy ostatnią cyfrę
-            digitsList.add(digit);     // Dodajemy cyfrę do listy
-            sum += digit;              // Dodajemy cyfrę do sumy
-            number /= 10;              // Usuwamy ostatnią cyfrę z liczby
-        }
-
-        // Teraz lista ma cyfry w odwrotnej kolejności, więc musimy je odwrócić
-        Collections.reverse(digitsList);
-
-        // Konwertujemy listę na tablicę
-        int[] digitsArray = digitsList.stream().mapToInt(Integer::intValue).toArray();
-
-        // Wyświetlamy wynik
-        System.out.println("Tablica cyfr: " + Arrays.toString(digitsArray));
-        System.out.println("Suma cyfr: " + sum);
-    }
 
 
     @SuppressWarnings("unused")

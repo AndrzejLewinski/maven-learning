@@ -1,5 +1,6 @@
 package org.example.learning.essentials.extremeeasy;
 
+import org.example.learning.essentials.extremeeasy.IntroductionToJava.BasicMathematicalOperations;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
