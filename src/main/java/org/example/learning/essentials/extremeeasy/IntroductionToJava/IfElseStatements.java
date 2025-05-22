@@ -7,7 +7,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 
 /**
@@ -26,9 +30,33 @@ public class IfElseStatements {
         ///  AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
         IfElseStatements elseStatements = new IfElseStatements();
-        elseStatements.smallTest();
+        elseStatements.exercise();
 
     }
+
+    @SuppressWarnings("OptionalGetWithoutIsPresent")
+    private void exercise() {
+        List<Integer> collect =
+                IntStream.range(0, 50).map(i -> ThreadLocalRandom.current().nextInt(55) + 45).boxed().collect(Collectors.toList());
+        collect.forEach(PrintUtils::printIntegerWithSpace);
+        double asDouble = collect.stream().mapToInt(Integer::intValue).average().getAsDouble();
+        System.out.println();
+        System.out.println(asDouble);
+        int average = (int) asDouble;
+        System.out.println(average);
+        if(average<60){
+            System.out.println("F");
+        }else if(average<70){
+            System.out.println("D");
+        }else if(average<80){
+            System.out.println("C");
+        }else if(average<90){
+            System.out.println("B");
+        }else {
+            System.out.println("A");
+        }
+    }
+
 
     private void smallTest() {
 
