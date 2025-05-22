@@ -36,23 +36,16 @@ public class SwitchBasicStatements {
         System.out.println("4. Water");
         int choice = isValidNumber3(scanner);
         String result = switch (choice){
-            case 1 ->{
-                yield "You chose Coffee. Price: $2.00";
-            }
-            case 2->{
-                yield "You chose Tea. Price $3.00";
-            }
-            case 3->{
-                yield "You chose Juice. Price $2.50";
-            }
-            case 4->{
-                yield "You chose Water. Price $1.00";
-            }
+            case 1 -> "You chose Coffee. Price: $2.00";
+            case 2-> "You chose Tea. Price $3.00";
+            case 3-> "You chose Juice. Price $2.50";
+            case 4-> "You chose Water. Price $1.00";
             default -> throw new IllegalStateException("Unexpected value: " + choice);
         };
         System.out.println(result);
     }
 
+    @SuppressWarnings("unused")
     private void basicCalculator() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter number a: ");
@@ -81,8 +74,7 @@ public class SwitchBasicStatements {
 
             default -> throw new IllegalStateException("Unexpected value: " + answer);
         };
-
-
+        System.out.println(result);
     }
 
     private int addition(int a, int b){
@@ -181,10 +173,10 @@ public class SwitchBasicStatements {
             try{
                 String string = scanner.nextLine();
                 number = Integer.parseInt(string);
-                if(number!=0){
-                    isValid=false;
-                }else {
+                if (number == 0) {
                     System.out.println("You can't divide by zero! Enter number different than zero: ");
+                } else {
+                    isValid = false;
                 }
             }catch (NumberFormatException e){
                 System.out.println("This is not a number. Enter valid number: ");

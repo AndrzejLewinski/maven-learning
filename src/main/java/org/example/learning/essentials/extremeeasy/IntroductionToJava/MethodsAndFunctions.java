@@ -44,7 +44,7 @@ public class MethodsAndFunctions {
 
     @SuppressWarnings("unused")
     public double squarePower(int number){
-        return (double) Math.pow(number,2);
+        return Math.pow(number,2);
     }
 
     @SuppressWarnings("unused")

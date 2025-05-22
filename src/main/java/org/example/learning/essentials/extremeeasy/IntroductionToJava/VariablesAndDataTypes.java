@@ -78,7 +78,7 @@ public class VariablesAndDataTypes {
     }
 
     @SuppressWarnings("unused")
-    private void supressUnusedWarning(){
+    private void suppressUnusedWarning(){
         PrintUtils.printThreeVariables(new PrintUtils().getPrefix(1),new VariablesAndDataTypes().myAge(1),"\n");
         PrintUtils.printThreeVariables(new PrintUtils().getPrefix(6),new VariablesAndDataTypes().sum(11,21,31),"\n");
         PrintUtils.printThreeVariables(new PrintUtils().getPrefix(8),new VariablesAndDataTypes().rectangleArea(14,15),"\n");

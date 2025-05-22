@@ -1,12 +1,12 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava;
 
-import org.example.learning.QuickStart;
 import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -16,7 +16,7 @@ import java.util.stream.IntStream;
 public class ControlFlowBasics {
 
 
-    private static final Logger logger = LoggerFactory.getLogger(QuickStart.class);
+    private static final Logger logger = LoggerFactory.getLogger(ControlFlowBasics.class);
 
 
     public static void main(String[] args) {
@@ -71,6 +71,7 @@ public class ControlFlowBasics {
         return number>0;
     }
 
+    @SuppressWarnings("unused")
     private void exercise2(){
         new ControlFlowBasics().switchDay(5);
         new ControlFlowBasics().switchDay(4);
@@ -84,13 +85,16 @@ public class ControlFlowBasics {
         }
     }
 
+    @SuppressWarnings("unused")
     private void exercise0(){
         new ControlFlowBasics().exercise1(5);
         new ControlFlowBasics().exercise1(-5);
     }
 
+    @SuppressWarnings("unused")
     private void switchExpression() {
-        int day = 3;
+        Scanner scanner = new Scanner(System.in);
+        int day = scanner.nextInt();
 
         String dayName = switch (day) {
             case 1 -> "Poniedziałek";

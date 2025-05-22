@@ -129,7 +129,7 @@ public class BasicMathematicalOperations {
         System.out.println("Factorial of ("+number+") = "+n);
     }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "BreakStatement"})
     private void reversingNumberMethodTwo() {
         int number = 123454321;
         String string = String.valueOf(number);
@@ -183,7 +183,7 @@ public class BasicMathematicalOperations {
         }
     }
 
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "BreakStatement"})
     public boolean reversingNumberMethodOne(int number){
         boolean isPrime = number >= 2;
         for(int i =2;i<=(int)Math.sqrt(number);i++){
@@ -246,6 +246,7 @@ public class BasicMathematicalOperations {
         }
         return (double) a/b;
     }
+    @SuppressWarnings("BreakStatement")
     private int getNonZeroNumber() {
         Scanner scanner = new Scanner(System.in);
         int number;
@@ -253,10 +254,10 @@ public class BasicMathematicalOperations {
             try {
                 String string = scanner.nextLine();
                 number = Integer.parseInt(string);
-                if (number != 0) {
-                    break;
-                } else {
+                if (number == 0) {
                     System.out.println("Zero is not allowed. Please enter a number different from zero.");
+                } else {
+                    break;
                 }
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a valid number.");
@@ -268,6 +269,7 @@ public class BasicMathematicalOperations {
     private int addition(int a, int b){
         return a+b;
     }
+    @SuppressWarnings("BreakStatement")
     private int isValidNumber(){
         Scanner scanner = new Scanner(System.in);
         int number;
