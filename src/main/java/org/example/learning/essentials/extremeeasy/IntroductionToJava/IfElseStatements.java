@@ -19,7 +19,6 @@ import java.util.stream.IntStream;
 @SuppressWarnings("unused")
 public class IfElseStatements {
 
-
     private static final Logger logger = LoggerFactory.getLogger(IfElseStatements.class);
 
     public static void main(String[] args) {
@@ -31,6 +30,27 @@ public class IfElseStatements {
         IfElseStatements elseStatements = new IfElseStatements();
         elseStatements.exercise();
 
+    }
+
+    @SuppressWarnings("OptionalGetWithoutIsPresent")
+    private void exercise2() {
+        List<Integer> collect =
+                IntStream.range(0, 50).map(i -> ThreadLocalRandom.current().nextInt(55) + 45).boxed().collect(Collectors.toList());
+        collect.forEach(PrintUtils::printIntegerWithSpace);
+        double asDouble = collect.stream().mapToInt(Integer::intValue).average().getAsDouble();
+        System.out.println();
+        System.out.println(asDouble);
+        int average = (int) asDouble;
+        System.out.println(average);
+        // Divide average by 10 to match tens digit (e.g., 95 -> 9) for grade classification
+        String grade = switch (average / 10) {
+            case 10, 9 -> "A";
+            case 8 -> "B";
+            case 7 -> "C";
+            case 6 -> "D";
+            default -> "F";
+        };
+        System.out.println(grade);
     }
 
     @SuppressWarnings("OptionalGetWithoutIsPresent")
