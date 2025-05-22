@@ -1,9 +1,14 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava.ComparisonOperators;
+import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -20,10 +25,130 @@ public class ComparisonOperators {
         ///AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
         ComparisonOperators comparisonOperators = new ComparisonOperators();
-        comparisonOperators.MultiplicationTable();
+
 
     }
 
+    private void reversingNumber() {
+        ComparisonOperators comparisonOperators = new ComparisonOperators();
+        int n = 12345;
+        System.out.println(n);
+        int m = comparisonOperators.reverseIntegerNumber(n);
+        System.out.println(m);
+    }
+
+    private int reverseIntegerNumber(int number) {
+        String string = String.valueOf(number);
+        char[] digits = string.toCharArray();
+        char[] reversed  = new char[digits.length];
+        for(int i =0;i<digits.length;i++){
+            reversed[i]=digits[digits.length-i-1];
+        }
+        int reversedNumber = 0;
+        for(int i =0;i<reversed.length;i++){
+            reversedNumber = (int) (reversedNumber+ (reversed.length-i)*Math.pow(10,reversed.length-i-1));
+        }
+        return reversedNumber;
+    }
+
+    private void reverseString2() {
+        //declaring number
+        int number = 12345;
+        //printing number
+        System.out.println(number);
+
+        String string = String.valueOf(number); //applying n number to string object
+        char[] charArray = string.toCharArray(); //converting string to char array
+        //noinspection ForLoopReplaceableByForEach
+        for(int i =0;i<charArray.length;i++){
+            System.out.print(charArray[i]+" ");  //printing characters from char array
+        }
+        System.out.println();
+        for(int i =charArray.length-1;i>=0;i--){
+            System.out.print(charArray[i]+" ");  //printing characters from char array
+        }
+        System.out.println();
+        char[] reversed  = new char[charArray.length]; //creating new char array
+        for(int i =0;i<charArray.length;i++){
+            reversed[i]=charArray[charArray.length-i-1]; // applying numbers to new char array named reversed
+            System.out.print(reversed[i]+" ");
+        }
+        System.out.println();
+        int reversedNumber = 0;
+        for(int i =0;i<reversed.length;i++){
+            //reversing number
+            reversedNumber = (int) (reversedNumber+ (reversed.length-i)*Math.pow(10,reversed.length-i-1));
+            // System.out.print(reversed[i]+" "); //we're testing if reversed array works
+            System.out.print(reversedNumber+" ");
+        }
+        System.out.println();
+        System.out.println(reversedNumber);
+    }
+
+    private void reverseString() {
+        int n = 123456;
+        StringBuilder stringBuilder = new StringBuilder();
+        String string = stringBuilder.append(n).reverse().toString();
+        System.out.println(n+" -> +"+string);
+    }
+
+    private void searchingForPrimeNumbers2() {
+        ComparisonOperators comparisonOperators = new ComparisonOperators();
+        comparisonOperators.searchingForPrimeNumbers();
+        /// ____________________________________________________________///
+        /// --------------*** Searching for Prime Numbers ***------------
+        for(int i =0;i<100;i++){
+            if(isPrime(i)){
+                PrintUtils.printThreeVarAnimations(" ",i," ");
+            }
+        }
+        System.out.println();
+        PrintUtils.printThreeVarAnimations("🎉","All prime numbers found!","");
+    }
+
+    private void searchingForPrimeNumbers() {
+        final String[] frames = {"", ".", "..", "..."};
+        final int timeout = 220;
+        String input = "🔎 Searching for prime numbers from 0 to 99";
+        final int repetitions = 2;
+        final int dotsAfter = 1;
+        for (int i = 0; i < repetitions; i++) {
+            for (String frame : frames) {
+                try {
+                    System.out.print("\r" + input + frame);
+                    TimeUnit.MILLISECONDS.sleep(timeout);
+                } catch (InterruptedException e) {
+                    System.err.println("Animation interrupted");
+                    return;
+                }
+            }
+        }
+        for (int i = 0; i < dotsAfter; i++) {
+            try {
+                System.out.print(".");
+                TimeUnit.MILLISECONDS.sleep(timeout);
+            } catch (InterruptedException e) {
+                System.err.println("Animation interrupted");
+                return;
+            }
+        }
+        System.out.println();
+    }
+
+    private boolean isPrime(int number) {
+        if(number<=1){
+            return false; //just returning false, without using any booleans
+        }
+        int limit = (int) Math.sqrt(number);
+        for(int i = 2; i<= limit;i++){
+            if(number%i==0){
+                return false; //just returning false, without using any booleans
+            }
+        }
+        return true;
+    }
+
+    @SuppressWarnings("unused")
     private void MultiplicationTable() {
         int tableLength = 10;
         for(int i = 0; i < tableLength; i++){
@@ -146,6 +271,8 @@ public class ComparisonOperators {
         }
         return result;
     }
+
+
 
 
 

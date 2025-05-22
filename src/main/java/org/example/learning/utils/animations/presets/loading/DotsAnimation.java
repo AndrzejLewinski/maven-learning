@@ -8,6 +8,8 @@ import org.example.learning.utils.animations.generators.MinimalisticAnimations;
  */
 public class DotsAnimation implements Animation {
 
+
+
     @Override
     public void run() {
         MinimalisticAnimations.loadingAndDotsAnimation();
