@@ -1,31 +1,43 @@
-# IntroductionToJava - ComparisonOperators
+# 📘 IntroductionToJava - ComparisonOperators
 
-This project is part of an introductory Java learning module. It demonstrates key programming concepts using small, interactive console-based exercises. These include a multiplication table, a number-guessing game ("Hot and Cold"), and comparison-based logic.
+This project is part of the *Introduction to Java* module and serves as a hands-on way to explore basic programming concepts using interactive, console-based applications. The exercises range from number guessing games to number manipulation and prime detection.
 
 ---
 
 ## ✨ Features
 
 ### 🔢 Multiplication Table
-- Displays a 10×10 multiplication table.
-- Values equal to 0 are replaced with `__` for clarity.
-- Properly spaced output for easy reading.
+- Prints a **10×10 multiplication table**.
+- Multiplications involving zero (`0`) are shown as `__` for clarity.
+- Outputs are spaced for visual alignment.
 
-### ❄🔥 Getting Warmer, Getting Colder Game
-- The program randomly picks a number from 1 to 100.
-- The user guesses the number, receiving visual feedback:
-    - 🧊 (ice cubes) for "cold" guesses.
-    - 🔥 (flames) for "warm" guesses.
-    - 🍀 (clover) when the correct number is guessed.
-- Input is validated to ensure it's numeric and within the correct range.
+### ❄🔥 Hot and Cold Number Game
+- Randomly picks a number between **1 and 100**.
+- User guesses and receives visual feedback based on the proximity:
+    - `🧊` (ice cubes) for cold guesses.
+    - `🔥` (flames) for warm guesses.
+    - `🍀` (clover) for a correct guess.
+- Input is validated for numeric correctness and range.
 
 ### 🎯 Guess a Number (1–5)
-- A simple guessing game where the user tries to guess a random number between 1 and 5.
-- Continues looping until the correct number is guessed.
+- Simple loop-based guessing game.
+- User must guess the number (between 1–5) until it's correct.
 
 ### 🔍 Number Comparison
-- Prompts the user to input two numbers.
-- Compares them and prints whether the first number is greater than, less than, or equal to the second.
+- Prompts user to enter two integers.
+- Compares and prints whether the first is:
+    - Greater than,
+    - Less than,
+    - Or equal to the second.
+
+### 🔁 Reverse Integer
+- Demonstrates reversing the digits of an integer using both `StringBuilder` and manual array manipulation.
+- Outputs the reversed value step-by-step.
+
+### 🔢 Prime Number Finder
+- Iterates from 0 to 99.
+- Identifies and displays all prime numbers in that range.
+- Uses a basic prime-checking algorithm with animated feedback.
 
 ---
 
@@ -33,9 +45,11 @@ This project is part of an introductory Java learning module. It demonstrates ke
 
 ### Option 1: Using Command Line
 
-1. **Compile:**
-   ```bash
-   javac -d out src/org/example/learning/essentials/extremeeasy/IntroductionToJava/ComparisonOperators/ComparisonOperators.java
+1. **Compile the project:**
+
+```bash
+javac -d out src/org/example/learning/essentials/extremeeasy/IntroductionToJava/ComparisonOperators/ComparisonOperators.java
+
 
 <<ul>
   <li>📂 src

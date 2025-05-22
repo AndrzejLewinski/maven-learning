@@ -3,9 +3,6 @@ import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
@@ -24,11 +21,11 @@ public class ComparisonOperators {
         AnimationLauncher.runHerbalLeaf();
         ///AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
-        ComparisonOperators comparisonOperators = new ComparisonOperators();
 
 
     }
 
+    @SuppressWarnings("unused")
     private void reversingNumber() {
         ComparisonOperators comparisonOperators = new ComparisonOperators();
         int n = 12345;
@@ -51,6 +48,7 @@ public class ComparisonOperators {
         return reversedNumber;
     }
 
+    @SuppressWarnings("unused")
     private void reverseString2() {
         //declaring number
         int number = 12345;
@@ -85,6 +83,7 @@ public class ComparisonOperators {
         System.out.println(reversedNumber);
     }
 
+    @SuppressWarnings("unused")
     private void reverseString() {
         int n = 123456;
         StringBuilder stringBuilder = new StringBuilder();
@@ -92,6 +91,7 @@ public class ComparisonOperators {
         System.out.println(n+" -> +"+string);
     }
 
+    @SuppressWarnings("unused")
     private void searchingForPrimeNumbers2() {
         ComparisonOperators comparisonOperators = new ComparisonOperators();
         comparisonOperators.searchingForPrimeNumbers();
