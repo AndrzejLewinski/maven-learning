@@ -45,11 +45,10 @@ This project is part of the *Introduction to Java* module and serves as a hands-
 
 ### Option 1: Using Command Line
 
-1. **Compile the project:**
 
-```bash
-javac -d out src/org/example/learning/essentials/extremeeasy/IntroductionToJava/ComparisonOperators/ComparisonOperators.java
-
+1. **Compile:**
+   ```bash
+   javac -d out src/org/example/learning/essentials/extremeeasy/IntroductionToJava/ComparisonOperators/ComparisonOperators.java
 
 <<ul>
   <li>📂 src
