@@ -1,4 +1,4 @@
-package org.example.learning.essentials.extremeeasy.IntroductionToJava;
+package org.example.learning.essentials.extremeeasy.IntroductionToJava.ComparisonOperators;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +41,7 @@ public class ComparisonOperators {
         }
     }
 
+    @SuppressWarnings("unused")
     private void GettingWarmerColder() {
 
         Random random = new Random();
@@ -59,11 +60,11 @@ public class ComparisonOperators {
             }else if(Math.abs(randomNumber-x)>25){
                 System.out.println("🧊🧊🧊🧊");
             }else if(Math.abs(randomNumber-x)>5){
-                System.out.println("🧊🧊🧊");
+                System.out.println("🧊🧊🔥");
             }else if(Math.abs(randomNumber-x)>2){
-                System.out.println("🧊🧊");
+                System.out.println("🔥🔥");
             }else if(Math.abs(randomNumber-x)>1){
-                System.out.println("🧊");
+                System.out.println("🔥");
             }
 
 
@@ -74,6 +75,7 @@ public class ComparisonOperators {
         }while (isValid);
     }
 
+    @SuppressWarnings("unused")
     private void exercise2() {
         Random random = new Random();
         //Losujemy liczbę
