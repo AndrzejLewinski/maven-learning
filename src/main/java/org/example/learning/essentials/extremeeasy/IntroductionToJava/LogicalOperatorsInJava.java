@@ -19,7 +19,37 @@ public class LogicalOperatorsInJava {
         logger.info("🚀 Program starts...");
         AnimationLauncher.runHerbalLeaf();
         LogicalOperatorsInJava logicalOperatorsInJava = new LogicalOperatorsInJava();
-        logicalOperatorsInJava.exercise4();
+        logicalOperatorsInJava.exercise5();
+    }
+
+    private void exercise5() {
+        System.out.println("Please give us your age : ");
+        Scanner scanner= new Scanner(System.in);
+        int age = ValidationUtils.readInteger(scanner);
+        System.out.println("Do you have an invitation to this party: ");
+        boolean invitationCondition = ValidationUtils.readBoolean(scanner);
+        System.out.println("Are you on VIP List ? ");
+        boolean isVIP = ValidationUtils.readBoolean(scanner);
+        System.out.println("Are you drunk ?  ");
+        boolean isDrunk = ValidationUtils.readBoolean(scanner);
+        System.out.println("What's the time currently right now ? ");
+        int time = ValidationUtils.readIntInRange(scanner,0,23);
+        boolean afterMidnight = time >= 0 && time < 6;
+        boolean isAdult = isAdult(age);
+        boolean invitationOrVIP = invitationCondition || isVIP;
+        boolean isSober = !isDrunk;
+        boolean allPositiveConditions = isAdult && invitationCondition && isSober;
+        boolean normalConditions = isAdult && isSober && invitationOrVIP;
+        boolean isUserPermittedToEnter = allPositiveConditions || !afterMidnight && normalConditions;
+        if(isUserPermittedToEnter){
+            System.out.println("Use is eligible to enter");
+        }else {
+            System.out.println("User is not eligible to enter.");
+        }
+    }
+
+    private boolean isAdult(int number){
+        return number>=18;
     }
 
     private void exercise4() {
@@ -37,10 +67,6 @@ public class LogicalOperatorsInJava {
         } else {
             System.out.println("⛔ User is not permitted to attend the late-night screening.");
         }
-    }
-
-    private boolean isAdult(int number){
-        return number>=18;
     }
 
     private void exercise3() {
