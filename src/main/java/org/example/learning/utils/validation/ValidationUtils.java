@@ -1,5 +1,6 @@
-package org.example.learning.essentials.extremeeasy.IntroductionToJava.DefaultClass;
+package org.example.learning.utils.validation;
 
+import org.example.learning.essentials.extremeeasy.IntroductionToJava.DefaultClass.DefaultClass;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.jboss.logging.Logger;
@@ -9,12 +10,9 @@ import java.util.Scanner;
 /**
  * Created by User on 23.05.2025
  */
-@SuppressWarnings("unused")
-public class DefaultClass {
+public class ValidationUtils {
 
-
-
-    private static final Logger logger = LoggerFactory.logger(DefaultClass.class);
+    private static final Logger logger = LoggerFactory.logger(ValidationUtils.class);
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
@@ -22,8 +20,9 @@ public class DefaultClass {
         AnimationLauncher.runHerbalLeaf();
         ///  AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
-        DefaultClass defaultClass = new DefaultClass();
-        defaultClass.exercise();
+
+        ValidationUtils validationUtils = new ValidationUtils();
+        validationUtils.exercise();
 
     }
 
@@ -155,7 +154,5 @@ public class DefaultClass {
             }
         }
     }
-
-
 
 }

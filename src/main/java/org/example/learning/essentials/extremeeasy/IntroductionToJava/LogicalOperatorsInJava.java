@@ -25,13 +25,32 @@ public class LogicalOperatorsInJava {
 
     }
 
+    @SuppressWarnings("CommentedOutCode")
     private void exercise() {
 
         Scanner scanner = new Scanner(System.in);
-        int number = readInteger(scanner);
-        int number2 = readPositiveInt(scanner);
-        int number3 = readDivisor(scanner);
+        // TODO: Uncomment these method calls when input validation exercises are enabled
+        // int number = readInteger(scanner);
+        // int number2 = readPositiveInt(scanner);
+        // int number3 = readDivisor(scanner);
 
+
+
+
+    }
+
+    private boolean readBoolean(Scanner scanner) {
+        System.out.println("Enter boolean value (true/false): ");
+        while (true) {
+            String input = scanner.nextLine().trim().toLowerCase();
+            if (input.equals("true")) {
+                return true;
+            } else if (input.equals("false")) {
+                return false;
+            } else {
+                System.out.println("This is not a boolean value. Please enter 'true' or 'false': ");
+            }
+        }
     }
 
 
