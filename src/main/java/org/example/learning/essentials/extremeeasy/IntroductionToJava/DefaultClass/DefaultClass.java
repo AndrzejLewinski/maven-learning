@@ -1,6 +1,5 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava.DefaultClass;
 
-import org.example.learning.essentials.extremeeasy.IntroductionToJava.LogicalOperatorsInJava;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.jboss.logging.Logger;
@@ -10,6 +9,7 @@ import java.util.Scanner;
 /**
  * Created by User on 23.05.2025
  */
+@SuppressWarnings("unused")
 public class DefaultClass {
 
 
