@@ -20,50 +20,47 @@ public class ChristmasTree {
         ///AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
 
-        ChristmasTree christmasTree = new ChristmasTree();
-        christmasTree.exercise3();
-
     }
 
-    private void exercise3() {
 
-        int loopLength = 5;
-        char sign = '*';
 
-        for(int i =0;i<loopLength;i++){ //  0,1,2,3,4 (loop runs 5 times)
-            System.out.print("("+i+") "); // prints the current row index (useful for debugging)
-
-            for(int j =0;j<=i;j++){ // for j<=i (j,i = 0),  prints (i + 1) "*" characters in each line
-                System.out.print(sign);
+    private void exercise1() {
+        int height = 4;
+        for(int i =0;i<height;i++){
+            for(int j=height-1;j>i;j--){
+                //System.out.print("-");
+                System.out.print(" ");
             }
-
-            System.out.println(); // moves to the next line after printing stars
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            for(int j=0;j<i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
         }
+        for (int i = 0; i < height - 1; i++) {
+            System.out.print(" ");
+        }
+        System.out.println("|");
     }
 
     private void exercise2() {
-
-        char sign = '*';
-
-        for(int i =0;i<3;i++){
-            for(int j =0;j<3;j++){
-                System.out.print(sign);
+        int height = 4;
+        for(int i =0;i<height;i++){
+            //spacje
+            for(int j = 0;j<i;j++){
+                //System.out.print("_");
+                System.out.print(" ");
+            }
+            for(int j=2*height-1;j>=2*i+1;j--){
+                System.out.print("*");
             }
             System.out.println();
         }
 
     }
 
-    private void exercise1() {
-        char sign = '*';
-        for(int i =0;i<5;i++)
-            System.out.print(sign);
 
-    }
 
-    private void exercise0() {
-        char sign = '*';
-        for(int i =0;i<5;i++)
-            System.out.println(sign);
-    }
 }
