@@ -21,8 +21,173 @@ public class ChristmasTree {
         ///AnimationLauncher.runLemon();
 
         ChristmasTree christmasTree = new ChristmasTree();
-        christmasTree.exerciseEight();
+        christmasTree.threeChristmasTreesBase();
 
+    }
+
+
+    private void threeChristmasTreesBase() {
+        int n  = 5;
+        char stair = '*';
+        int  breaks = 1;
+        int  multiply = 1;
+        for(int i = n - 1; i >= 0; i--){
+
+            int x = i+1;
+
+            String input = String.valueOf(" ");
+
+            //first block of code
+            for(int j=0;j<=i;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(input);
+                }
+            }
+            //second block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+            //third block of code
+            for(int j=0;j<=i*2;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(input);
+                }
+            }
+            //fourth block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+            //5th block of code
+            for(int j=0;j<=i*2;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(input);
+                }
+            }
+            //fourth block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+            for(int m =0;m<breaks;m++){
+                System.out.println();
+            }
+        }
+
+        for(int i =0;i<n*n;i++){
+            System.out.print("-");
+        }
+
+        for(int i = 0; i < n; i++){
+
+            int x = i+1;
+
+            String input = String.valueOf(" ");
+
+            //first block of code
+            for(int j=0;j<=i;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(input);
+                }
+            }
+            //second block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+            //third block of code
+            for(int j=0;j<=i*2;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(input);
+                }
+            }
+            //fourth block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+            //5th block of code
+            for(int j=0;j<=i*2;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(input);
+                }
+            }
+            //fourth block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+            for(int m =0;m<breaks;m++){
+                System.out.println();
+            }
+        }
+    }
+
+
+    private void exerciseEleven() {
+
+        int n  = 5;
+        char stair = '*';
+        int  breaks = 1;
+        int  multiply = 1;
+        for(int i = n - 1; i >= 0; i--){
+            //first block of code
+            for(int j=0;j<=i;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(i+1);
+                }
+            }
+            //second block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+            //third block of code
+            for(int j=0;j<=i;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(i+1);
+                }
+            }
+
+            for(int m =0;m<breaks;m++){
+                System.out.println();
+            }
+        }
+
+    }
+
+    private void exerciseTen() {
+
+        int n  = 3;
+        char stair = '*';
+        int  breaks = 1;
+        int  multiply = 1;
+        for(int i = n - 1; i >= 0; i--){
+            //first block of code
+            for(int j=0;j<=i;j++){
+                for(int m=0; m<multiply; m++){
+                    System.out.print(i+1);
+                }
+            }
+            //second block of code
+            for(int o=0; o<multiply; o++){
+                for(int m=0; m<n*2-1-i*2; m++){
+                    System.out.print(stair);
+                }
+            }
+
+            for(int m =0;m<breaks;m++){
+                System.out.println();
+            }
+        }
     }
 
 
