@@ -35,7 +35,7 @@ public class ChristmasTree_Archive01 {
 
             int x = i+1;
 
-            String input = String.valueOf(" ");
+            String input = " ";
 
             //first block of code
             for(int j=0;j<=i;j++){
@@ -83,7 +83,7 @@ public class ChristmasTree_Archive01 {
 
             int x = i+1;
 
-            String input = String.valueOf(" ");
+            String input = " ";
 
             //first block of code
             for(int j=0;j<=i;j++){
