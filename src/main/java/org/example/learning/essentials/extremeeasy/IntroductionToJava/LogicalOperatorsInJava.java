@@ -19,18 +19,42 @@ public class LogicalOperatorsInJava {
         logger.info("🚀 Program starts...");
         AnimationLauncher.runHerbalLeaf();
         LogicalOperatorsInJava logicalOperatorsInJava = new LogicalOperatorsInJava();
-        logicalOperatorsInJava.exercise3();
+        logicalOperatorsInJava.exercise4();
+    }
+
+    private void exercise4() {
+        int age = 20;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Do you have a ticket? Please answer 'true' or 'false': ");
+        boolean hasTicket = ValidationUtils.readBoolean(scanner);
+
+        System.out.println("Is it after 10PM? Please answer 'true' or 'false': ");
+        boolean isAfter10PM = ValidationUtils.readBoolean(scanner);
+
+        if (isAdult(age) && hasTicket && isAfter10PM) {
+            System.out.println("✅ User is eligible for the late-night movie screening.");
+        } else {
+            System.out.println("⛔ User is not permitted to attend the late-night screening.");
+        }
+    }
+
+    private boolean isAdult(int number){
+        return number>=18;
     }
 
     private void exercise3() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("How many steps have you made today ? ");
+        System.out.println("How many steps have you taken today ? ");
         int stepsToday = ValidationUtils.readInteger(scanner);
         int goal = 10000;
-        System.out.println("Do we have a bonus day ? ");
+        System.out.println("Is today a bonus day y ? ");
         boolean bonusDay = ValidationUtils.readBoolean(scanner);
-        if(bonusDay || stepsToday>goal){
-            System.out.println("User will receive a gift.");
+
+        if (bonusDay || stepsToday > goal) {
+            System.out.println("🎁 Congratulations! You are eligible for a reward.");
+        } else {
+            System.out.println("Keep going! You're doing great — no reward today, but you're getting closer!");
         }
         scanner.close();
     }
@@ -52,10 +76,10 @@ public class LogicalOperatorsInJava {
 
     private void exercise1() {
         Scanner scanner = new Scanner(System.in);
-        boolean isRaining = false;
-        if(!isRaining){
+        boolean isRaining = ValidationUtils.readBoolean(scanner);
+        if (isRaining) {
             System.out.println("It's raining!");
-        }else {
+        } else {
             System.out.println("It's not raining!");
         }
     }
