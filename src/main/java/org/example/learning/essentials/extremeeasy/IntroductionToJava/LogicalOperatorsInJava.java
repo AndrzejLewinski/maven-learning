@@ -1,6 +1,7 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava;
 
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
+import org.example.learning.utils.validation.ValidationUtils;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.jboss.logging.Logger;
 
@@ -33,6 +34,8 @@ public class LogicalOperatorsInJava {
         // int number = readInteger(scanner);
         // int number2 = readPositiveInt(scanner);
         // int number3 = readDivisor(scanner);
+
+
 
 
 

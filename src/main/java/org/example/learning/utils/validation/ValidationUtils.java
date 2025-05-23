@@ -1,6 +1,5 @@
 package org.example.learning.utils.validation;
 
-import org.example.learning.essentials.extremeeasy.IntroductionToJava.DefaultClass.DefaultClass;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.jboss.logging.Logger;
@@ -10,6 +9,7 @@ import java.util.Scanner;
 /**
  * Created by User on 23.05.2025
  */
+@SuppressWarnings("unused")
 public class ValidationUtils {
 
     private static final Logger logger = LoggerFactory.logger(ValidationUtils.class);
@@ -21,19 +21,51 @@ public class ValidationUtils {
         ///  AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
 
-        ValidationUtils validationUtils = new ValidationUtils();
-        validationUtils.exercise();
+         ValidationUtils validationUtils = new ValidationUtils();
+         validationUtils.printMenu();
 
+
+    }
+
+    public void printMenu() {
+        final String RESET = "\033[0m";
+        final String DARK_GREEN = "\033[38;5;22m";
+        final String BRIGHT_GREEN = "\033[38;5;82m";
+        final String LIME = "\033[38;5;118m";
+        final String OLIVE = "\033[38;5;28m";
+        final String LEAF = "\033[38;5;40m";
+        final String TITLE_COLOR = "\033[38;5;46m";
+
+        String line = DARK_GREEN + "+--------------------------------------------------------------------+" + RESET;
+        System.out.println(line);
+        System.out.println("|          🍃🌿🍀      " + TITLE_COLOR + "ValidationUtils Menu" + TITLE_COLOR + "      🍃🌿🍀            " + DARK_GREEN + "||" + RESET);
+        System.out.println(line);
+        System.out.println("|      🍋  " + BRIGHT_GREEN + "This class provides methods for input validation:" + BRIGHT_GREEN + "  " + "🍋    " + DARK_GREEN + "||" + RESET);
+        System.out.println(DARK_GREEN + "|                                                                   ||" + RESET);
+        System.out.printf(DARK_GREEN + "| %-35s | %-27s ||\n", LEAF + "🔧 Method" + RESET, OLIVE + "📄 Description" + RESET);
+        System.out.println(DARK_GREEN + "+-----------------------------------+--------------------------------+" + RESET);
+        System.out.printf("| %-35s | %-27s ||\n", "🔢 readInteger(Scanner)", "reads any integer");
+        System.out.printf("| %-35s | %-27s ||\n", "🔼 readPositiveInt(Scanner)", "reads positive integer (>0)");
+        System.out.printf("| %-35s | %-27s ||\n", "🚫 readDivisor(Scanner)", "reads integer != 0");
+        System.out.printf("| %-34s | %-27s ||\n", "✅ readBoolean(Scanner)", "reads boolean (true/false)");
+        System.out.printf("| %-34s | %-27s ||\n", "➗ readDouble(Scanner)", "reads decimal number");
+        System.out.printf("| %-35s | %-27s ||\n", "🎯 readIntInRange(Scanner,min,max)", "reads int within range");
+        System.out.printf("| %-35s | %-27s ||\n", "📝 readNonEmptyString(Scanner)", "reads non-empty string");
+        System.out.println(line);
+        System.out.println(DARK_GREEN + "| ✅ " + LIME + "To use these methods, create a Scanner object, then        " + DARK_GREEN + "    ||" + RESET);
+        System.out.println(DARK_GREEN + "| 💬 " + LEAF + "Call them like:                                           " + DARK_GREEN + "     ||" + RESET);
+        System.out.println(OLIVE + "| int num = ValidationUtils.readInteger(scanner); 🚀" + DARK_GREEN + "                ||" + RESET);
+        System.out.println(line);
     }
 
 
     @SuppressWarnings("CommentedOutCode")
     private void exercise() {
 
-        Scanner scanner = new Scanner(System.in);
+        // TODO: Uncomment these method calls when input validation exercises are enabled
+        //Scanner scanner = new Scanner(System.in);
         // Your method calls
 
-        // TODO: Uncomment these method calls when input validation exercises are enabled
         // int number = readInteger(scanner);
         // int number2 = readPositiveInt(scanner);
         // int number3 = readDivisor(scanner);
@@ -47,7 +79,7 @@ public class ValidationUtils {
 
 
 
-    private String readNonEmptyString(Scanner scanner) {
+    public String readNonEmptyString(Scanner scanner) {
         System.out.println("Enter a non-empty string: ");
         while (true) {
             String input = scanner.nextLine().trim();
@@ -59,7 +91,7 @@ public class ValidationUtils {
         }
     }
 
-    private int readIntInRange(Scanner scanner, int min, int max) {
+    public int readIntInRange(Scanner scanner, int min, int max) {
         System.out.printf("Enter integer number between %d and %d:%n", min, max);
         int result;
         while (true) {
@@ -77,7 +109,7 @@ public class ValidationUtils {
         }
     }
 
-    private double readDouble(Scanner scanner) {
+    public double readDouble(Scanner scanner) {
         System.out.println("Enter a decimal number (e.g., 3.14): ");
         double result;
         while (true) {
@@ -91,7 +123,7 @@ public class ValidationUtils {
         }
     }
 
-    private boolean readBoolean(Scanner scanner) {
+    public boolean readBoolean(Scanner scanner) {
         System.out.println("Enter boolean value (true/false): ");
         while (true) {
             String input = scanner.nextLine().trim().toLowerCase();
@@ -105,7 +137,7 @@ public class ValidationUtils {
         }
     }
 
-    private int readDivisor(Scanner scanner){
+    public int readDivisor(Scanner scanner){
         System.out.println("Enter integer number different than zero: ");
         int result;
         while (true){
@@ -123,7 +155,7 @@ public class ValidationUtils {
         }
     }
 
-    private int readPositiveInt(Scanner scanner){
+    public int readPositiveInt(Scanner scanner){
         System.out.println("Enter positive integer number: ");
         int result;
         while (true){
@@ -141,7 +173,7 @@ public class ValidationUtils {
         }
     }
 
-    private int readInteger(Scanner scanner){
+    public int readInteger(Scanner scanner){
         System.out.println("Enter integer number: ");
         int result;
         while (true){
