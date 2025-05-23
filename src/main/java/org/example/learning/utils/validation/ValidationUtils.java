@@ -1,71 +1,124 @@
 package org.example.learning.utils.validation;
 
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
-import org.hibernate.annotations.common.util.impl.LoggerFactory;
-import org.jboss.logging.Logger;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
+ * Helper class for input validation in console applications.
  * Created by User on 23.05.2025
  */
 @SuppressWarnings("unused")
 public class ValidationUtils {
 
-    private static final Logger logger = LoggerFactory.logger(ValidationUtils.class);
+    private static final Logger logger = Logger.getLogger(ValidationUtils.class.getName());
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
-        ///  AnimationLauncher.runDots();
         AnimationLauncher.runHerbalLeaf();
-        ///  AnimationLauncher.runClover();
-        ///AnimationLauncher.runLemon();
+        printMenu();
 
-         ValidationUtils validationUtils = new ValidationUtils();
-         validationUtils.printMenu();
+        Scanner scanner = new Scanner(System.in);
 
     }
 
-
-    @SuppressWarnings("CommentedOutCode")
-    private void exercise() {
-
-        // TODO: Uncomment these method calls when input validation exercises are enabled
-        //Scanner scanner = new Scanner(System.in);
-        // Your method calls
-
-        // int number = readInteger(scanner);
-        // int number2 = readPositiveInt(scanner);
-        // int number3 = readDivisor(scanner);
-        // boolean condition = readBoolean(scanner);
-        // double doubleNumber = readDouble(scanner);
-        // int number4 = readIntInRange(scanner,4,5);
-        // String string = readNonEmptyString(scanner);
-
-
-    }
-
-
-
-    public String readNonEmptyString(Scanner scanner) {
-        System.out.println("Enter a non-empty string: ");
+    /**
+     * Reads any integer from user input.
+     */
+    public static int readInteger(Scanner scanner) {
+        System.out.println("Enter integer number: ");
         while (true) {
             String input = scanner.nextLine().trim();
-            if (input.isEmpty()) {
-                System.out.println("Input cannot be empty. Please enter a valid string: ");
-            } else {
-                return input;
+            try {
+                return Integer.parseInt(input);
+            } catch (NumberFormatException e) {
+                System.out.println("This is not a number. Enter a valid number: ");
             }
         }
     }
 
-    public int readIntInRange(Scanner scanner, int min, int max) {
-        System.out.printf("Enter integer number between %d and %d:%n", min, max);
-        int result;
+    /**
+     * Reads a positive integer (> 0) from user input.
+     */
+    public static int readPositiveInt(Scanner scanner) {
+        System.out.println("Enter positive integer number: ");
         while (true) {
+            String input = scanner.nextLine().trim();
             try {
-                String input = scanner.nextLine().trim();
-                result = Integer.parseInt(input);
+                int result = Integer.parseInt(input);
+                if (result > 0) {
+                    return result;
+                } else {
+                    System.out.println("Number must be positive. Please enter number greater than zero: ");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("This is not a number. Enter a valid number: ");
+            }
+        }
+    }
+
+    /**
+     * Reads an integer different from zero.
+     */
+    public static int readDivisor(Scanner scanner) {
+        System.out.println("Enter integer number different than zero: ");
+        while (true) {
+            String input = scanner.nextLine().trim();
+            try {
+                int result = Integer.parseInt(input);
+                if (result == 0) {
+                    System.out.println("You can't divide by zero. Please enter a number different than zero: ");
+                } else {
+                    return result;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("This is not a number. Enter a valid number: ");
+            }
+        }
+    }
+
+    /**
+     * Reads a boolean value (true/false) from user input.
+     */
+    public static boolean readBoolean(Scanner scanner) {
+        System.out.println("Enter boolean value (true/false): ");
+        while (true) {
+            String input = scanner.nextLine().trim().toLowerCase();
+            if ("true".equals(input)) {
+                return true;
+            } else if ("false".equals(input)) {
+                return false;
+            } else {
+                System.out.println("This is not a boolean value. Please enter 'true' or 'false': ");
+            }
+        }
+    }
+
+    /**
+     * Reads a floating-point number from user input.
+     */
+    public static double readDouble(Scanner scanner) {
+        System.out.println("Enter a decimal number (e.g., 3.14): ");
+        while (true) {
+            String input = scanner.nextLine().trim();
+            try {
+                return Double.parseDouble(input);
+            } catch (NumberFormatException e) {
+                System.out.println("This is not a valid decimal number. Please try again: ");
+            }
+        }
+    }
+
+    /**
+     * Reads an integer within the specified range [min, max].
+     */
+    public static int readIntInRange(Scanner scanner, int min, int max) {
+        System.out.printf("Enter integer number between %d and %d:%n", min, max);
+        while (true) {
+            String input = scanner.nextLine().trim();
+            try {
+                int result = Integer.parseInt(input);
                 if (result >= min && result <= max) {
                     return result;
                 } else {
@@ -77,86 +130,25 @@ public class ValidationUtils {
         }
     }
 
-    public double readDouble(Scanner scanner) {
-        System.out.println("Enter a decimal number (e.g., 3.14): ");
-        double result;
+    /**
+     * Reads a non-empty string from user input.
+     */
+    public static String readNonEmptyString(Scanner scanner) {
+        System.out.println("Enter a non-empty string: ");
         while (true) {
-            try {
-                String input = scanner.nextLine().trim();
-                result = Double.parseDouble(input);
-                return result;
-            } catch (NumberFormatException e) {
-                System.out.println("This is not a valid decimal number. Please try again: ");
-            }
-        }
-    }
-
-    public boolean readBoolean(Scanner scanner) {
-        System.out.println("Enter boolean value (true/false): ");
-        while (true) {
-            String input = scanner.nextLine().trim().toLowerCase();
-            if (input.equals("true")) {
-                return true;
-            } else if (input.equals("false")) {
-                return false;
+            String input = scanner.nextLine().trim();
+            if (input.isEmpty()) {
+                System.out.println("Input cannot be empty. Please enter a valid string: ");
             } else {
-                System.out.println("This is not a boolean value. Please enter 'true' or 'false': ");
+                return input;
             }
         }
     }
 
-    public int readDivisor(Scanner scanner){
-        System.out.println("Enter integer number different than zero: ");
-        int result;
-        while (true){
-            try{
-                String string = scanner.nextLine();
-                result = Integer.parseInt(string);
-                if (result == 0) {
-                    System.out.println("You can't divide by zero. Please enter number different than zero: ");
-                } else {
-                    return result;
-                }
-            }catch (NumberFormatException e){
-                System.out.println("This is not a number. Enter valid number: ");
-            }
-        }
-    }
-
-    public int readPositiveInt(Scanner scanner){
-        System.out.println("Enter positive integer number: ");
-        int result;
-        while (true){
-            try{
-                String string = scanner.nextLine();
-                result = Integer.parseInt(string);
-                if(result>0){
-                    return result;
-                }else {
-                    System.out.println("Number must be positive. Please enter number greater than zero: ");
-                }
-            }catch (NumberFormatException e){
-                System.out.println("This is not a number. Enter valid number: ");
-            }
-        }
-    }
-
-    public int readInteger(Scanner scanner){
-        System.out.println("Enter integer number: ");
-        int result;
-        while (true){
-            try{
-                String string = scanner.nextLine();
-                result = Integer.parseInt(string);
-                return result;
-            }catch (NumberFormatException e){
-                System.out.println("This is not a number. Enter valid number: ");
-            }
-        }
-    }
-
-
-    public void printMenu() {
+    /**
+     * Prints a colorful menu explaining the available validation methods.
+     */
+    public static void printMenu() {
         final String RESET = "\033[0m";
         final String DARK_GREEN = "\033[38;5;22m";
         final String BRIGHT_GREEN = "\033[38;5;82m";
@@ -167,24 +159,23 @@ public class ValidationUtils {
 
         String line = DARK_GREEN + "+--------------------------------------------------------------------+" + RESET;
         System.out.println(line);
-        System.out.println("|          🍃🌿🍀      " + TITLE_COLOR + "ValidationUtils Menu" + TITLE_COLOR + "      🍃🌿🍀            " + DARK_GREEN + "||" + RESET);
+        System.out.println("|          🍃🌿🍀      " + TITLE_COLOR + "ValidationUtils Menu" + RESET + "      🍃🌿🍀            " + DARK_GREEN + "||" + RESET);
         System.out.println(line);
-        System.out.println("|      🍋  " + BRIGHT_GREEN + "This class provides methods for input validation:" + BRIGHT_GREEN + "  " + "🍋    " + DARK_GREEN + "||" + RESET);
+        System.out.println("|      🍋  " + BRIGHT_GREEN + "This class provides methods for input validation:" + RESET + "  " + "🍋    " + DARK_GREEN + "||" + RESET);
         System.out.println(DARK_GREEN + "|                                                                   ||" + RESET);
-        System.out.printf(DARK_GREEN + "| %-35s | %-27s ||\n", LEAF + "🔧 Method" + RESET, OLIVE + "📄 Description" + RESET);
+        System.out.printf(DARK_GREEN + "| %-35s | %-27s ||%n", LEAF + "🔧 Method" + RESET, OLIVE + "📄 Description" + RESET);
         System.out.println(DARK_GREEN + "+-----------------------------------+--------------------------------+" + RESET);
-        System.out.printf("| %-35s | %-27s ||\n", "🔢 readInteger(Scanner)", "reads any integer");
-        System.out.printf("| %-35s | %-27s ||\n", "🔼 readPositiveInt(Scanner)", "reads positive integer (>0)");
-        System.out.printf("| %-35s | %-27s ||\n", "🚫 readDivisor(Scanner)", "reads integer != 0");
-        System.out.printf("| %-34s | %-27s ||\n", "✅ readBoolean(Scanner)", "reads boolean (true/false)");
-        System.out.printf("| %-34s | %-27s ||\n", "➗ readDouble(Scanner)", "reads decimal number");
-        System.out.printf("| %-35s | %-27s ||\n", "🎯 readIntInRange(Scanner,min,max)", "reads int within range");
-        System.out.printf("| %-35s | %-27s ||\n", "📝 readNonEmptyString(Scanner)", "reads non-empty string");
+        System.out.printf("| %-35s | %-27s ||%n", "🔢 readInteger(Scanner)", "reads any integer");
+        System.out.printf("| %-35s | %-27s ||%n", "🔼 readPositiveInt(Scanner)", "reads positive integer (>0)");
+        System.out.printf("| %-35s | %-27s ||%n", "🚫 readDivisor(Scanner)", "reads integer != 0");
+        System.out.printf("| %-34s | %-27s ||%n", "✅ readBoolean(Scanner)", "reads boolean (true/false)");
+        System.out.printf("| %-34s | %-27s ||%n", "➗ readDouble(Scanner)", "reads decimal number");
+        System.out.printf("| %-35s | %-27s ||%n", "🎯 readIntInRange(Scanner,min,max)", "reads int within range");
+        System.out.printf("| %-35s | %-27s ||%n", "📝 readNonEmptyString(Scanner)", "reads non-empty string");
         System.out.println(line);
         System.out.println(DARK_GREEN + "| ✅ " + LIME + "To use these methods, create a Scanner object, then        " + DARK_GREEN + "    ||" + RESET);
         System.out.println(DARK_GREEN + "| 💬 " + LEAF + "Call them like:                                           " + DARK_GREEN + "     ||" + RESET);
         System.out.println(OLIVE + "| int num = ValidationUtils.readInteger(scanner); 🚀" + DARK_GREEN + "                ||" + RESET);
         System.out.println(line);
     }
-
 }
