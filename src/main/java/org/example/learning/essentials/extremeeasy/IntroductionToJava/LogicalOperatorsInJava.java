@@ -1,5 +1,6 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava;
 
+import org.example.learning.essentials.hard.LearningNewThings;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.example.learning.utils.validation.ValidationUtils;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
@@ -16,11 +17,77 @@ public class LogicalOperatorsInJava {
     private static final Logger logger = LoggerFactory.logger(LogicalOperatorsInJava.class);
 
     public static void main(String[] args) {
-        logger.info("🚀 Program starts...");
-        AnimationLauncher.runHerbalLeaf();
-        LogicalOperatorsInJava logicalOperatorsInJava = new LogicalOperatorsInJava();
-        logicalOperatorsInJava.exercise5();
+         Scanner scanner = new Scanner(System.in);
+         logger.info("🚀 Program starts...");
+         AnimationLauncher.runHerbalLeaf();
+         LogicalOperatorsInJava logicalOperatorsInJava = new LogicalOperatorsInJava();
+         logicalOperatorsInJava.exercise6();
+         scanner.close();
     }
+
+    private void exercise6() {
+
+        Scanner scanner = new Scanner(System.in);
+        String role = LearningNewThings.readValidStringFromOptions(scanner, "chose your role: " +
+                "user/admin/moderator/manager" +
+                "/gameplayer","user","admin","moderator","manager","game player");
+        System.out.println(role);
+
+
+    }
+
+    private void newMethodMiniTest() {
+        String role = ValidationUtils
+                .isValidStringFromThreeOptions(new Scanner(System.in), "admin", "user", "moderator");
+        System.out.println("Your role is "+role);
+
+    }
+
+    private void checkUserAccess() {
+        LogicalOperatorsInJava logicalOperatorsInJava = new LogicalOperatorsInJava();
+        Scanner scanner = new Scanner(System.in);
+        //We need to return String which is either admin, moderator or user, so we need a validation class for it
+        //expected input from user : ADMIN  /  USER / MODERATOR
+        System.out.println("What is your role ? Please answer : admin, moderator or user? ");
+        String role = logicalOperatorsInJava.isValidRole(scanner);
+        System.out.println("Your role is : "+role);
+
+        boolean isAdmin = role.equals("admin");
+        boolean isModerator = role.equals("moderator");
+        boolean isUser = role.equals("user");
+
+        System.out.println("Do you have active account ?");
+        boolean hasActiveAccount     = ValidationUtils.readBoolean(scanner);
+        System.out.println("Do you have subscription ?");
+        boolean hasSubscription      = ValidationUtils.readBoolean(scanner);
+        System.out.println("Do you accept the rules ?");
+        boolean hasAcceptedTheRules  = ValidationUtils.readBoolean(scanner);
+
+        boolean hasAccess = false;
+
+
+        System.out.println("mini-test: "+isAdmin+isModerator+isUser);
+    }
+
+    //We need to return String which is either admin, moderator or user, so we need a validation class for it
+    //expected input from user : ADMIN  /  USER / MODERATOR
+    //We need to have a method which returns String value
+
+    private String isValidRole(Scanner scanner){
+        String input;
+        while (true){
+            System.out.println("Enter your role (admin/moderator/user): ");
+            input = scanner.nextLine();
+            if(input.equalsIgnoreCase("admin") || input.equalsIgnoreCase("user") || input.equalsIgnoreCase("moderator")){
+                return input.toLowerCase();
+            }else {
+                System.out.println("Print proper role admin/user or moderator ? ");
+            }
+        }
+    }
+
+
+
 
     private void exercise5() {
         System.out.println("Please give us your age : ");

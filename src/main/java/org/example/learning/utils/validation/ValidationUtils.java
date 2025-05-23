@@ -18,9 +18,20 @@ public class ValidationUtils {
         logger.info("🚀 Program starts...");
         AnimationLauncher.runHerbalLeaf();
         printMenu();
-
         Scanner scanner = new Scanner(System.in);
+    }
 
+    public static String isValidStringFromThreeOptions(Scanner scanner, String role1, String role2, String role3){
+        String input;
+        while (true){
+            System.out.println("Enter your role ("+role1+","+role2+","+role3+")");
+            input = scanner.nextLine();
+            if(input.equalsIgnoreCase(role1) || input.equalsIgnoreCase(role2) || input.equalsIgnoreCase(role3)){
+                return input.toLowerCase();
+            }else {
+                System.out.println("Print proper role "+role1+"/"+role2+"/"+role3);
+            }
+        }
     }
 
     /**
@@ -172,6 +183,7 @@ public class ValidationUtils {
         System.out.printf("| %-34s | %-27s ||%n", "➗ readDouble(Scanner)", "reads decimal number");
         System.out.printf("| %-35s | %-27s ||%n", "🎯 readIntInRange(Scanner,min,max)", "reads int within range");
         System.out.printf("| %-35s | %-27s ||%n", "📝 readNonEmptyString(Scanner)", "reads non-empty string");
+        System.out.printf("| %-36s | %-27s ||%n", "3️⃣ isValidStringFromThreeOptions", "user chooses from list");
         System.out.println(line);
         System.out.println(DARK_GREEN + "| ✅ " + LIME + "To use these methods, create a Scanner object, then        " + DARK_GREEN + "    ||" + RESET);
         System.out.println(DARK_GREEN + "| 💬 " + LEAF + "Call them like:                                           " + DARK_GREEN + "     ||" + RESET);
