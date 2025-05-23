@@ -12,7 +12,7 @@ import java.util.Scanner;
 @SuppressWarnings("unused")
 public class LogicalOperatorsInJava {
 
-    private static Logger logger = LoggerFactory.logger(LogicalOperatorsInJava.class);
+    private static final Logger logger = LoggerFactory.logger(LogicalOperatorsInJava.class);
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
@@ -35,7 +35,7 @@ public class LogicalOperatorsInJava {
     }
 
     private int readPositiveInt(Scanner scanner){
-        int result = 0;
+        int result;
         while (true){
             try{
                 String string = scanner.nextLine();
@@ -52,7 +52,7 @@ public class LogicalOperatorsInJava {
     }
 
     private int readInteger(Scanner scanner){
-        int result = 0;
+        int result;
         while (true){
             try{
              String string = scanner.nextLine();
