@@ -20,9 +20,19 @@ public class BreakAndContinueInLoops {
         ///AnimationLauncher.runLemon();
 
         BreakAndContinueInLoops breakAndContinueInLoops = new BreakAndContinueInLoops();
-        breakAndContinueInLoops.exercise1();
+        breakAndContinueInLoops.exercise2();
 
     }
+
+    private void exercise2() {
+
+
+
+
+
+    }
+
+    @SuppressWarnings("unused")
     private void exercise1() {
 
         int result = 0;
