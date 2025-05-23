@@ -5,7 +5,9 @@ import java.time.format.DateTimeFormatter;
 
 /**
 * Created by User on 20.05.2025
-*/public class LoggerUtils {
+*/
+@SuppressWarnings("unused")
+public class LoggerUtils {
 
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 

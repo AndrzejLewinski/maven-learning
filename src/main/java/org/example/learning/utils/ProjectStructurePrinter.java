@@ -15,12 +15,14 @@ public class ProjectStructurePrinter {
 
         try {
             Files.walkFileTree(startPath, new SimpleFileVisitor<>() {
+                @SuppressWarnings("NullableProblems")
                 @Override
-                public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) {
+                public FileVisitResult preVisitDirectory(Path dir, @SuppressWarnings("NullableProblems") BasicFileAttributes attrs) {
                     System.out.println("📁 " + dir.toString());
                     return FileVisitResult.CONTINUE;
                 }
 
+                @SuppressWarnings("NullableProblems")
                 @Override
                 public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
                     System.out.println("  📄 " + file.toString());

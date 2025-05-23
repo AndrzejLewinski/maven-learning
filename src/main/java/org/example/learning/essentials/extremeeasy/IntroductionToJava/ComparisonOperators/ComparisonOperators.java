@@ -194,7 +194,7 @@ public class ComparisonOperators {
 
 
             if(x == randomNumber){
-                System.out.println("🍀 Contratulations 🍀 You have guessed the number.");
+                System.out.println("🍀 Congratulations 🍀 You have guessed the number.");
                 isValid=false;
             }
         }while (isValid);
@@ -214,7 +214,7 @@ public class ComparisonOperators {
         while (isValid){
             int x = readNumberBetweenRange(scanner,1,5);
                 if(x == randomNumber){
-                    System.out.println("Contratulations! You have guessed the number.");
+                    System.out.println("Congratulations! You have guessed the number.");
                     isValid=false;
                 }
         }
