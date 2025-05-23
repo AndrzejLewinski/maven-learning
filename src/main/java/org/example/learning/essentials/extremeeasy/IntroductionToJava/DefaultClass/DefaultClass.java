@@ -1,5 +1,6 @@
-package org.example.learning.essentials.extremeeasy.IntroductionToJava;
+package org.example.learning.essentials.extremeeasy.IntroductionToJava.DefaultClass;
 
+import org.example.learning.essentials.extremeeasy.IntroductionToJava.LogicalOperatorsInJava;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.jboss.logging.Logger;
@@ -9,10 +10,11 @@ import java.util.Scanner;
 /**
  * Created by User on 23.05.2025
  */
-@SuppressWarnings("unused")
-public class LogicalOperatorsInJava {
+public class DefaultClass {
 
-    private static final Logger logger = LoggerFactory.logger(LogicalOperatorsInJava.class);
+
+
+    private static final Logger logger = LoggerFactory.logger(DefaultClass.class);
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
@@ -21,9 +23,9 @@ public class LogicalOperatorsInJava {
         ///  AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
 
-        new LogicalOperatorsInJava().exercise();
 
     }
+
 
     private void exercise() {
 
@@ -76,20 +78,14 @@ public class LogicalOperatorsInJava {
         int result;
         while (true){
             try{
-             String string = scanner.nextLine();
-             result = Integer.parseInt(string);
-             return result;
+                String string = scanner.nextLine();
+                result = Integer.parseInt(string);
+                return result;
             }catch (NumberFormatException e){
                 System.out.println("This is not a number. Enter valid number: ");
             }
         }
     }
-
-
-
-
-
-
 
 
 

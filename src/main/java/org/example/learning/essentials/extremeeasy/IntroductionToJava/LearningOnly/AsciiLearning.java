@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
  * Created by User on 23.05.2025
  */
 @SuppressWarnings("unused")
-public class ChristmasTree {
+public class AsciiLearning {
 
-    private static final Logger logger = LoggerFactory.getLogger(ChristmasTree.class);
+    private static final Logger logger = LoggerFactory.getLogger(AsciiLearning.class);
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");

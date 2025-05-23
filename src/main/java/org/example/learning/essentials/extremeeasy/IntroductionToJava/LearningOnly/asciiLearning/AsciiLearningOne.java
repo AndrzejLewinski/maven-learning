@@ -1,4 +1,4 @@
-package org.example.learning.essentials.extremeeasy.IntroductionToJava.LearningOnly.christmastree;
+package org.example.learning.essentials.extremeeasy.IntroductionToJava.LearningOnly.asciiLearning;
 
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
  * Created by User on 23.05.2025
  */
 @SuppressWarnings("unused")
-public class ChristmasTreeLearning {
+public class AsciiLearningOne {
 
-    private static final Logger logger = LoggerFactory.getLogger(ChristmasTreeLearning.class);
+    private static final Logger logger = LoggerFactory.getLogger(AsciiLearningOne.class);
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
@@ -20,7 +20,7 @@ public class ChristmasTreeLearning {
         ///AnimationLauncher.runClover();
         ///AnimationLauncher.runLemon();
 
-        ChristmasTreeLearning christmasTree = new ChristmasTreeLearning();
+        AsciiLearningOne christmasTree = new AsciiLearningOne();
         christmasTree.threeChristmasTreesBase();
 
     }
