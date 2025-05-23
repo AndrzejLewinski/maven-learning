@@ -147,13 +147,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 2, 3, 3, 3, 4};
-        Map<Integer>, Integer> countMap = new HashMap<>();
+        Map&lt;Integer, Integer&gt; countMap = new HashMap&lt;&gt;();
 
         for (int num : numbers) {
             countMap.put(num, countMap.getOrDefault(num, 0) + 1);
         }
 
-        for (Map.Entry<Integer>, Integer> entry : countMap.entrySet()) {
+        for (Map.Entry&lt;Integer, Integer&gt; entry : countMap.entrySet()) {
             System.out.println(entry.getKey() + " występuje " + entry.getValue() + " razy.");
         }
     }
