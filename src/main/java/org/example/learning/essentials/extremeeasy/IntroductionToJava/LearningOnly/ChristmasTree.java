@@ -78,9 +78,6 @@ public class ChristmasTree {
             }
         }
 
-        for(int i =0;i<n*n;i++){
-            System.out.print("-");
-        }
 
         for(int i = 0; i < n; i++){
 
