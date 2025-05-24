@@ -20,15 +20,9 @@ public class DefaultClass {
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
         ///AnimationLauncher.runDots();
-        ResultAnimations.dotsAnimation("(","");
 
-        ScopeOfVariables scopeOfVariables = new ScopeOfVariables();
-
-
-        ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
-
     }
 
 
