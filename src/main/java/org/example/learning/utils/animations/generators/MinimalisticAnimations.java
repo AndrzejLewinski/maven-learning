@@ -49,7 +49,7 @@ public class MinimalisticAnimations{
     public static void loadingAndDotsAnimation() {
         final String[] frames = {"", ".", "..", "..."};
         final int timeout = 220;
-        String input = "Loading";
+        String input = "Starting application, please wait";
         final int repetitions = 2;
         final int dotsAfter = 1;
         for (int i = 0; i < repetitions; i++) {

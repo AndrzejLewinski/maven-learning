@@ -21,11 +21,8 @@ public class ForEachLoopsInJava {
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
-        ///  AnimationLauncher.runDots();
-        ///  AnimationLauncher.runHerbalLeaf();
-        ///  AnimationLauncher.runClover();
-        ///  AnimationLauncher.runLemon();
-        ResultAnimations.fourLeaf("(counting boolean value), result is: ",true);
+        AnimationLauncher.runDots();
+        ResultAnimations.herbalLeaf("(counting boolean value), result is: ",true);
         boolean isPartialSuccess = true;
         @SuppressWarnings("ConstantValue")
         String message = isPartialSuccess ? "⚠️ logic partially passed" : "✅ test passed";
