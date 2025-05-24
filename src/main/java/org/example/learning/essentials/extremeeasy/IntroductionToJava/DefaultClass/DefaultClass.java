@@ -20,14 +20,12 @@ public class DefaultClass {
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
         AnimationLauncher.runDots();
-        ResultAnimations.herbalLeaf("(counting boolean value), result is: ",true);
-        boolean isPartialSuccess = true;
-        @SuppressWarnings("ConstantValue")
-        String message = isPartialSuccess ? "⚠️ logic partially passed" : "✅ test passed";
-        ResultAnimations.dotsAnimation(message, "");
+        ResultAnimations.herbalLeaf("comment: ", "");
+        AnimationLauncher.runHerbalLeaf();
+        ///
+
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
-        ///
     }
 
 
