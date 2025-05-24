@@ -1,7 +1,6 @@
 package org.example.miniprojects;
 
 import org.example.animations.ResultAnimations;
-import org.example.learning.essentials.IntroductionToJava.JavaBasicsSummary.JavaBasicsSummary;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,7 +14,7 @@ import java.util.Scanner;
 public class SimpleCalculator {
 
 
-    private static final Logger logger = LoggerFactory.getLogger(JavaBasicsSummary.class);
+    private static final Logger logger = LoggerFactory.getLogger(SimpleCalculator.class);
 
     public static void main(String[] args) {
 
