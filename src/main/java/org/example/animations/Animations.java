@@ -1,5 +1,7 @@
 package org.example.animations;
 
+import org.example.learning.utils.PrintUtils;
+
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -20,7 +22,6 @@ public class Animations {
 
 
     }
-
 
     @SuppressWarnings("unused")
     private static void animation01() {
