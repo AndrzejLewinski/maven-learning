@@ -21,13 +21,66 @@ public class ForEachLoopsInJava {
     private static final Logger logger = LoggerFactory.getLogger(ForEachLoopsInJava.class);
 
     public static void main(String[] args) {
+        logger.info("🚀 Program starts...");
+        AnimationLauncher.runDots();
+        AnimationLauncher.runHerbalLeaf();
+        ///
         ForEachLoopsInJava forEachLoopsInJava = new ForEachLoopsInJava();
-        forEachLoopsInJava.output();
+        forEachLoopsInJava.numbers();
+
+        logger.info("Finalizing resources...");
+        logger.info("Application shutting down. Goodbye!");
+    }
+
+    private void numbers() {
+
+        List<Integer> collect =
+                IntStream.range(0, 10).map(i -> ThreadLocalRandom.current().nextInt(4)).boxed().collect(Collectors.toList());
+        ResultAnimations.herbalLeaf("creating random list", "");
+        collect.forEach(PrintUtils::printIntegerWithSpace);
+        System.out.println();
+        List<Integer> sorted = collect.stream().mapToInt(Integer::intValue).sorted().boxed().collect(Collectors.toList());
+        sorted.forEach(PrintUtils::printIntegerWithSpace);
+        System.out.println();
+
+        int[] tab = new int[sorted.size()];
+        for(int i =0;i<tab.length;i++){
+            tab[i]=sorted.get(i);
+            PrintUtils.printThreeVarAnimations("", tab[i]," ");
+        }
+        System.out.println();
+
+        Map<Integer, Integer> countMap = new HashMap<>();
+        for (int number : tab) {
+            countMap.put(number, countMap.getOrDefault(number, 0) + 1);
+        }
+
+        int max = Integer.MIN_VALUE;
+        int count =0;
+
+        //we're finding maximum number
+        for(Map.Entry<Integer,Integer> map : countMap.entrySet()){
+            System.out.println(map.getKey()+" "+map.getValue());
+            if(map.getValue()>max){
+                max = map.getValue();
+            }
+        }
+        //we're getting keys
+        List<Integer> keysWithMax = new ArrayList<>();
+        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+            if (entry.getValue() == max) {
+                keysWithMax.add(entry.getKey());
+            }
+        }
+        System.out.println();
+        System.out.println("max value ="+max);
+        System.out.println("all keys for maximum values : ");
+        keysWithMax.forEach(PrintUtils::printIntegerWithSpace);
+        System.out.println();
     }
 
     private void output() {
-        logger.info("🚀 Program starts...");
-        AnimationLauncher.runDots();
+
         ///
         {
             List<Integer> collect = IntStream.range(0, 10).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
@@ -57,8 +110,7 @@ public class ForEachLoopsInJava {
             ResultAnimations.dotsAnimation(message, "");
         }
         ///
-        logger.info("Finalizing resources...");
-        logger.info("Application shutting down. Goodbye!");
+
     }
 
 
