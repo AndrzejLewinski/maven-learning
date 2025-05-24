@@ -21,14 +21,23 @@ public class ForEachLoopsInJava {
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
-        AnimationLauncher.runHerbalLeaf();
-
-            ForEachLoopsInJava forEachLoopsInJava = new ForEachLoopsInJava();
-            forEachLoopsInJava.exercise10();
+        ///  AnimationLauncher.runDots();
+        ///  AnimationLauncher.runHerbalLeaf();
+        ///  AnimationLauncher.runClover();
+        ///  AnimationLauncher.runLemon();
+        ResultAnimations.fourLeaf("(counting boolean value), result is: ",true);
+        boolean isPartialSuccess = true;
+        @SuppressWarnings("ConstantValue")
+        String message = isPartialSuccess ? "⚠️ logic partially passed" : "✅ test passed";
+        ResultAnimations.dotsAnimation(message, "");
+        logger.info("Finalizing resources...");
+        logger.info("Application shutting down. Goodbye!");
+        ///
     }
 
     private void exercise10() {
-        ResultAnimations.fourLeaf("(counting boolean value)",true);
+
+
 
     }
 

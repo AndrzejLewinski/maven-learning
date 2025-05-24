@@ -10,6 +10,36 @@ import java.util.concurrent.TimeUnit;
 public class ResultAnimations {
 
 
+    public static <T> void dotsAnimation(String description, T result) {
+        final String[] frames = {"", ".", "..", "..."};
+        final int timeout = 220;
+        final int repetitions = 2;
+        final int dotsAfter = 1;
+        for (int i = 0; i < repetitions; i++) {
+            for (String frame : frames) {
+                try {
+                    System.out.print("\r" + description + frame);
+                    TimeUnit.MILLISECONDS.sleep(timeout);
+                } catch (InterruptedException e) {
+                    System.err.println("Animation interrupted");
+                    return;
+                }
+            }
+        }
+        for (int i = 0; i < dotsAfter; i++) {
+            try {
+                System.out.print(".");
+                TimeUnit.MILLISECONDS.sleep(timeout);
+            } catch (InterruptedException e) {
+                System.err.println("Animation interrupted");
+                return;
+            }
+        }
+        System.out.print(" "+result);
+        System.out.println();
+    }
+
+
     public static <T> void fourLeaf(String description, T output) {
 
         String[] symbols = {
@@ -35,8 +65,7 @@ public class ResultAnimations {
                 System.err.println("❌ Przerwano animację");
             }
         }
-        PrintUtils.printDoubleEmptyLine();
-        //System.out.println("\n✅ Załadowano!");
+        PrintUtils.printEmptyLine();
     }
 
 
@@ -67,7 +96,6 @@ public class ResultAnimations {
             }
         }
         PrintUtils.printDoubleEmptyLine();
-        //System.out.println("\n✅ Załadowano!");
     }
 
     @SuppressWarnings("unused")
@@ -97,8 +125,6 @@ public class ResultAnimations {
             }
         }
         PrintUtils.printDoubleEmptyLine();
-        //System.out.println("\n✅ Załadowano!");
     }
-
 
 }
