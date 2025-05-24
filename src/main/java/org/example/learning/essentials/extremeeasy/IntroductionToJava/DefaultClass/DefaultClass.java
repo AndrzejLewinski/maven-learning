@@ -1,7 +1,6 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava.DefaultClass;
 
 import org.example.animations.ResultAnimations;
-import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.jboss.logging.Logger;
 
@@ -19,11 +18,12 @@ public class DefaultClass {
 
     public static void main(String[] args) {
         logger.info("🚀 Program starts...");
-        AnimationLauncher.runDots();
-        ResultAnimations.herbalLeaf("comment: ", "");
-        AnimationLauncher.runHerbalLeaf();
-        ///
+        ///AnimationLauncher.runDots();
+        ResultAnimations.dotsAnimation("(","");
 
+
+
+        ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
     }
