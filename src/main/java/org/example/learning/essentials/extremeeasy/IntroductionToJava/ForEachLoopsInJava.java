@@ -51,6 +51,7 @@ public class ForEachLoopsInJava {
         List<Integer> list = Arrays.asList(-3, 5, -1, 2, -7, 0);
 
         int count = 0;
+        //noinspection ForLoopReplaceableByForEach
         for(int i =0;i<tab.length;i++){
             if(tab[i]>0){
                 count++;

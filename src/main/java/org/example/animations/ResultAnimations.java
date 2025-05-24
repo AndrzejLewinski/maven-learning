@@ -40,6 +40,7 @@ public class ResultAnimations {
     }
 
 
+    @SuppressWarnings("unused")
     public static <T> void lemon(String description, T output) {
 
         String[] symbols = {
@@ -69,6 +70,7 @@ public class ResultAnimations {
         //System.out.println("\n✅ Załadowano!");
     }
 
+    @SuppressWarnings("unused")
     public static <T> void herbalLeaf(String description, T output) {
 
         String[] symbols = {
