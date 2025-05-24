@@ -1,14 +1,15 @@
 package org.example.learning.essentials.extremeeasy.IntroductionToJava;
 
 import org.example.animations.ResultAnimations;
+import org.example.learning.utils.PrintUtils;
 import org.example.learning.utils.animations.launcher.AnimationLauncher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * Created by User on 24.05.2025
@@ -20,23 +21,46 @@ public class ForEachLoopsInJava {
     private static final Logger logger = LoggerFactory.getLogger(ForEachLoopsInJava.class);
 
     public static void main(String[] args) {
+        ForEachLoopsInJava forEachLoopsInJava = new ForEachLoopsInJava();
+        forEachLoopsInJava.output();
+    }
+
+    private void output() {
         logger.info("🚀 Program starts...");
         AnimationLauncher.runDots();
-        ResultAnimations.herbalLeaf("(counting boolean value), result is: ",true);
-        boolean isPartialSuccess = true;
-        @SuppressWarnings("ConstantValue")
-        String message = isPartialSuccess ? "⚠️ logic partially passed" : "✅ test passed";
-        ResultAnimations.dotsAnimation(message, "");
+        ///
+        {
+            List<Integer> collect = IntStream.range(0, 10).map(i -> ThreadLocalRandom.current().nextInt(100)).boxed().collect(Collectors.toList());
+            collect.forEach(PrintUtils::printIntegerWithSpace);
+            System.out.println();
+
+            double doubleAverage = collect.stream().mapToInt(Integer::intValue).average().orElse(0);
+            int average = (int)  doubleAverage;
+            PrintUtils.printEmptyLine();
+            int[] tab = new int[collect.size()];
+            for(int i =0;i<collect.size();i++){
+                tab[i]=collect.get(i);
+                if(tab[i]>average){
+                    int output = tab[i];
+                    PrintUtils.printThreeVarAnimations("", output, " ");
+                }
+            }
+            System.out.println();
+            ResultAnimations.fourLeaf("(counting average value):","");
+            String result = "average value is: ";
+            PrintUtils.printThreeVarAnimations(result, " is ", average);
+            System.out.println();
+            boolean isPartialSuccess = false;
+            @SuppressWarnings("ConstantValue")
+            String message = isPartialSuccess ? "⚠️ logic partially passed" : "✅ Cleaning application";
+            System.out.println();
+            ResultAnimations.dotsAnimation(message, "");
+        }
+        ///
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
-        ///
     }
 
-    private void exercise10() {
-
-
-
-    }
 
     private void exercise9() {
 

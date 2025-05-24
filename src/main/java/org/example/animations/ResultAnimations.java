@@ -95,7 +95,7 @@ public class ResultAnimations {
                 System.err.println("❌ Przerwano animację");
             }
         }
-        PrintUtils.printDoubleEmptyLine();
+        System.out.println();
     }
 
     @SuppressWarnings("unused")
@@ -124,7 +124,7 @@ public class ResultAnimations {
                 System.err.println("❌ Przerwano animację");
             }
         }
-        PrintUtils.printDoubleEmptyLine();
+        System.out.println();
     }
 
 }
