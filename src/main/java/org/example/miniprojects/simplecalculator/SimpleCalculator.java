@@ -1,4 +1,4 @@
-package org.example.miniprojects;
+package org.example.miniprojects.simplecalculator;
 import org.example.animations.ResultAnimations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,22 +16,29 @@ public class SimpleCalculator {
 
     public static void main(String[] args) {
 
+
+
         logger.info("🚀 Program starts...");
-        ///AnimationLauncher.runDots();
-        //ResultAnimations.dotsAnimation("(","");
         SimpleCalculator simpleCalculator = new SimpleCalculator();
 
 
         simpleCalculator.countAverage();
-        //ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
 
     }
 
     private void countAverage(){
-        ResultAnimations.dotsAnimation("Starting application","");
-        ResultAnimations.herbalLeaf("", "");
+        boolean isAnimationEnabled = false;
+        //noinspection ConstantValue
+        if(isAnimationEnabled){
+            ResultAnimations.dotsAnimation("Starting application","");
+            ResultAnimations.fourLeaf("", "");
+        }
+        System.out.println("👋 Welcome to Simple Grade Calculator!");
+        System.out.println("You'll be asked to enter 3 grades (each between 1 and 5).");
+        System.out.println("The app will calculate the average and give you a result.\n");
+
         System.out.println();
 
 
@@ -63,8 +70,11 @@ public class SimpleCalculator {
         //We are printing average of our grades and text description of it which is meaning of the grades
         System.out.print(" Average of your grades is: "+doubleAvg+", which means it is: "+grade+" grade.");
         System.out.println();
-        ResultAnimations.dotsAnimation("Cleaning data.", "");
-        ResultAnimations.lemon("Closed all processes", "✅");
+        //noinspection ConstantValue
+        if(isAnimationEnabled){
+            ResultAnimations.dotsAnimation("Cleaning data.", "");
+            ResultAnimations.fourLeaf("Closed all processes", "✅");
+        }
     }
 
     private String getGradeDescription(double average) {
