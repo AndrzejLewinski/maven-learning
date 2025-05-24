@@ -1,7 +1,6 @@
 package org.example.learning.essentials.IntroductionToJava.JavaBasicsSummary;
 
 import org.example.animations.ResultAnimations;
-import org.example.learning.essentials.IntroductionToJava.ScopeOfVariables.ScopeOfVariables;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,12 +17,48 @@ public class JavaBasicsSummary {
         logger.info("🚀 Program starts...");
         ///AnimationLauncher.runDots();
         ResultAnimations.dotsAnimation("(","");
-
-        ScopeOfVariables scopeOfVariables = new ScopeOfVariables();
+        JavaBasicsSummary javaBasicsSummary = new JavaBasicsSummary();
+        javaBasicsSummary.helloWorld();
 
         ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
 
     }
+
+    private void helloWorld() {
+        System.out.println("hello world!");
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
