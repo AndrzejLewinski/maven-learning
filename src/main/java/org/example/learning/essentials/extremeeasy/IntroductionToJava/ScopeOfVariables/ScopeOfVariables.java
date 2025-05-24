@@ -62,6 +62,7 @@ public class ScopeOfVariables {
     }
 
 
+    @SuppressWarnings("unused")
     private void modifyScores() {
 
         ScopeOfVariables.score = 30;
@@ -73,6 +74,7 @@ public class ScopeOfVariables {
 
     }
 
+    @SuppressWarnings("unused")
     private void incrementCounter() {
 
         int globalCounter = ScopeOfVariables.counter;
@@ -84,6 +86,7 @@ public class ScopeOfVariables {
 
     }
 
+    @SuppressWarnings("unused")
     private void showValues() {
         int number1 = ScopeOfVariables.number;
         int number = 5;
