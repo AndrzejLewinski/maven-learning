@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * Created by User on 24.05.2025
  */
-@SuppressWarnings("BreakStatementWithLabel")
+@SuppressWarnings({"BreakStatementWithLabel", "unused"})
 public class LabelsInLoops {
 
 
@@ -114,6 +114,7 @@ public class LabelsInLoops {
         //tutaj jest wartość, której szukamy
         String keyToFind = "four";
 
+        //noinspection LabeledStatement
         search:  // label dla zewnętrznej pętli
         //noinspection ForLoopReplaceableByForEach
         for (int i = 0; i < listOfMaps.size(); i++) {
@@ -125,7 +126,7 @@ public class LabelsInLoops {
                 System.out.println("Sprawdzam klucz: " + entry.getKey());
 
                 //jeżeli klucz bieżącej mapy jest równy kluczowi, który chcemy znaleźć
-                //ignorując wielkość znaków , to przerywamy label
+                //ignorując wielkość znaków, to przerywamy label
                 if (entry.getKey().equalsIgnoreCase(keyToFind)) {
                     System.out.println("Znalazłem " + keyToFind + " z wartością: " + entry.getValue());
                     //noinspection BreakStatement
@@ -196,6 +197,7 @@ public class LabelsInLoops {
 
         //noinspection LabeledStatement
         outer:
+        //noinspection ConstantValue
         for (int i = 1; i <= 4; i++) {
             //noinspection LabeledStatement
             inner:
@@ -206,8 +208,8 @@ public class LabelsInLoops {
                 }
                 if (j == 2) {
                     System.out.println("Continue inner loop at i = " + i + ", j = " + j);
-                    //noinspection ContinueStatement
-                    continue inner;  // pomiń resztę iteracji wewnętrznej pętli dla tego j=2
+                    //noinspection ContinueStatement,UnnecessaryLabelOnContinueStatement
+                    continue inner;  // pomiń resztę iteracji wewnętrznej pętli dla tego j = 2
                 }
                 System.out.println("i = " + i + ", j = " + j);
             }
@@ -237,13 +239,14 @@ public class LabelsInLoops {
         //noinspection LabeledStatement
         outer:
         for (int i = 1; i <= 3; i++) {
+            //noinspection ConstantValue
             for (int j = 1; j <= 3; j++) {
                 if (j == 3) {
                     //noinspection ContinueStatementWithLabel
                     continue outer;  // pomiń resztę i przejdź do kolejnej iteracji pętli outer
-                    // if j==3
+                    // if j= = 3
                     //i = 3, j = 1
-                    //i = 3, j = 2
+                    //i = 3, j = 2,
                     //czyli w momencie, którym już to j jet 3 to nie pozwala działać dalej
                     //i przechodzi na początek działania po label
 
@@ -260,13 +263,15 @@ public class LabelsInLoops {
 
         //noinspection LabeledStatement
         outerLoop:
+        //noinspection ConstantValue
         for (int i = 0; i <= 3; i++) {
+            //noinspection ConstantValue
             for (int j = 0; j <=3; j++) {
                 System.out.println("i = " + i + ", j = " + j);
                 if (j == 2) {
                     //noinspection BreakStatement
                     break outerLoop;
-                    // gdyby nie break 'outerLoop' (label) dalej by było
+                    // Gdyby nie break 'outerLoop' (label) dalej by było
                     //....
                     //i = 3, j = 1
                     //i = 3, j = 2
