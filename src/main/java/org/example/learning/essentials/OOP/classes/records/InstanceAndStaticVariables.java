@@ -1,4 +1,7 @@
-package org.example.learning.essentials.OOP;
+package org.example.learning.essentials.OOP.classes.records;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by User on 25.05.2025
@@ -6,13 +9,77 @@ package org.example.learning.essentials.OOP;
 public class InstanceAndStaticVariables {
 
     public static void main(String[] args) {
+        Student student = new Student("Ada","SLO1");
+        Student student2 = new Student("Ania","SLO1");
 
-        Car car1 = new Car("red");
-        Car car2 = new Car("blue");
-        System.out.println(Car.numberOfCars);
-        System.out.println(car1.getColor());
-        System.out.println(car2.getColor());
+        for(Map.Entry<String,String> map : Student.getTotalStudents().entrySet()){
+            System.out.println(map.getKey()+" "+map.getValue());
+        }
 
+    }
+
+    private static class Student{
+
+        private final String name;
+        private final String schoolName;
+
+        private static int totalStudents = 0;
+
+        public static final Map<String,String> students = new HashMap<>();
+
+
+        private Student(String name, String schoolName) {
+            this.name = name;
+            this.schoolName = schoolName;
+            totalStudents++;
+            students.put(name,schoolName);
+        }
+
+        public String getSchoolName() {
+            return schoolName;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public static Map<String,String> getTotalStudents() {
+            return new HashMap<>(students);
+        }
+    }
+
+    private static class Vehicle{
+
+        private final String type; //instancyjne
+        private final int id; //instancyjne
+
+        private static int nextId =1;
+        private static int totalVehicles =0;
+
+        private static Map<String,Integer> typeCount = new HashMap<>();
+
+        public Vehicle(String type) {
+            this.type = type;
+            this.id = nextId++; //id instancyjne id nadawane automatycznie //int nextId -> do generowania unikalnego id
+
+            totalVehicles++;
+            typeCount.put(type,typeCount.getOrDefault(type,0)+1);
+        }
+
+        public String getType() {
+            return type;
+        }
+
+        public int getId() {
+            return id;
+        }
+
+        static void printStatistics(){
+            System.out.println("Total vehicles: "+totalVehicles);
+            for(Map.Entry<String,Integer> entry : typeCount.entrySet()){
+                System.out.println(entry.getKey()+" : "+entry.getValue());
+            }
+        }
     }
 
     @SuppressWarnings("unused")
@@ -28,6 +95,8 @@ public class InstanceAndStaticVariables {
         }
     }
 
+
+    @SuppressWarnings("unused")
     private static class Car{
 
         private final String color;
