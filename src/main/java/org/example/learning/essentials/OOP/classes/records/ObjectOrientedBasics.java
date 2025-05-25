@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP;
+package org.example.learning.essentials.OOP.classes.records;
 
 import org.example.animations.ResultAnimations;
 
@@ -25,9 +25,5 @@ public class ObjectOrientedBasics {
 
     private void method2() {
 
-
-
-
     }
-
 }
