@@ -1,6 +1,7 @@
 package org.example.learning.essentials.OOP;
 
 import org.example.animations.ResultAnimations;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,16 +16,18 @@ public class ObjectOrientedBasics {
         ResultAnimations.dotsAnimation("(", "");
 
         ObjectOrientedBasics objectOrientedBasics = new ObjectOrientedBasics();
-        objectOrientedBasics.method();
+        objectOrientedBasics.method2();
 
         ResultAnimations.dotsAnimation("", ")");
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
     }
 
-    private void method() {
+    private void method2() {
 
-        System.out.println("Hello World!");
+
+
 
     }
+
 }
