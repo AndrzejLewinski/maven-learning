@@ -7,6 +7,7 @@ import java.util.*;
  */
 public class OOPFour {
 
+    @SuppressWarnings("unused")
     private static class Person{
 
         private void use(){
@@ -40,6 +41,7 @@ public class OOPFour {
         }
     }
 
+    @SuppressWarnings("unused")
     private static class Laptop{
 
         String brand;
@@ -60,6 +62,7 @@ public class OOPFour {
         }
     }
 
+    @SuppressWarnings("unused")
     private static class Book{
 
         String title;
@@ -94,6 +97,7 @@ public class OOPFour {
 
     private static class Library{
 
+        @SuppressWarnings("FieldMayBeFinal")
         private ArrayList<Book> books;
 
 
@@ -122,6 +126,7 @@ public class OOPFour {
             }
         }
 
+        @SuppressWarnings("unused")
         public ArrayList<Book> getBooks() {
             return books;
         }
@@ -151,6 +156,7 @@ public class OOPFour {
 
         for (Book b : library.books) {
             if (b.title.equalsIgnoreCase(book.getTitle())) {
+                //noinspection DataFlowIssue
                 System.out.println("Znaleziono: " + found.title + ", " + found.author);
             }
         }

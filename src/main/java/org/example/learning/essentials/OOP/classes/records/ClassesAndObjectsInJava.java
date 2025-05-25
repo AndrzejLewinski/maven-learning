@@ -19,6 +19,7 @@ public class ClassesAndObjectsInJava {
 
     private static class CarRent{
 
+        @SuppressWarnings("FieldMayBeFinal")
         private List<Car> cars = new ArrayList<>();
 
         public CarRent() {
@@ -56,6 +57,7 @@ public class ClassesAndObjectsInJava {
             return brand;
         }
 
+        @SuppressWarnings("unused")
         void drive(){
             System.out.println("Driving "+getBrand()+" "+getModel());
         }

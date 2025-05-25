@@ -49,6 +49,7 @@ public class ConstructorsInJava {
             }
         }
 
+        @SuppressWarnings("unused")
         void startEngine(){
             if(fuel > 0){
                 engineOn = true;
@@ -59,6 +60,7 @@ public class ConstructorsInJava {
 
         }
 
+        @SuppressWarnings("unused")
         void refuel(int amount){
             if (amount <= 0) {
                 System.out.println("Invalid refuel amount.");

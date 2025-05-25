@@ -14,7 +14,9 @@ class OOPZero {
 
     private interface Animal {
 
+        @SuppressWarnings("unused")
         void makeSound();
+        @SuppressWarnings("unused")
         void sleep();
 
     }
@@ -33,6 +35,7 @@ class OOPZero {
 
     private final List<Animal> animals = new ArrayList<>();
 
+    @SuppressWarnings("ClassEscapesDefinedScope")
     public void addAnimal(Animal animal){
         animals.add(animal);
         System.out.println(animal.getClass().getSimpleName()+" added to list");
@@ -48,11 +51,13 @@ class OOPZero {
         }
     }
 
+    @SuppressWarnings("unused")
     public void clearAnimals(){
         animals.clear();
     }
 
 
+    @SuppressWarnings("unused")
     private static class Cat implements Animal{
 
         String name;
@@ -67,10 +72,12 @@ class OOPZero {
             System.out.println(name+" is sleeping ...");
         }
 
+        @SuppressWarnings("unused")
         public Cat(String name) {
             this.name = name;
         }
 
+        @SuppressWarnings("unused")
         public String getName() {
             return name;
         }
@@ -85,7 +92,7 @@ class OOPZero {
 
     private static class Owl implements Animal{
 
-        private String name;
+        private final String name;
 
         public Owl(String name) {
             this.name = name;

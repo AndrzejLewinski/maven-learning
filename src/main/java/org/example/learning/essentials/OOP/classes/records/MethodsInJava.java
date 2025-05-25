@@ -13,7 +13,7 @@ public class MethodsInJava {
         String string = rectangle.toString();
         System.out.println(string);
         Rectangle resize = rectangle.resize(1, 11);
-        System.out.println(resize.toString());
+        System.out.println(resize);
         Rectangle rectangle1 = resize.resizeByHeight(5);
         System.out.println(rectangle1);
         System.out.println();
@@ -28,6 +28,7 @@ public class MethodsInJava {
             return new Rectangle(width, height);
         }
 
+        @SuppressWarnings("unused")
         public static Rectangle createSquare(int width){
             //noinspection SuspiciousNameCombination
             return new Rectangle(width,width);
@@ -35,6 +36,7 @@ public class MethodsInJava {
 
     }
 
+    @SuppressWarnings("unused")
     private static abstract class Shape{
 
         abstract int getArea();
@@ -44,6 +46,7 @@ public class MethodsInJava {
     }
 
 
+   @SuppressWarnings("unused")
    private static class Rectangle extends Shape{
        private final int width;
        private final int height;
@@ -54,6 +57,7 @@ public class MethodsInJava {
        }
 
        //simple factory method
+       @SuppressWarnings("unused")
        public static Rectangle createSquare(int sideLength) {
            return new Rectangle(sideLength, sideLength);
        }
@@ -74,6 +78,7 @@ public class MethodsInJava {
            return  new Rectangle(this.width,newHeight);
        }
 
+       @SuppressWarnings("unused")
        public boolean isEqualTo(Rectangle other) {
            return this.width == other.width && this.height == other.height;
        }
@@ -100,6 +105,7 @@ public class MethodsInJava {
            return height;
        }
 
+       @SuppressWarnings("unused")
        public int getWidth() {
            return width;
        }

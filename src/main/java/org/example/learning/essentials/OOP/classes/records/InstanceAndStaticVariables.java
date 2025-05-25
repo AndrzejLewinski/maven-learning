@@ -8,6 +8,7 @@ import java.util.Map;
  */
 public class InstanceAndStaticVariables {
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
         Student student = new Student("Ada","SLO1");
         Student student2 = new Student("Ania","SLO1");
@@ -18,6 +19,7 @@ public class InstanceAndStaticVariables {
 
     }
 
+    @SuppressWarnings("unused")
     private static class Student{
 
         private final String name;
@@ -48,6 +50,7 @@ public class InstanceAndStaticVariables {
         }
     }
 
+    @SuppressWarnings("unused")
     private static class Vehicle{
 
         private final String type; //instancyjne
@@ -56,6 +59,7 @@ public class InstanceAndStaticVariables {
         private static int nextId =1;
         private static int totalVehicles =0;
 
+        @SuppressWarnings("FieldMayBeFinal")
         private static Map<String,Integer> typeCount = new HashMap<>();
 
         public Vehicle(String type) {
