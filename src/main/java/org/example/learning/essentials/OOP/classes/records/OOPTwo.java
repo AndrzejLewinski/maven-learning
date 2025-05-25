@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Created by User on 25.05.2025
  */
+@SuppressWarnings("unused")
 public class OOPTwo {
 
 
@@ -19,6 +20,7 @@ public class OOPTwo {
         for(OOPTwo elephantOne1 : elephantOnes){
             elephantOne1.sleep();
             elephantOne1.speak();
+            //noinspection UseOfSystemOutOrSystemErr
             System.out.println(elephantOne1);
         }
     }

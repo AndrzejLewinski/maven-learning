@@ -12,8 +12,8 @@ class OOPOne {
 
     private static class Dog{
 
-        private String name;
-        private int age;
+        private final String name;
+        private final int age;
 
         void bark(){
             System.out.println("woof");
@@ -24,10 +24,12 @@ class OOPOne {
             this.age = age;
         }
 
+        @SuppressWarnings("unused")
         public String getName() {
             return name;
         }
 
+        @SuppressWarnings("unused")
         public int getAge() {
             return age;
         }

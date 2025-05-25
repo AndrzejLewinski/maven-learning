@@ -18,11 +18,13 @@ public class OOPThree {
     }
 
     private interface Animal{
+        @SuppressWarnings("unused")
         void speak();
 
     }
 
     private interface Food{
+        @SuppressWarnings("unused")
         void eat();
     }
 
@@ -43,7 +45,7 @@ public class OOPThree {
 
 
     private static class Monkey implements Animal{
-        private String name;
+        private final String name;
 
         @Override
         public void speak() {
