@@ -15,6 +15,7 @@ public class InstanceAndStaticVariables {
 
     }
 
+    @SuppressWarnings("unused")
     private static class MathUtils{
 
         private static final double PI = Math.PI;
@@ -23,7 +24,7 @@ public class InstanceAndStaticVariables {
             System.out.println(PI*radius*radius);
         }
         public static double circleArea(double radius){
-            return (double) (PI*radius*radius);
+            return PI*radius*radius;
         }
     }
 
@@ -50,6 +51,7 @@ public class InstanceAndStaticVariables {
     }
 
 
+    @SuppressWarnings("unused")
     private static class Person{
 
         String name;
@@ -66,10 +68,11 @@ public class InstanceAndStaticVariables {
     }
 
 
+    @SuppressWarnings("unused")
     private static class Counter{
 
         private static int count = 0;  //zmienna statyczna zliczająca obiekty
-        private int id;                // zmienna instancyjna przechowująca unikalny numer obiektu
+        private final int id;                // zmienna instancyjna przechowująca unikalny numer obiektu
 
         public Counter() {
             count++; //zwiększamy licznik obiektów
