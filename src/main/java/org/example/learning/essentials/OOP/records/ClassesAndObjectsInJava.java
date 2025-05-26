@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.classes.records;
+package org.example.learning.essentials.OOP.records;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.classes.stack;
+package org.example.learning.essentials.OOP.stack;
 
 import java.util.*;
 

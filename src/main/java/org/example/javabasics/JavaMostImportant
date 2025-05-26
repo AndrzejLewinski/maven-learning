@@ -1,0 +1,75 @@
+🚀 **Plan nauki Javy - 6 do 9 miesięcy**
+
+---
+
+🟢 **Faza 1: Fundamenty (1,5 miesiąca)**
+Zacznij od podstaw Javy i OOP, skupiając się na najważniejszych elementach.
+
+- 📝 IntroductionToJava
+- 👋 HelloWorldProgram
+- 🔢 VariablesAndDataTypes
+- 🔄 ControlFlowBasics + Loops
+- 🔧 MethodsAndFunctions + MethodOverloading/Overriding
+- 🏗️ ClassesAndObjects + Constructors
+- 📥 Basic Input/Output i WorkingWithStrings
+
+🎯 *Cel:* Poznać podstawy Javy i OOP, by pisać proste programy.
+
+---
+
+🟡 **Faza 2: Praktyczne OOP i kolekcje (1,5 miesiąca)**
+
+- 🔒 Encapsulation, Inheritance, Polymorphism
+- 📚 Kolekcje: ArrayList, HashMap, HashSet
+- ⚠️ Podstawy wyjątków (try-catch, throw)
+- 🧩 Lambda i Stream (podstawy)
+
+🎯 *Cel:* Pisać czytelny obiektowy kod i efektywnie korzystać z kolekcji.
+
+---
+
+🟠 **Faza 3: Zaawansowane koncepcje i wzorce (2 miesiące)**
+
+- 🏭 Wzorce projektowe: Singleton, Factory, Observer (proste)
+- 🧩 Abstrakcje: interfejsy, klasy abstrakcyjne
+- ⚡ Lambdy i strumienie (głębiej)
+- 🧪 Testowanie (JUnit podstawy)
+- 🐞 Debugging i logowanie
+
+🎯 *Cel:* Pisać profesjonalny, testowalny i skalowalny kod.
+
+---
+
+🔵 **Faza 4: Technologia i ekosystem (2 miesiące)**
+
+- 🛠️ Maven (budowanie i zarządzanie projektami)
+- 🌱 Spring Core i podstawy Spring Boot
+- 🧵 Multithreading i concurrency (podstawy)
+- 📂 Obsługa plików i praca z bazą danych (JDBC)
+
+🎯 *Cel:* Znać narzędzia i frameworki używane w realnych projektach.
+
+---
+
+🟣 **Faza 5: Projekt i praktyka (1-2 miesiące)**
+
+- 🌐 Stwórz prostą aplikację webową w Spring Boot (REST API)
+- ✅ Napisz testy jednostkowe
+- 🗄️ Połącz aplikację z bazą danych (JDBC lub Spring Data)
+- 🔍 Ćwicz debugowanie i refaktoryzację
+
+🎯 *Cel:* Praktycznie wykorzystać zdobytą wiedzę i nabrać doświadczenia.
+
+---
+
+💡 **Dodatkowe wskazówki:**
+
+- 🚫 Odłóż na później: Monady, Currying, Kafka, Kubernetes, AWS itp. — zbyt zaawansowane na początek.
+- ✅ Skup się na tym, co przynosi największy efekt: OOP, kolekcje, wyjątki, testy, Spring, Maven, multithreading.
+- 🔄 Ćwicz regularnie — teoria bez praktyki to tylko wiedza, ale bez umiejętności.
+- 📖 Czytaj dokumentację i praktykuj na projektach (open source lub własnych).
+
+---
+
+Powodzenia! 💪 Jeśli chcesz, pomogę też przygotować szczegółowy plan tygodniowy.
+

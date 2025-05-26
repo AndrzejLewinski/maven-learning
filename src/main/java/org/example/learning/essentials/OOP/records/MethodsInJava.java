@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.classes.records;
+package org.example.learning.essentials.OOP.records;
 
 /**
  * Created by User on 25.05.2025

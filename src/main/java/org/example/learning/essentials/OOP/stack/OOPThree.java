@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.classes.stack;
+package org.example.learning.essentials.OOP.stack;
 
 /**
  * Created by User on 25.05.2025
@@ -47,12 +47,11 @@ public class OOPThree {
     private static class Monkey implements Animal{
         private final String name;
 
+        @SuppressWarnings("SpellCheckingInspection")
         @Override
         public void speak() {
-            //noinspection SpellCheckingInspection
             System.out.println("uuuaa uaaa");
         }
-
         public Monkey(String name) {
             this.name = name;
         }
