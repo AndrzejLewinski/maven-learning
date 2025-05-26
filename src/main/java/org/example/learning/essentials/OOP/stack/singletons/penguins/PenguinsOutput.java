@@ -15,12 +15,15 @@ public class PenguinsOutput {
         Penguin penguin = new Penguin("Pingo",3);
         Penguin penguin1 = new Penguin("Ramzes",5);
 
+        Penguin penguin2 = PenguinFactory.createPenguin("Kizz", 4);
+
 
         PenguinsRegistry penguinsRegistry = PenguinsRegistry.getInstance();
 
 
         penguinsRegistry.register(penguin);
         penguinsRegistry.register(penguin1);
+        penguinsRegistry.register(penguin2);
 
 
         List<Penguin> registeredPenguins = penguinsRegistry.getRegisteredPenguins();

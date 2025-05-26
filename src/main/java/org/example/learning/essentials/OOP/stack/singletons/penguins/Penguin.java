@@ -27,4 +27,10 @@ public class Penguin {
     }
 
 
+    //static factory method
+    public static Penguin create(String name, int age) {
+        return new Penguin(name, age);
+    }
+
+
 }

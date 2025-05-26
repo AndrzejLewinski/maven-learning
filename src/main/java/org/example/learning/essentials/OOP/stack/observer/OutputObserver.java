@@ -17,19 +17,5 @@ public class OutputObserver {
 
         // Symulacja zmiany statusu zamówienia
         subject.changeStatus("Wysłane");
-
-    }
-
-    private static void method1() {
-
-        SimpleSubject subject = new SimpleSubject();
-
-        Observer obs1 = new SimpleObserver("Observer 1");
-        Observer obs2 = new SimpleObserver("Observer 2");
-        Observer obs3 = new SimpleObserver("Observer 3");
-
-        subject.addObserver(obs1);
-        subject.addObserver(obs2);
-        subject.addObserver(obs3);
     }
 }
