@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.classes;
+package org.example.learning.essentials.OOP.stack.singletons.bank;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**

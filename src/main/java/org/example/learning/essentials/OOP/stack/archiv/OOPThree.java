@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack;
+package org.example.learning.essentials.OOP.stack.archiv;
 
 /**
  * Created by User on 25.05.2025

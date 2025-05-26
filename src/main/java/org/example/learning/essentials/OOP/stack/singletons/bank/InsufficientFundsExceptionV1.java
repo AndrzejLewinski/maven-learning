@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.classes;
+package org.example.learning.essentials.OOP.stack.singletons.bank;
 
 /**
  * Created by User on 26.05.2025

@@ -1,6 +1,8 @@
-package org.example.learning.essentials.OOP.classes;
+package org.example.learning.essentials.OOP.singleton;
 
 
+import org.example.learning.essentials.OOP.stack.singletons.bank.BankAccountV1;
+import org.example.learning.essentials.OOP.stack.singletons.bank.InsufficientFundsExceptionV1;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

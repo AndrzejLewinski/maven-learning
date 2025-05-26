@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack;
+package org.example.learning.essentials.OOP.stack.archiv;
 
 import java.util.ArrayList;
 import java.util.List;
