@@ -6,8 +6,10 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by User on 26.05.2025
  */
+@SuppressWarnings("unused")
 public class PenguinV1 {
 
+    @SuppressWarnings("unused")
     private static final Logger logger = LoggerFactory.getLogger(PenguinV1.class);
 
     private final Object lock= new Object();

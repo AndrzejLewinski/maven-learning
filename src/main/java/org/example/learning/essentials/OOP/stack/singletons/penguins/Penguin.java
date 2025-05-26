@@ -5,8 +5,8 @@ package org.example.learning.essentials.OOP.stack.singletons.penguins;
  */
 public class Penguin {
 
-    private String name;
-    private int age;
+    final private String name;
+    final private int age;
 
     public Penguin(String name, int age){
         this.name = name;

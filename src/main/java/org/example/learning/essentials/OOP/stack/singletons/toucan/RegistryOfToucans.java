@@ -10,7 +10,8 @@ public class RegistryOfToucans {
 
     private static final RegistryOfToucans instance = new RegistryOfToucans();
 
-    private List<Toucan> toucanList = new ArrayList<>();
+
+    private final List<Toucan> toucanList = new ArrayList<>();
 
     public static RegistryOfToucans getInstance(){
         return instance;
