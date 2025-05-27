@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.singletons.toucan;
+package org.example.learning.essentials.OOP.stack.singletons.birds.toucan;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,6 @@ import java.util.List;
 public class RegistryOfToucans {
 
     private static final RegistryOfToucans instance = new RegistryOfToucans();
-
 
     private final List<Toucan> toucanList = new ArrayList<>();
 

@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.singletons.penguins;
+package org.example.learning.essentials.OOP.stack.singletons.birds.penguins;
 
 import java.util.ArrayList;
 import java.util.List;

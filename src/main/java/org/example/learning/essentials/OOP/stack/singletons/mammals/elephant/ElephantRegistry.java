@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.singletons.elephant;
+package org.example.learning.essentials.OOP.stack.singletons.mammals.elephant;
 
 import java.util.ArrayList;
 import java.util.List;

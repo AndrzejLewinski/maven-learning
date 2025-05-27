@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.singletons.toucan;
+package org.example.learning.essentials.OOP.stack.singletons.birds.toucan;
 
 /**
  * Created by User on 26.05.2025

@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.singletons.giraffe;
+package org.example.learning.essentials.OOP.stack.singletons.mammals.giraffe;
 
 import java.util.List;
 

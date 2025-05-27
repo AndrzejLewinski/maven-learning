@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.singletons.elephant;
+package org.example.learning.essentials.OOP.stack.singletons.mammals.elephant;
 
 /**
  * Created by User on 26.05.2025

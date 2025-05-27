@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.singletons.penguins;
+package org.example.learning.essentials.OOP.stack.singletons.birds.penguins;
 
 /**
  * Created by User on 26.05.2025
