@@ -10,7 +10,6 @@ public class QueuesInJava {
 
     public static void main(String[] args) {
 
-
         //Kolejka to struktura danych first in first out
 
         //tworzymy prostą kolejkę
@@ -25,7 +24,6 @@ public class QueuesInJava {
         String first = queue.poll();
         System.out.println(first);
         System.out.println(queue);
-
 
 
     }
