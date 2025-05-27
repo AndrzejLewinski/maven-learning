@@ -3,12 +3,12 @@ package org.example.learning.essentials.OOP.stack.singletons.birds.penguins;
 /**
  * Created by User on 26.05.2025
  */
-public class Penguin {
+public class PenguinV2 {
 
     final private String name;
     final private int age;
 
-    public Penguin(String name, int age){
+    public PenguinV2(String name, int age){
         this.name = name;
         this.age  = age;
     }
@@ -28,8 +28,8 @@ public class Penguin {
 
 
     //static factory method
-    public static Penguin create(String name, int age) {
-        return new Penguin(name, age);
+    public static PenguinV2 create(String name, int age) {
+        return new PenguinV2(name, age);
     }
 
 

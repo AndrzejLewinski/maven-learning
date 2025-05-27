@@ -14,7 +14,7 @@ public class PenguinsRegistry {
 
 
     @SuppressWarnings("FieldMayBeFinal")
-    private List<Penguin> registeredPenguins = new ArrayList<>();
+    private List<PenguinV2> registeredPenguins = new ArrayList<>();
 
     private PenguinsRegistry(){
 
@@ -24,11 +24,11 @@ public class PenguinsRegistry {
         return instance;
     }
 
-    public void register(Penguin penguin){
+    public void register(PenguinV2 penguin){
         registeredPenguins.add(penguin);
     }
 
-    public List<Penguin> getRegisteredPenguins() {
+    public List<PenguinV2> getRegisteredPenguins() {
         return new ArrayList<>(registeredPenguins);
     }
 

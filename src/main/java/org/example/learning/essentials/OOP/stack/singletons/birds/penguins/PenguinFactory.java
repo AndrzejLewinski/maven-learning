@@ -13,11 +13,11 @@ public class PenguinFactory {
     // jego dane i zachowania (np. imię, wiek, metoda toString()).
     //Tworzenie instancji (szczególnie z dodatkową logiką) to inna odpowiedzialność — warto ją oddzielić.
 
-    public static Penguin createPenguin(String name, int age){
+    public static PenguinV2 createPenguin(String name, int age){
         //
 
 
-        return new Penguin(name,age);
+        return new PenguinV2(name,age);
     }
 
 }

@@ -11,6 +11,7 @@ public class Gorilla {
 
 
     public static void main(String[] args) {
+
         Gorilla gorilla1 = new Gorilla("____");
         Gorilla gorilla2 = new Gorilla("_**_");
 
@@ -20,6 +21,7 @@ public class Gorilla {
         List<Gorilla> gorillas = Gorilla.getInstance().getGorillaList();
         gorillas.forEach(System.out::println);
         System.out.println(gorillas.get(0));
+
     }
 
     String name;

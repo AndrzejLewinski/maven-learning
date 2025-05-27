@@ -1,4 +1,4 @@
-package org.example.learning.essentials.OOP.stack.speedruns;
+package org.example.learning.essentials.Speedruns;
 import org.example.animations.ResultAnimations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

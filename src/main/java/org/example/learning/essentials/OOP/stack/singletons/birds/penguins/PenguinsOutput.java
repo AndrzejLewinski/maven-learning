@@ -12,10 +12,10 @@ public class PenguinsOutput {
     public static void main(String[] args) {
 
         //Instancjonujemy pingwiny
-        Penguin penguin = new Penguin("Pingo",3);
-        Penguin penguin1 = new Penguin("Ramzes",5);
+        PenguinV2 penguin = new PenguinV2("Pingo",3);
+        PenguinV2 penguin1 = new PenguinV2("Ramzes",5);
 
-        Penguin penguin2 = PenguinFactory.createPenguin("Kizz", 4);
+        PenguinV2 penguin2 = PenguinFactory.createPenguin("Kizz", 4);
 
 
         PenguinsRegistry penguinsRegistry = PenguinsRegistry.getInstance();
@@ -26,7 +26,7 @@ public class PenguinsOutput {
         penguinsRegistry.register(penguin2);
 
 
-        List<Penguin> registeredPenguins = penguinsRegistry.getRegisteredPenguins();
+        List<PenguinV2> registeredPenguins = penguinsRegistry.getRegisteredPenguins();
         registeredPenguins.forEach(System.out::println);
 
     }
