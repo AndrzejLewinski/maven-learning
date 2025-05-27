@@ -1,7 +1,7 @@
 package org.example.learning.essentials.OOP.stack.singletons.birds.eagle;
 
 import org.example.animations.ResultAnimations;
-import org.example.learning.essentials.OOP.stack.speedruns.SpeedrunTwo;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

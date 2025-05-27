@@ -10,6 +10,7 @@ import java.util.stream.Stream;
 /**
  * Created by User on 27.05.2025
  */
+
 public class SpeedrunOne {
 
     private static final Logger logger = LoggerFactory.getLogger(SpeedrunOne.class);
@@ -59,6 +60,7 @@ public class SpeedrunOne {
         }
     }
 
+    @SuppressWarnings("unused")
     private static class extremeEasyOne {
         private static void names3() {
             List<String> names = new ArrayList<>(Arrays.asList("Jan", "Katarzyna", "Olek"));
@@ -96,6 +98,7 @@ public class SpeedrunOne {
             }
             System.out.println(counter);
         }
+        @SuppressWarnings("BreakStatement")
         private static void names4() {
             List<String> words = Arrays.asList("banan", "ananas", "arbuz", "cytryna");
             String name = "";
@@ -141,9 +144,11 @@ public class SpeedrunOne {
         }
     }
 
+    @SuppressWarnings("unused")
     private static class Backups{
 
         ///  Backup Classes
+        @SuppressWarnings("unused")
         private static class BackupZero{
             /// Backup Zero
 

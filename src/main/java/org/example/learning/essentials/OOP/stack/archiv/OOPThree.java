@@ -7,10 +7,10 @@ public class OOPThree {
 
     public static void main(String[] args) {
 
-        Monkey monkey = new Monkey("Zippy");
+        NotExactlyMonkeyAnimal monkey = new NotExactlyMonkeyAnimal("Zippy");
         monkey.eat();
         TalkingMonkey talkingMonkey = new TalkingMonkey("Bongo");
-        Monkey.Banana banana = new Monkey.Banana(true);
+        NotExactlyMonkeyAnimal.Banana banana = new NotExactlyMonkeyAnimal.Banana(true);
         talkingMonkey.speak();
         talkingMonkey.eatBanana(banana);
         monkey.eatBanana(banana);
@@ -28,7 +28,7 @@ public class OOPThree {
         void eat();
     }
 
-    private static class TalkingMonkey extends Monkey{
+    private static class TalkingMonkey extends NotExactlyMonkeyAnimal {
 
         public TalkingMonkey(String name) {
             super(name);
@@ -44,7 +44,7 @@ public class OOPThree {
     }
 
 
-    private static class Monkey implements Animal{
+    private static class NotExactlyMonkeyAnimal implements Animal{
         private final String name;
 
         @SuppressWarnings("SpellCheckingInspection")
@@ -52,7 +52,7 @@ public class OOPThree {
         public void speak() {
             System.out.println("uuuaa uaaa");
         }
-        public Monkey(String name) {
+        public NotExactlyMonkeyAnimal(String name) {
             this.name = name;
         }
 
