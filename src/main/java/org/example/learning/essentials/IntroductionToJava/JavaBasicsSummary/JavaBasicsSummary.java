@@ -18,7 +18,7 @@ public class JavaBasicsSummary {
         ResultAnimations.dotsAnimation("(","");
 
         JavaRepetition javaRepetition = new JavaRepetition();
-        javaRepetition.updateAndPrintTemperature();
+        javaRepetition.guessTheNumber();
 
         ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
@@ -55,6 +55,13 @@ public class JavaBasicsSummary {
                 default -> throw new IllegalStateException("Unexpected value: " + day);
             });
             System.out.println(result);
+        }
+
+        public void guessTheNumber() {
+
+
+
+
         }
     }
     @SuppressWarnings("unused")
