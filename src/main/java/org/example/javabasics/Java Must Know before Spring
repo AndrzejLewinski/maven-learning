@@ -1,0 +1,58 @@
+🟢 1. Wprowadzenie do Javy i podstawy
+1. IntroductionToJava
+2. HelloWorldProgram
+3. VariablesAndDataTypes
+4. ControlFlowBasics
+5. LoopsInJava
+6. MethodsAndFunctions
+7. BasicInputOutput
+8. WorkingWithStrings
+9. WorkingWithArrays
+10. BasicMathematicalOperations
+11. SwitchStatementsInJava
+12. IfElseStatements
+13. TernaryOperator
+14. ComparisonOperators
+15. LogicalOperatorsInJava
+16. BreakAndContinueInLoops
+17. NestedLoops
+18. ForEachLoopInJava
+19. LabelsInLoops
+20. ScopeOfVariables
+
+🟡 2. Programowanie obiektowe (OOP)
+21. ObjectOrientedBasics
+22. ClassesAndObjectsInJava
+23. ConstructorsInJava
+24. InstanceAndStaticVariables
+25. MethodsInJava
+26. MethodOverloading
+27. MethodOverriding
+28. EncapsulationInJava
+29. InheritanceInJava
+30. PolymorphismInJava
+
+🟠 3. Obsługa wyjątków
+31. BasicExceptionHandling
+32. TryCatchBlocks
+33. ThrowingExceptions
+
+🟢 4. Kolekcje i struktury danych
+34. WorkingWithCollections (List, Map, Set)
+35. ArrayListsInJava
+36. HashMapsInJava
+37. IteratingOverCollections
+
+🟡 5. Programowanie narzędziowe
+38. PackagesAndImports
+39. AccessModifiersInJava (public, private, protected)
+40. FileStructureAndMainMethod
+41. MavenBasics (structure + pom.xml)
+42. DebuggingAndReadingStackTraces
+
+🟠 6. Miękkie kompetencje przed Springiem
+43. Czytanie dokumentacji (np. javadoc, Spring docs)
+44. Debugowanie (System.out.println, breakpointy)
+45. Pisanie kodu podziałem na pliki (model, service, main)
+46. Rozumienie relacji między klasami (np. UserService → UserRepository)
+47. Ogarnięcie zależności w projekcie (np. przez Maven)

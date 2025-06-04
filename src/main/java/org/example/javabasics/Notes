@@ -1,5 +1,131 @@
-🟢 **1. Wprowadzenie do Javy i podstawy** - trudniejsze tematy
---------------------
-9. WorkingWithArrays
---------------------
-19. LabelsInLoops
+🟢 ✅ 1. IntroductionToJava
+🟢 ✅ 2. HelloWorldProgram
+🟢 ✅ 3. VariablesAndDataTypes
+🟢 ✅ 4. ControlFlowBasics
+🟢 ✅ 5. LoopsInJava
+🟢 ✅ 6. MethodsAndFunctions
+🟢 ✅ 7. BasicInputOutput
+🟢 ✅ 8. WorkingWithStrings
+🟢 ✅ 9. WorkingWithArrays
+🟢 ✅ 10. BasicMathematicalOperations
+🟢 ✅ 11. SwitchStatementsInJava
+🟢 ✅ 12. IfElseStatements
+🟢 ✅ 13. TernaryOperator
+🟢 ✅ 14. ComparisonOperators
+🟢 ✅ 15. LogicalOperatorsInJava
+🟢 ✅ 16. BreakAndContinueInLoops
+🟢 ✅ 17. NestedLoops
+🟢 ✅ 18. ForEachLoopInJava
+🟢 ✅ 19. LabelsInLoops
+🟢 ✅ 20. ScopeOfVariables
+
+🟡 ✅ 21. ObjectOrientedBasics
+🟡 ✅ 22. ClassesAndObjectsInJava
+🟡 ✅ 23. ConstructorsInJava
+🟡 ✅ 24. InstanceAndStaticVariables
+🟡 ✅ 25. MethodsInJava
+🟡 ✅ 26. MethodOverloading
+🟡 ✅ 27. MethodOverriding
+🟡 ✅ 28. EncapsulationInJava
+🟡 ✅ 29. InheritanceInJava
+🟡 ✅ 30. PolymorphismInJava
+
+🟠 ✅ 31. ExceptionHandlingBasics
+🟠 ✅ 32. TryCatchBlocks
+🟠 ✅ 33. MultipleCatchBlocks
+🟠 🟡 34. FinallyBlock
+🟠 🟡 35. ThrowingExceptions
+🟠 ⚙️ 36. CustomExceptions
+🟠 ⚙️ 37. CheckedAndUncheckedExceptions
+🟠 ⚙️ 38. HandlingRuntimeExceptions
+🟠 ⚙️ 39. HandlingCheckedExceptions
+🟠 ⚙️ 40. ExceptionChaining
+
+🟢 ✅ 41. ArrayListsInJava
+🟢 ✅ 42. LinkedListsInJava
+🟢 ✅ 43. HashMapsInJava
+🟢 🟡 44. HashSetsInJava
+🟢 ⚙️ 45. TreeSetsInJava
+🟢 ✅ 46. QueuesInJava
+🟢 🟡 47. DequeInJava
+🟢 🟡 48. StacksInJava
+🟢 🟡 49. IteratorsInJava
+🟢 🟡 50. CollectionsSortingInJava
+
+🟡 ⚙️ 51. StreamsInJava
+🟡 ⚙️ 52. LambdaExpressionsInJava
+🟡 ⚙️ 53. FunctionalInterfacesInJava
+🟡 ⚙️ 54. StreamFiltersInJava
+🟡 ⚙️ 55. StreamMapInJava
+🟡 ⚙️ 56. StreamReduceInJava
+🟡 ⚙️ 57. CollectorsInJava
+🟡 ⚙️ 58. MethodReferencesInJava
+🟡 ⚙️ 59. StreamCollectorsGroupBy
+🟡 ⚙️ 60. ParallelStreamsInJava
+🟡 ⚙️ 61. FunctionalProgrammingInJava
+🟡 ⚙️ 62. HigherOrderFunctionsInJava
+🟡 ⚙️ 63. ImmutabilityInJava
+🟡 ⚙️ 64. PureFunctionsInJava
+🟡 ⚙️ 65. FirstClassFunctionsInJava
+🟡 ⚙️ 66. SideEffectsInJava
+🟡 ⚙️ 67. StreamsAndLambdasInPractice
+🟡 ⚙️ 68. OptionalsInJava
+🟡 ⚙️ 69. MonadsInJava
+🟡 ⚙️ 70. CurryingInJava
+
+🟠 ✅ 71. AbstractClassesInJava
+🟠 ✅ 72. InterfacesInJava
+🟠 ⚙️ 73. AbstractMethodsInJava
+🟠 ⚙️ 74. MultipleInheritanceInJava
+🟠 ⚙️ 75. InnerClassesInJava
+🟠 ⚙️ 76. AnonymousClassesInJava
+🟠 ⚙️ 77. StaticMethodsInJava
+🟠 ⚙️ 78. NestedClassesInJava
+🟠 ⚙️ 79. SingletonPatternInJava
+🟠 ⚙️ 80. FactoryPatternInJava
+
+🟢 ✅ 81. LoggingInJava
+🟢 ✅ 82. DebuggingInJava
+🟢 ⚙️ 83. JVMArchitecture
+🟢 ⚙️ 84. JVMGarbageCollection
+🟢 ⚙️ 85. JVMMemoryManagement
+🟢 ⚙️ 86. JITCompilationInJava
+🟢 ⚙️ 87. ReflectionInJava
+🟢 ⚙️ 88. AnnotationsInJava
+🟢 ✅ 89. GenericsInJava
+🟢 🟡 90. TypeInferenceInJava
+
+🟡 ⚙️ 91–100. Wzorce projektowe (poznasz je naturalnie w Springu)
+
+🟠 ⚙️ 101–110. Algorytmy (ważne, ale osobny temat — nie przed Springiem)
+
+🟢 ⚙️ 111–120. Programowanie wielowątkowe (przydaje się później)
+
+🟡 ⚙️ 121–125. Obsługa plików i serializacja (opcjonalnie do Springa)
+
+🟠 ⚙️ 126–130. Bazy danych (Spring Data/JPA uprości wiele rzeczy)
+
+🟢 ⚙️ 131–140. Testowanie (JUnit, Mockito — na później)
+
+🟡 ✅ 141. IntroductionToMaven
+🟡 ✅ 142. SettingUpMavenProject
+🟡 ✅ 143. MavenBuildLifeCycle
+🟡 ✅ 144. MavenDependencies
+🟡 ⚙️ 145–160. Reszta Mavena (przydatna, ale nie wymagana od razu)
+
+🟠 ⚙️ 161–170. Technologie webowe (Spring ukrywa większość z tego)
+
+🟢 ✅ 171. IntroductionToSpringFramework
+🟢 ✅ 172. SpringConfiguration
+🟢 ✅ 173. SpringBeans
+🟢 ✅ 174. SpringDependencyInjection
+🟢 ✅ 175. SpringAnnotations
+🟢 ✅ 176. SpringMVC
+🟢 ✅ 177. SpringBootIntroduction
+🟢 ✅ 178. SpringBootRestApi
+🟢 ✅ 179. SpringBootApplicationStructure
+🟢 ✅ 180. SpringBootTesting
+
+🟡 ⚙️ 181–190. DevOps, Docker, Kafka, Redis, AWS — super później
+
+🟠 🧩 191–200. Projekt aplikacji (na końcu, ale ważne by ćwiczyć)
