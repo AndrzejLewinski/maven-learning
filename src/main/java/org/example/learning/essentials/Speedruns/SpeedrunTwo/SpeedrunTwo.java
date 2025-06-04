@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Created by User on 27.05.2025
  */
+@SuppressWarnings("unused")
 public class SpeedrunTwo {
 
     private static final Logger logger = LoggerFactory.getLogger(SpeedrunTwo.class);

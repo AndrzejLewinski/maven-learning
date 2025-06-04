@@ -28,19 +28,21 @@ public class JavaBasicsSummary {
 
     private static class JavaRepetition{
 
+        @SuppressWarnings("unused")
         public void updateAndPrintTemperature() {
-            float temperature = 22.5f;
+            @SuppressWarnings("UnusedAssignment") float temperature = 22.5f;
             temperature = 25.5f;
             System.out.println(temperature);
         }
 
-        @SuppressWarnings("ConstantValue")
+        @SuppressWarnings({"ConstantValue", "unused"})
         public void checkEvenOddUsingTernary() {
             int x = 10;
             boolean condition = x%2==0;
             String result = condition ? "Even" : "Odd";
             System.out.println(result);
         }
+        @SuppressWarnings("unused")
         public void dayOfTheWeekFromSwitch() {
             int day = 3;
             String result = String.valueOf(switch (day){
@@ -64,7 +66,7 @@ public class JavaBasicsSummary {
 
         }
     }
-    @SuppressWarnings("unused")
+    @SuppressWarnings({"unused", "UnusedAssignment"})
     private static class BackupClass {
         private void printNumbersUsingWhileLoop(){
             System.out.println();
@@ -93,7 +95,7 @@ public class JavaBasicsSummary {
             int a = 10;
             int b = 20;
             int result = a+b;
-            logger.info("Restult = {}",result);
+            logger.info("Result = {}",result);
 
         }
         public void declareAndPrintAge() {
@@ -139,13 +141,14 @@ public class JavaBasicsSummary {
                 System.out.println("Number is odd");
             }
         }
+        @SuppressWarnings("ConstantValue")
         public void checkIfAdult() {
             int age = 18;
             boolean condition = age>=18;
             if(condition){
                 System.out.println("You are adult");
             }else {
-                System.out.println("you'are not adult");
+                System.out.println("You are not adult");
             }
         }
     }

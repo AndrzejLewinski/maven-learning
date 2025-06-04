@@ -29,6 +29,7 @@ public class VariablesAndDataTypes {
         isAdult = true;
         name = "Ziggy";
         firstLetterInName = 'a';
+        @SuppressWarnings("ConstantValue")
         String string = age + " " + weight + " " + isAdult + " " + name + " " + firstLetterInName;
         System.out.println(string);
     }

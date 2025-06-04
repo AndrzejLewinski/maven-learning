@@ -1,8 +1,5 @@
 package org.example.learning.essentials.Speedruns.SpeedrunTwo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
 * Created by User on 27.05.2025
 */public class IntroductionToJava {
