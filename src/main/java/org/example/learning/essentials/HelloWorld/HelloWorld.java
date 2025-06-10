@@ -4,6 +4,9 @@ import org.example.animations.ResultAnimations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 /**
  * Created by User on 10.06.2025
  */
@@ -17,7 +20,7 @@ public class HelloWorld {
         ///AnimationLauncher.runDots();
         ResultAnimations.dotsAnimation("(","");
 
-        helloWorld("Hi there!");
+        new HelloWorld().sth();
 
         ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
@@ -25,7 +28,55 @@ public class HelloWorld {
 
     }
 
-    private static void helloWorld(String string) {
+    private void sth() {
+
+
+    }
+
+
+    private void learning(){
+        Systemus.out.printSth("...");
+    }
+    @SuppressWarnings("SpellCheckingInspection")
+    private static class Systemus{
+        static Printus out = new Printus();
+    }
+    @SuppressWarnings("SpellCheckingInspection")
+    private static class Printus{
+        public void printSth(String string){
+            System.out.println(string);
+        }
+
+    }
+
+    @SuppressWarnings("unused")
+    private static void noHelloWorld() {
+
+        //Zapisujemy oryginalny System.out
+        PrintStream originalOut = System.out;
+
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        PrintStream tempOut = new PrintStream(buffer);
+        System.setOut(tempOut);
+        System.out.println("Hello World!");
+
+        //Przywracamy oryginalny System.out
+        System.setOut(originalOut);
+
+        //Tego na dole już nie wypisało
+        String output = buffer.toString().trim();
+        System.out.println("Data from buffer:  "+output);
+
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    public static void helloWorldInput(String string) {
         System.out.println(string);
     }
+
+    private static void helloWorld() {
+        System.out.println("Hello, World!");
+    }
+
+
 }
