@@ -20,7 +20,7 @@ public class HelloWorld {
         ///AnimationLauncher.runDots();
         ResultAnimations.dotsAnimation("(","");
 
-        new HelloWorld().sth();
+
 
         ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
@@ -28,8 +28,9 @@ public class HelloWorld {
 
     }
 
-    private void sth() {
-
+    @SuppressWarnings("SameParameterValue")
+    private void helloWorldTwo(String name) {
+        System.out.println("Hello, "+name+"!");
 
     }
 
