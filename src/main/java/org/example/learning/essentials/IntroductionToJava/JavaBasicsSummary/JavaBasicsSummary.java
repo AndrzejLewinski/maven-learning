@@ -20,7 +20,7 @@ public class JavaBasicsSummary {
         ResultAnimations.dotsAnimation("(","");
 
         JavaRepetitionTwo javaRepetitionTwo = new JavaRepetitionTwo();
-        javaRepetitionTwo.sth();
+        javaRepetitionTwo.helloWorld();
 
         ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
@@ -29,15 +29,9 @@ public class JavaBasicsSummary {
     }
 
     private static class JavaRepetitionTwo{
-
-        public void sth(){
-
-            System.out.println(1);
-
+        public void helloWorld(){
+            System.out.println("Hello, World!");
         }
-
-
-
     }
 
     @SuppressWarnings("unused")
