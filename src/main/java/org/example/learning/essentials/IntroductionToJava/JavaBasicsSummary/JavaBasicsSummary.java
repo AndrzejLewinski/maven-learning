@@ -4,6 +4,8 @@ import org.example.animations.ResultAnimations;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Scanner;
+
 /**
  * Created by User on 24.05.2025
  */
@@ -17,8 +19,8 @@ public class JavaBasicsSummary {
         ///AnimationLauncher.runDots();
         ResultAnimations.dotsAnimation("(","");
 
-        JavaRepetition javaRepetition = new JavaRepetition();
-        javaRepetition.guessTheNumber();
+        JavaRepetitionTwo javaRepetitionTwo = new JavaRepetitionTwo();
+        javaRepetitionTwo.sth();
 
         ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
@@ -26,6 +28,19 @@ public class JavaBasicsSummary {
 
     }
 
+    private static class JavaRepetitionTwo{
+
+        public void sth(){
+
+            System.out.println(1);
+
+        }
+
+
+
+    }
+
+    @SuppressWarnings("unused")
     private static class JavaRepetition{
 
         @SuppressWarnings("unused")
@@ -58,12 +73,17 @@ public class JavaBasicsSummary {
             });
             System.out.println(result);
         }
-
+        @SuppressWarnings("unused")
         public void guessTheNumber() {
-
-
-
-
+            int number = 7;
+            System.out.println("Podaj liczbę: ");
+            Scanner scanner = new Scanner(System.in);
+            int guessNumber = scanner.nextInt();
+            if(guessNumber==number){
+                System.out.println("You guessed correctly!");
+            }else {
+                System.out.println("Try again!");
+            }
         }
     }
     @SuppressWarnings({"unused", "UnusedAssignment"})
