@@ -6,7 +6,7 @@ package org.example.learning.essentials.IntroductionToJava.JavaBasicsSummary;
 public class JavaEconomy {
 
     public static void main(String[] args) {
-        assetsEstimationTwo();
+        assetsEstimationOne();
     }
 
     private static void assetsEstimationTwo() {
@@ -34,7 +34,7 @@ public class JavaEconomy {
         // Wyświetlanie wartości aktywów
         System.out.println("currency reserves      : " + (int) currencyReserves() + suffix);
         System.out.println("sovereign wealth funds : " + (int) sovereignWealthFunds() + suffix);
-        System.out.println("assets managers        : " + (int) assetManagers() + suffix);
+        System.out.println("largest assets managers: " + (int) assetManagers() + suffix);
 
         int liquidBankAssets = (int) bankAssets() / 4;
         System.out.println("liquid bank assets     : " + liquidBankAssets + suffix);
