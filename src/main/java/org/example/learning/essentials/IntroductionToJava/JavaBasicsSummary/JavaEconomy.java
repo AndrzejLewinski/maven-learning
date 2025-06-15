@@ -12,6 +12,7 @@ public class JavaEconomy {
     private static void assets() {
         String suffix = " bln USD";
 
+
         // Wyświetlanie wartości aktywów
         System.out.println("currency reserves      : " + (int) currencyReserves() + suffix);
         System.out.println("sovereign wealth funds : " + (int) sovereignWealthFunds() + suffix);
