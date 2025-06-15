@@ -6,80 +6,47 @@ package org.example.learning.essentials.IntroductionToJava.JavaBasicsSummary;
 public class JavaEconomy {
 
     public static void main(String[] args) {
-
         assets();
-
     }
 
-
     private static void assets() {
-
         String suffix = " bln USD";
 
-        //System.out.println("bank assets            : "  +(int) bankAssets()           +suffix);
-        System.out.println("currency reserves      : "  +(int) currencyReserves()     +suffix);
-        System.out.println("sovereign wealth funds : "  +(int) sovereignWealthFunds() +suffix);
-        System.out.println("assets managers        : "  +(int) assetManagers()        +suffix);
-        int liquidBankAssets = (int)bankAssets()/4;
-        System.out.println("liquid bank assets     : "+liquidBankAssets+suffix);
-        System.out.println("pension funds          : "+ pensionFunds()+suffix);
+        // Wyświetlanie wartości aktywów
+        System.out.println("currency reserves      : " + (int) currencyReserves() + suffix);
+        System.out.println("sovereign wealth funds : " + (int) sovereignWealthFunds() + suffix);
+        System.out.println("assets managers        : " + (int) assetManagers() + suffix);
+
+        int liquidBankAssets = (int) bankAssets() / 4;
+        System.out.println("liquid bank assets     : " + liquidBankAssets + suffix);
+        System.out.println("pension funds          : " + pensionFunds() + suffix);
 
         System.out.println();
-        //1.73 - jedna pozycja się powtarza w pension funds i sovereign wealth funds;
-        double result =
-                (liquidBankAssets+currencyReserves()+sovereignWealthFunds()+assetManagers()+pensionFunds()-1.73);
-        int result2= (int) result;
 
-        System.out.println("All liquid assets = "+result2+suffix);
+        // Uwzględnianie powtarzających się danych w pension funds i sovereign wealth funds
+        double result = (liquidBankAssets + currencyReserves() + sovereignWealthFunds() +
+                assetManagers() + pensionFunds() - 1.73);
+
+        int result2 = (int) result;
+        System.out.println("All liquid assets = " + result2 + suffix);
     }
 
     private static int pensionFunds() {
         int[] pensionFunds = {
-                2456,
-                1790,
-                1356,
-                1507,
-                1062,
-                737,
-                570,
-                498,
-                462,
-                402,
-                389,
-                251,
-                348,
-                247,
-                282,
-                240,
-                183,
-                182,
-                160,
-                228,
-                134,
-                125,
-                106,
-                124,
-                112,
-                80,
-                79,
-                70,
-                85,
-                56,
-                0
+                2456, 1790, 1356, 1507, 1062, 737, 570, 498, 462, 402, 389, 251,
+                348, 247, 282, 240, 183, 182, 160, 228, 134, 125, 106, 124, 112,
+                80, 79, 70, 85, 56, 0
         };
 
-        // Zmienna do sumowania wartości funduszy
         int totalPensionFunds = 0;
 
-        // Sumowanie wartości funduszy
+        // Sumowanie wartości funduszy emerytalnych
         for (int fund : pensionFunds) {
             totalPensionFunds += fund;
         }
 
-        return totalPensionFunds/1000;
+        return totalPensionFunds / 1000;
     }
-
-
 
     private static double bankAssets() {
         double[] bankAssets = {
@@ -97,14 +64,14 @@ public class JavaEconomy {
                 352.87, 351.79, 345.81, 339.21, 338.14, 337.65
         };
 
-        // Zmienna do sumowania aktywów
         double totalAssets = 0;
 
         // Sumowanie aktywów banków
         for (double asset : bankAssets) {
             totalAssets += asset;
         }
-        return totalAssets/1000;
+
+        return totalAssets / 1000;
     }
 
     private static double currencyReserves() {
@@ -126,22 +93,17 @@ public class JavaEconomy {
                 400, 300, 200, 100
         };
 
-        // Zmienna do przechowywania sumy rezerw
         long totalReserves = 0;
 
         // Sumowanie rezerw walutowych
         for (long reserve : reserves) {
             totalReserves += reserve;
         }
-        @SuppressWarnings("unused") double result;
-        //noinspection UnusedAssignment
-        return result = (double) totalReserves / 1_000_000;
 
+        return (double) totalReserves / 1_000_000;
     }
 
     private static double sovereignWealthFunds() {
-        // Dane AUM w miliardach USD dla państwowych funduszy inwestycyjnych
-        // Format: {AUM w miliardach USD, nazwa funduszu, kraj, rok założenia, sektor}
         long[] aumData = {
                 1738, 1332, 1090, 1057, 1029, 925, 801, 629, 526, 514, 414, 436,
                 341, 317, 302, 287, 223, 196, 189, 156, 133, 123, 87, 80, 80,
@@ -150,20 +112,17 @@ public class JavaEconomy {
                 5, 5, 4, 3, 3, 2, 2, 2, 2, 2, 1, 1, 1, 0, 0, 0, 0
         };
 
-        // Obliczanie sumy AUM w miliardach USD
         long totalAum = 0;
         for (long aum : aumData) {
             totalAum += aum;
         }
 
-        return (double) totalAum /1000;
+        return (double) totalAum / 1000;
     }
 
     private static double assetManagers() {
-
-
-        // Tablica zawierająca dane AUM w miliardach USD dla 20 największych firm
         long[] aumData = {
+
                 10473, 9300, 5303, 4340, 3629, 3564, 2858, 2848, 2620, 2600,
                 2479, 2015, 1730, 1670, 1663, 1604, 1512, 1501, 1496, 1485
         };
