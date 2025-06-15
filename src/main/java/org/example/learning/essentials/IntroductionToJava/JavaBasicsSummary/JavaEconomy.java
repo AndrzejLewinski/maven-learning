@@ -35,37 +35,37 @@ public class JavaEconomy {
 
     private static int pensionFunds() {
         int[] pensionFunds = {
-                2456, // Federal Old-age and Survivors Insurance Trust Fund (Social Security)
-                1790, // Government Pension Investment Fund (Japan)
-                1356, // Government Pension Fund of Norway
-                1507, // Military Retirement Fund (USA)
-                1062, // Civil Service Retirement and Disability Fund (USA)
-                737,  // Thrift Savings Plan (TSP) (USA)
-                570,  // Canada Pension Plan and CPP Investment Board
-                498,  // Stichting Pensioenfonds ABP (Netherlands)
-                462,  // National Pension Service (South Korea)
-                402,  // Caisse de dépôt et placement du Québec (Canada - Quebec)
-                389,  // California Public Employees' Retirement System (CalPERS)
-                251,  // National Social Security Fund (China)
-                348,  // Central Provident Fund (Singapore)
-                247,  // Ontario Teachers' Pension Plan (OTPP)
-                282,  // California State Teachers' Retirement System (CalSTRS)
-                240,  // Employees Provident Fund (Malaysia)
-                183,  // Stichting Pensioenfonds Zorg en Welzijn (Netherlands)
-                182,  // AP-funds (Sweden)
-                160,  // AFP (Chile)
-                228,  // Employees' Provident Fund Organisation (India)
-                134,  // Public Institution for Social Security Fund (Kuwait)
-                125,  // Russian National Wealth Fund (Russia)
-                106,  // ATP (Denmark)
-                124,  // OMERS (Ontario, Canada)
-                112,  // Government Employees Pension Fund (South Africa)
-                80,   // Caixa de Previdencia dos Funcionários do Banco do Brasil (Brazil)
-                79,   // State Teachers Retirement System of Ohio (USA)
-                70,   // AGIRC – ARRCO (France)
-                85,   // National Pension System (India)
-                56,   // Pensions Reserve Fund (France)
-                0     // National Pension Reserve Fund (Ireland) - brak danych
+                2456,
+                1790,
+                1356,
+                1507,
+                1062,
+                737,
+                570,
+                498,
+                462,
+                402,
+                389,
+                251,
+                348,
+                247,
+                282,
+                240,
+                183,
+                182,
+                160,
+                228,
+                134,
+                125,
+                106,
+                124,
+                112,
+                80,
+                79,
+                70,
+                85,
+                56,
+                0
         };
 
         // Zmienna do sumowania wartości funduszy
@@ -133,7 +133,8 @@ public class JavaEconomy {
         for (long reserve : reserves) {
             totalReserves += reserve;
         }
-        double result;
+        @SuppressWarnings("unused") double result;
+        //noinspection UnusedAssignment
         return result = (double) totalReserves / 1_000_000;
 
     }
