@@ -6,11 +6,28 @@ package org.example.learning.essentials.IntroductionToJava.JavaBasicsSummary;
 public class JavaEconomy {
 
     public static void main(String[] args) {
-        assets();
+        assetsEstimationTwo();
     }
 
-    private static void assets() {
-        String suffix = " bln USD";
+    private static void assetsEstimationTwo() {
+        //wg Gemini
+
+        //Sovereign Wealth Funds - SWF
+        int swf = 13;
+        //Asset Managers
+        int am  = 128;
+        //Liquid Bank Assets
+        int lba = 29;
+        //Pension Funds
+        int pf = 58;
+
+        int result = swf+am+lba+pf;
+        System.out.println(result);
+
+    }
+
+    private static void assetsEstimationOne() {
+        String suffix = " tln USD";
 
 
         // Wyświetlanie wartości aktywów
