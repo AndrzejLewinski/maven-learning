@@ -5,6 +5,7 @@ package org.example.learning.essentials.IntroductionToJava.JavaBasicsSummary;
  */
 public class JavaEconomy {
 
+
     public static void main(String[] args) {
         assets();
     }
