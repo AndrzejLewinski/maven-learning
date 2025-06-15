@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FilenameFilter;
 import java.io.PrintStream;
 
 /**
@@ -21,19 +23,52 @@ public class HelloWorld {
         ResultAnimations.dotsAnimation("(","");
 
 
-
         ResultAnimations.dotsAnimation("",")");
         logger.info("Finalizing resources...");
         logger.info("Application shutting down. Goodbye!");
 
     }
 
-    @SuppressWarnings("SameParameterValue")
-    private void helloWorldTwo(String name) {
-        System.out.println("Hello, "+name+"!");
+
+
+    private static void simpleMethodOne() {
+
+        // Ścieżka do katalogu, który chcemy przeszukać
+        String directoryPath = "C:\\Program Files\\Epic Games\\UE_5.4\\Engine\\Plugins";
+
+        // Utwórz obiekt File z podaną ścieżką
+        File directory = new File(directoryPath);
+
+        // Sprawdź, czy podana ścieżka to katalog
+        if (directory.exists() && directory.isDirectory()) {
+            // Wypisz wszystkie podfoldery w katalogu
+            String[] subdirectories = directory.list(new FilenameFilter() {
+                @Override
+                public boolean accept(File dir, String name) {
+                    return new File(dir, name).isDirectory();
+                }
+            });
+
+            // Wyświetl nazwy wszystkich folderów
+            if (subdirectories != null) {
+                System.out.println("Foldery w katalogu " + directoryPath + ":");
+                for (String subdirectory : subdirectories) {
+                    System.out.println(subdirectory);
+                }
+            } else {
+                System.out.println("Brak folderów w tej lokalizacji.");
+            }
+        } else {
+            System.out.println("Podana ścieżka nie jest katalogiem.");
+        }
 
     }
 
+
+    @SuppressWarnings("SameParameterValue")
+    private void helloWorldTwo(String name) {
+        System.out.println("Hello, "+name+"!");
+    }
 
     private void learning(){
         Systemus.out.printSth("...");
