@@ -9,22 +9,7 @@ public class JavaEconomy {
         assetsEstimationOne();
     }
 
-    private static void assetsEstimationTwo() {
-        //poprawki
 
-        //Sovereign Wealth Funds - SWF
-        int swf = 13;
-        //Asset Managers
-        int am  = 128;
-        //Liquid Bank Assets
-        int lba = 29;
-        //Pension Funds
-        int pf = 58;
-
-        int result = swf+am+lba+pf;
-        System.out.println(result);
-
-    }
 
     @SuppressWarnings("unused")
     private static void assetsEstimationOne() {
@@ -34,11 +19,13 @@ public class JavaEconomy {
         // Wyświetlanie wartości aktywów
         System.out.println("currency reserves      : " + (int) currencyReserves() + suffix);
         System.out.println("sovereign wealth funds : " + (int) sovereignWealthFunds() + suffix);
+        // Wszyscy asset managers 128 bln usd
         System.out.println("largest assets managers: " + (int) assetManagers() + suffix);
 
         int liquidBankAssets = (int) bankAssets() / 4;
         System.out.println("liquid bank assets     : " + liquidBankAssets + suffix);
-        System.out.println("pension funds          : " + pensionFunds() + suffix);
+        // Wszystkie pension funds ok 58 bln usd
+        System.out.println("largest pension funds          : " + pensionFunds() + suffix);
 
         System.out.println();
 
