@@ -10,7 +10,7 @@ public class JavaEconomy {
     }
 
     private static void assetsEstimationTwo() {
-        //wg Gemini
+        //poprawki
 
         //Sovereign Wealth Funds - SWF
         int swf = 13;
@@ -26,6 +26,7 @@ public class JavaEconomy {
 
     }
 
+    @SuppressWarnings("unused")
     private static void assetsEstimationOne() {
         String suffix = " tln USD";
 
